@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useRef } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
 import { syncBodyScrollLock } from "@/lib/scrollLock";
@@ -30,10 +30,15 @@ export default function Modal({
   closeLabel = "Close",
   className = "",
 }: ModalProps) {
+  const [mounted, setMounted] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
   const previouslyFocused = useRef<HTMLElement | null>(null);
   const reactId = useId();
   const owner = `${lockOwner}-${reactId}`;
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => syncBodyScrollLock(owner, open), [open, owner]);
 
@@ -69,7 +74,8 @@ export default function Modal({
     };
   }, [open, onClose]);
 
-  if (typeof document === "undefined") {
+  // Keep SSR and the first client paint identical (null) to avoid hydration mismatch.
+  if (!mounted) {
     return null;
   }
 

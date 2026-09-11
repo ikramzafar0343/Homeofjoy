@@ -1,6 +1,6 @@
 .section {
   position: relative;
-  overflow: hidden;
+  overflow-x: clip;
   background: #fff;
   padding: 4rem 0 5rem;
 }
@@ -90,7 +90,7 @@
 
 .card {
   position: relative;
-  flex: 0 0 min(58vw, 15.5rem);
+  flex: 0 0 min(72vw, 16.5rem);
   scroll-snap-align: start;
   border: 0;
   padding: 0;
@@ -107,9 +107,15 @@
 
 .cardMedia {
   position: relative;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   background: var(--color-navy);
+}
+
+@media (min-width: 768px) {
+  .cardMedia {
+    aspect-ratio: 3 / 4;
+  }
 }
 
 .cardImage {

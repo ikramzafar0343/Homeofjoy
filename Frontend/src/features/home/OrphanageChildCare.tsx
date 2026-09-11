@@ -56,7 +56,7 @@ export default function OrphanageChildCare() {
       <div className="siteContainer">
         <div
           data-care-reveal
-          className="relative mb-14 min-h-[280px] overflow-hidden md:mb-20 md:min-h-[420px] lg:min-h-[520px]"
+          className="relative mb-14 min-h-[min(56vw,22rem)] overflow-hidden md:mb-20 md:min-h-[420px] lg:min-h-[520px]"
         >
           <SplashVisual tone="warm" imageSrc="/images/sections/orphanage.webp" imageAlt="Children sharing a communal meal in the school courtyard" className="absolute inset-0 h-full w-full" />
         </div>

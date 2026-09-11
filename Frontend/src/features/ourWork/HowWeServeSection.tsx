@@ -45,36 +45,55 @@ export default function HowWeServeSection() {
         return;
       }
 
-      const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (reduced) {
-        return;
-      }
+      const mm = gsap.matchMedia();
 
-      const trigger = ScrollTrigger.create({
-        id: "how-we-serve",
-        trigger: section,
-        start: "top top",
-        end: () => `+=${Math.round(window.innerHeight * TOPIC_COUNT * 0.5)}`,
-        pin,
-        ...pinnedSectionDefaults,
-        refreshPriority: pinRefreshPriority.howWeServe,
-        onUpdate: (self) => {
-          const nextIndex = Math.min(
-            TOPIC_COUNT - 1,
-            Math.floor(self.progress * TOPIC_COUNT),
-          );
-          if (nextIndex !== activeIndexRef.current) {
-            activeIndexRef.current = nextIndex;
-            setActiveIndex(nextIndex);
-          }
+      mm.add(
+        {
+          isDesktop: "(min-width: 1024px)",
+          reduceMotion: "(prefers-reduced-motion: reduce)",
         },
-      });
+        (context) => {
+          const { isDesktop, reduceMotion } = context.conditions as {
+            isDesktop: boolean;
+            reduceMotion: boolean;
+          };
 
-      scrollTriggerRef.current = trigger;
+          if (!isDesktop || reduceMotion) {
+            scrollTriggerRef.current = null;
+            return;
+          }
+
+          const trigger = ScrollTrigger.create({
+            id: "how-we-serve",
+            trigger: section,
+            start: "top top",
+            end: () => `+=${Math.round(window.innerHeight * TOPIC_COUNT * 0.5)}`,
+            pin,
+            ...pinnedSectionDefaults,
+            refreshPriority: pinRefreshPriority.howWeServe,
+            onUpdate: (self) => {
+              const nextIndex = Math.min(
+                TOPIC_COUNT - 1,
+                Math.floor(self.progress * TOPIC_COUNT),
+              );
+              if (nextIndex !== activeIndexRef.current) {
+                activeIndexRef.current = nextIndex;
+                setActiveIndex(nextIndex);
+              }
+            },
+          });
+
+          scrollTriggerRef.current = trigger;
+
+          return () => {
+            trigger.kill();
+            scrollTriggerRef.current = null;
+          };
+        },
+      );
 
       return () => {
-        trigger.kill();
-        scrollTriggerRef.current = null;
+        mm.revert();
       };
     },
     { scope: sectionRef },
@@ -183,7 +202,18 @@ export default function HowWeServeSection() {
       >
         <div ref={pinRef} className={styles.pin}>
           <div className={`siteContainer ${styles.layout}`}>
-            <div>
+            <div className={styles.mediaCol}>
+              <div ref={mediaRef} className={styles.mediaFrame}>
+                <FieldPhotoStack
+                  key={topic.id}
+                  photos={topic.gallery}
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  intervalMs={3000}
+                />
+              </div>
+            </div>
+
+            <div className={styles.copyCol}>
               <p className={styles.label}>How we serve</p>
 
               <div ref={copyRef} className={styles.copyBlock}>
@@ -214,17 +244,6 @@ export default function HowWeServeSection() {
                   );
                 })}
               </ul>
-            </div>
-
-            <div className={styles.mediaCol}>
-              <div ref={mediaRef} className={styles.mediaFrame}>
-                <FieldPhotoStack
-                  key={topic.id}
-                  photos={topic.gallery}
-                  sizes="(max-width: 1024px) 100vw, 42vw"
-                  intervalMs={3000}
-                />
-              </div>
             </div>
           </div>
         </div>

@@ -90,6 +90,14 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/images/homeOfJoyLogo.webp", type: "image/webp" },
+    ],
+    apple: [{ url: "/images/homeOfJoyLogo.webp", type: "image/webp" }],
+    shortcut: ["/favicon.ico"],
+  },
 };
 
 export default function RootLayout({

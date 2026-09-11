@@ -53,7 +53,7 @@ export default function EducationStory() {
       <div className="siteContainer grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
         <div
           data-edu-reveal
-          className="relative min-h-[320px] overflow-hidden md:min-h-[480px] lg:min-h-[560px]"
+          className="relative min-h-[min(56vw,22rem)] overflow-hidden md:min-h-[480px] lg:min-h-[560px]"
         >
           <SplashVisual tone="sky" imageSrc="/images/sections/education.webp" imageAlt="Young students reading workbooks at Home of Joy School" className="absolute inset-0 h-full w-full" />
         </div>

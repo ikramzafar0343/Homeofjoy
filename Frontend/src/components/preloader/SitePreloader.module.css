@@ -13,13 +13,21 @@
   z-index: 0;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.preloaderPanel:nth-child(n + 2) {
+  display: none;
 }
 
 @media (min-width: 768px) {
   .preloaderMedia {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: 1fr;
+  }
+
+  .preloaderPanel:nth-child(n + 2) {
+    display: block;
   }
 }
 
@@ -39,6 +47,8 @@
   position: absolute;
   inset: 0;
   z-index: 1;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
   pointer-events: none;
   background:
     linear-gradient(

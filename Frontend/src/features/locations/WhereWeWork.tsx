@@ -119,7 +119,7 @@ export default function WhereWeWork() {
                 src={activeGroup.imageSrc}
                 alt=""
                 fill
-                sizes="(max-width: 1024px) 100vw, 45vw"
+                sizes="(max-width: 640px) 48vw, (max-width: 1024px) 45vw, 40vw"
               />
             </div>
             <div className={styles.mediaOverlay} aria-hidden="true" />

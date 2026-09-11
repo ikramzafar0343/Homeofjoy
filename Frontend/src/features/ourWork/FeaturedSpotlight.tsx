@@ -100,21 +100,13 @@ export default function FeaturedSpotlight() {
         ScrollTrigger.create({
           trigger: node,
           start: "top 88%",
+          once: true,
           onEnter: () => {
             gsap.to(node, {
               opacity: 1,
               y: 0,
               duration: 0.7,
               ease: "power3.out",
-              overwrite: true,
-            });
-          },
-          onLeaveBack: () => {
-            gsap.to(node, {
-              opacity: 0,
-              y: 24,
-              duration: 0.35,
-              ease: "power2.in",
               overwrite: true,
             });
           },

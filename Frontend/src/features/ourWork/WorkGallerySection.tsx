@@ -65,21 +65,13 @@ export default function WorkGallerySection() {
         ScrollTrigger.create({
           trigger: node,
           start: "top 90%",
+          once: true,
           onEnter: () => {
             gsap.to(node, {
               opacity: 1,
               y: 0,
               duration: 0.65,
               ease: "power3.out",
-              overwrite: true,
-            });
-          },
-          onLeaveBack: () => {
-            gsap.to(node, {
-              opacity: 0,
-              y: 28,
-              duration: 0.35,
-              ease: "power2.in",
               overwrite: true,
             });
           },

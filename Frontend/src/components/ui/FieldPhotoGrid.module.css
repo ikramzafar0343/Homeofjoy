@@ -7,9 +7,15 @@
 .cell {
   position: relative;
   margin: 0;
-  aspect-ratio: 1;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   background: var(--color-navy);
+}
+
+@media (min-width: 768px) {
+  .cell {
+    aspect-ratio: 1;
+  }
 }
 
 .cell img {

@@ -84,7 +84,7 @@ export default function CommunityDisasterOutreach() {
 
         <div
           data-outreach-reveal
-          className="relative mb-12 min-h-[240px] overflow-hidden md:mb-16 md:min-h-[360px]"
+          className="relative mb-12 min-h-[min(52vw,20rem)] overflow-hidden md:mb-16 md:min-h-[360px]"
         >
           <SplashVisual tone="warm" imageSrc="/images/sections/community.webp" imageAlt="Carrying relief supplies through floodwater during disaster response" className="absolute inset-0 h-full w-full" />
         </div>

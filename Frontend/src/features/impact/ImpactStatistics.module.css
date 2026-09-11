@@ -6,16 +6,25 @@
 .pin {
   position: relative;
   display: flex;
-  min-height: 100vh;
-  align-items: center;
-  overflow: hidden;
+  min-height: auto;
+  align-items: stretch;
+  overflow: visible;
   color: #fff;
+}
+
+@media (min-width: 1024px) {
+  .pin {
+    min-height: 100vh;
+    align-items: center;
+    overflow: hidden;
+  }
 }
 
 .media {
   position: absolute;
   inset: 0;
   z-index: 0;
+  min-height: 100%;
 }
 
 .media img {
@@ -42,7 +51,7 @@
   display: grid;
   width: 100%;
   gap: 2.5rem;
-  padding: 6rem 0 4.5rem;
+  padding: 5rem 0 3.5rem;
 }
 
 @media (min-width: 1024px) {
@@ -185,10 +194,12 @@
 }
 
 .mobileDot {
-  width: 7px;
-  height: 7px;
+  width: 0.85rem;
+  height: 0.85rem;
+  padding: 0;
   border: 1px solid rgb(255 255 255 / 0.55);
   background: transparent;
+  cursor: pointer;
 }
 
 .mobileDotActive {

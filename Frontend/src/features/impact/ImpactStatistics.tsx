@@ -37,33 +37,51 @@ export default function ImpactStatistics() {
         return;
       }
 
-      const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (reduced) {
-        return;
-      }
+      const mm = gsap.matchMedia();
 
-      const trigger = ScrollTrigger.create({
-        id: "impact-statistics",
-        trigger: section,
-        start: "top top",
-        end: () => `+=${Math.round(window.innerHeight * SLIDE_COUNT * 0.55)}`,
-        pin,
-        ...pinnedSectionDefaults,
-        refreshPriority: pinRefreshPriority.impact,
-        onUpdate: (self) => {
-          const nextIndex = Math.min(
-            SLIDE_COUNT - 1,
-            Math.floor(self.progress * SLIDE_COUNT),
-          );
-          if (nextIndex !== activeIndexRef.current) {
-            activeIndexRef.current = nextIndex;
-            setActiveIndex(nextIndex);
-          }
+      mm.add(
+        {
+          isDesktop: "(min-width: 1024px)",
+          reduceMotion: "(prefers-reduced-motion: reduce)",
         },
-      });
+        (context) => {
+          const { isDesktop, reduceMotion } = context.conditions as {
+            isDesktop: boolean;
+            reduceMotion: boolean;
+          };
+
+          if (!isDesktop || reduceMotion) {
+            return;
+          }
+
+          const trigger = ScrollTrigger.create({
+            id: "impact-statistics",
+            trigger: section,
+            start: "top top",
+            end: () => `+=${Math.round(window.innerHeight * SLIDE_COUNT * 0.55)}`,
+            pin,
+            ...pinnedSectionDefaults,
+            refreshPriority: pinRefreshPriority.impact,
+            onUpdate: (self) => {
+              const nextIndex = Math.min(
+                SLIDE_COUNT - 1,
+                Math.floor(self.progress * SLIDE_COUNT),
+              );
+              if (nextIndex !== activeIndexRef.current) {
+                activeIndexRef.current = nextIndex;
+                setActiveIndex(nextIndex);
+              }
+            },
+          });
+
+          return () => {
+            trigger.kill();
+          };
+        },
+      );
 
       return () => {
-        trigger.kill();
+        mm.revert();
       };
     },
     { scope: sectionRef },
@@ -167,13 +185,20 @@ export default function ImpactStatistics() {
               ))}
             </ul>
 
-            <div className={styles.mobileDots} aria-hidden="true">
+            <div className={styles.mobileDots} role="tablist" aria-label="Impact slides">
               {impactSlides.map((item, index) => (
-                <span
+                <button
                   key={`m-${item.id}`}
+                  type="button"
                   className={`${styles.mobileDot} ${
                     index === activeIndex ? styles.mobileDotActive : ""
                   }`}
+                  aria-label={`Show impact slide ${index + 1}`}
+                  aria-current={index === activeIndex ? "true" : undefined}
+                  onClick={() => {
+                    activeIndexRef.current = index;
+                    setActiveIndex(index);
+                  }}
                 />
               ))}
             </div>

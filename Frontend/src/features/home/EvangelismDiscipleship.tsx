@@ -81,7 +81,7 @@ export default function EvangelismDiscipleship() {
 
         <div
           data-faith-reveal
-          className="relative min-h-[320px] overflow-hidden md:min-h-[480px]"
+          className="relative min-h-[min(56vw,22rem)] overflow-hidden md:min-h-[480px]"
         >
           <SplashVisual tone="faith" imageSrc="/images/sections/evangelism.webp" imageAlt="Discipleship and literacy workshop in the field" className="absolute inset-0 h-full w-full" />
         </div>
