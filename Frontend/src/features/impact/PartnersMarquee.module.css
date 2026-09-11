@@ -1,0 +1,118 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--color-light-gray);
+  border-bottom: 1px solid var(--color-light-gray);
+  background: #fff;
+  padding: 3.5rem 0 4rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 4.5rem 0 5rem;
+  }
+}
+
+.intro {
+  margin-bottom: 2.25rem;
+  text-align: center;
+}
+
+.heading {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  font-weight: 600;
+}
+
+.marquee {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+}
+
+.track {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 1.75rem;
+  padding-inline: 0.85rem;
+  animation: partnersMarquee 42s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .track {
+    gap: 2.25rem;
+  }
+}
+
+.marquee:hover .track {
+  animation-play-state: paused;
+}
+
+.logoCard {
+  display: flex;
+  width: 10.5rem;
+  height: 4.75rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(38 33 122 / 0.08);
+  background: #fff;
+  padding: 0.65rem 0.9rem;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+@media (min-width: 768px) {
+  .logoCard {
+    width: 12.5rem;
+    height: 5.25rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+.logoCard:hover {
+  border-color: rgb(0 155 214 / 0.35);
+  box-shadow: 0 8px 24px rgb(38 33 122 / 0.08);
+  transform: translateY(-2px);
+}
+
+.logoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes partnersMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 72rem;
+    margin-inline: auto;
+  }
+
+  .marquee {
+    display: block;
+    mask-image: none;
+  }
+}

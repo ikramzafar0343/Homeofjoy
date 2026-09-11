@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80" role="img" aria-label="UNESCO">
+  <rect width="260" height="80" fill="#ffffff"/>
+  <circle cx="40" cy="40" r="26" fill="#0077C8"/>
+  <path d="M26 40h28M40 26c8 5 12 10 12 14s-4 9-12 14c-8-5-12-10-12-14s4-9 12-14z" fill="none" stroke="#fff" stroke-width="2.5"/>
+  <text x="78" y="46" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#0077C8">UNESCO</text>
+</svg>

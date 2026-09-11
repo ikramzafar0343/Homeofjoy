@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" role="img" aria-label="Pakistan Red Crescent">
+  <rect width="300" height="80" fill="#ffffff"/>
+  <circle cx="40" cy="40" r="26" fill="#D21034"/>
+  <path d="M48 24a18 18 0 1 0 0 32 14 14 0 1 1 0-32z" fill="#fff"/>
+  <text x="78" y="34" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#D21034">Pakistan</text>
+  <text x="78" y="54" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A">Red Crescent</text>
+</svg>

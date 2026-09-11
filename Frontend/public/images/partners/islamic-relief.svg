@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" role="img" aria-label="Islamic Relief">
+  <rect width="300" height="80" fill="#ffffff"/>
+  <circle cx="40" cy="40" r="26" fill="#009A44"/>
+  <path d="M48 24a18 18 0 1 0 0 32 14 14 0 1 1 0-32z" fill="#fff"/>
+  <polygon points="54,28 57,36 66,36 59,41 62,50 54,45 46,50 49,41 42,36 51,36" fill="#fff"/>
+  <text x="78" y="36" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#009A44">Islamic</text>
+  <text x="78" y="58" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#1A1A1A">Relief</text>
+</svg>

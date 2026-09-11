@@ -1,0 +1,32 @@
+.footer {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.footerLink {
+  color: rgb(255 255 255 / 0.8);
+  transition: color 0.3s var(--ease-standard);
+}
+
+.footerLink:hover,
+.footerLink:focus-visible {
+  color: var(--color-white);
+}
+
+.footerAccent {
+  color: var(--color-blue);
+}
+
+.footerCta {
+  display: inline-flex;
+  border-radius: var(--radius-md);
+  background: var(--color-orange);
+  color: var(--color-white);
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  transition: filter 0.3s var(--ease-standard);
+}
+
+.footerCta:hover {
+  filter: brightness(1.05);
+}

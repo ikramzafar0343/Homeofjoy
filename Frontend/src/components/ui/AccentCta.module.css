@@ -1,0 +1,99 @@
+.cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  overflow: hidden;
+  border: 0;
+  padding: 0.85rem 1.15rem 0.85rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.35s ease;
+}
+
+.ctaSky {
+  background: var(--color-sky);
+  color: var(--color-navy);
+}
+
+.ctaOrange {
+  background: var(--color-orange);
+  color: #fff;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-101%);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 0;
+}
+
+.ctaSky::before {
+  background: var(--color-navy);
+}
+
+.ctaOrange::before {
+  background: var(--color-navy);
+}
+
+.cta:hover::before,
+.cta:focus-visible::before {
+  transform: translateX(0);
+}
+
+.ctaSky:hover,
+.ctaSky:focus-visible {
+  color: #fff;
+}
+
+.ctaOrange:hover,
+.ctaOrange:focus-visible {
+  color: #fff;
+}
+
+.cta:focus-visible {
+  outline: 2px solid var(--color-sky);
+  outline-offset: 3px;
+}
+
+.ctaLabel,
+.ctaArrow {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.ctaArrow {
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cta:hover .ctaArrow,
+.cta:focus-visible .ctaArrow {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta,
+  .cta::before,
+  .ctaArrow {
+    transition: none;
+  }
+
+  .cta:hover::before,
+  .cta:focus-visible::before {
+    transform: none;
+  }
+
+  .ctaSky:hover,
+  .ctaSky:focus-visible {
+    background: var(--color-navy);
+    color: #fff;
+  }
+}

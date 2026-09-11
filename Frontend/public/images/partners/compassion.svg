@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" role="img" aria-label="Compassion International">
+  <rect width="320" height="80" fill="#ffffff"/>
+  <circle cx="40" cy="40" r="26" fill="#E31837"/>
+  <path d="M40 28c6 6 10 10 10 16 0 6-4 10-10 10s-10-4-10-10c0-6 4-10 10-16z" fill="#fff"/>
+  <text x="78" y="36" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#E31837">Compassion</text>
+  <text x="78" y="58" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="600" fill="#555555">International</text>
+</svg>

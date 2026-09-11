@@ -1,0 +1,304 @@
+.section {
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
+  background: var(--color-navy);
+  color: #fff;
+}
+
+.pin {
+  position: relative;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .pin {
+    display: block;
+    min-height: 100vh;
+  }
+}
+
+.trackWrap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  gap: 1.25rem;
+  padding: 0.75rem 8vw 4.25rem;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.header {
+  position: relative;
+  z-index: 2;
+  padding: 4.5rem 0 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 5rem 0 1.5rem;
+  }
+}
+
+.headerInner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .headerInner {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+
+.heading {
+  margin: 0;
+  max-width: 22ch;
+  color: #fff;
+  font-size: clamp(1.85rem, 3.6vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.progress {
+  display: none;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+@media (min-width: 1024px) {
+  .progress {
+    display: flex;
+  }
+}
+
+.progressDot {
+  width: 8px;
+  height: 8px;
+  border: 1px solid rgb(255 255 255 / 0.55);
+  background: transparent;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.progressDotActive {
+  border-color: var(--color-orange);
+  background: var(--color-orange);
+  transform: scale(1.15);
+}
+
+.progressLabel {
+  margin: 0 0 0 0.35rem;
+  color: rgb(255 255 255 / 0.7);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.panel {
+  position: relative;
+  display: grid;
+  width: min(78vw, 920px);
+  height: min(68vh, 36rem);
+  flex-shrink: 0;
+  overflow: hidden;
+  background: var(--color-navy);
+}
+
+.panelMedia {
+  position: absolute;
+  inset: 0;
+}
+
+.panelMedia img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.panelOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      105deg,
+      rgb(38 33 122 / 0.88) 0%,
+      rgb(38 33 122 / 0.62) 42%,
+      rgb(38 33 122 / 0.28) 70%,
+      rgb(0 0 0 / 0.35) 100%
+    );
+}
+
+.panelContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 2.25rem;
+}
+
+@media (min-width: 1280px) {
+  .panelContent {
+    padding: 2.5rem 2.75rem;
+  }
+}
+
+.panelTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.panelIndex {
+  color: var(--color-orange);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.panelStage {
+  color: rgb(255 255 255 / 0.72);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.panelBody {
+  max-width: 28rem;
+}
+
+.panelTitle {
+  margin: 0 0 1rem;
+  font-size: clamp(2.5rem, 4.5vw, 4.25rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.panelCopy {
+  margin: 0;
+  max-width: 24rem;
+  color: rgb(255 255 255 / 0.84);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.panelArrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 1.75rem;
+  color: var(--color-sky);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.mobileHeader {
+  display: block;
+  padding: 4.5rem 0 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .mobileHeader {
+    display: none;
+  }
+}
+
+.mobile {
+  display: block;
+  padding: 0 0 4.5rem;
+}
+
+@media (min-width: 1024px) {
+  .mobile {
+    display: none;
+  }
+}
+
+.mobileList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.mobileCard {
+  position: relative;
+  min-height: 22rem;
+  overflow: hidden;
+  background: var(--color-navy);
+}
+
+.mobileMedia {
+  position: absolute;
+  inset: 0;
+}
+
+.mobileMedia img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.mobileOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgb(38 33 122 / 0.35) 0%,
+      rgb(38 33 122 / 0.72) 48%,
+      rgb(38 33 122 / 0.92) 100%
+    );
+}
+
+.mobileContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 22rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+}
+
+.mobileIndex {
+  margin: 0 0 0.65rem;
+  color: var(--color-orange);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.mobileTitle {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.85rem, 7vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.mobileCopy {
+  margin: 0;
+  max-width: 28rem;
+  color: rgb(255 255 255 / 0.84);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}

@@ -1,0 +1,48 @@
+.odometer {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  color: inherit;
+}
+
+.hundredsWrap {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.digitWindow {
+  position: relative;
+  height: 1em;
+  overflow: hidden;
+}
+
+.digitTrack {
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+}
+
+.digit {
+  display: flex;
+  height: 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+.rule {
+  display: block;
+  width: 1.5px;
+  height: 0.72em;
+  margin: 0 0.18em 0 0.14em;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+.percent {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}

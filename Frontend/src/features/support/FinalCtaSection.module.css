@@ -1,0 +1,144 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      160deg,
+      #ffffff 0%,
+      #f7f9fb 42%,
+      rgb(143 209 244 / 0.28) 100%
+    );
+  color: var(--color-navy);
+  padding: 5rem 0 5.5rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 6.5rem 0 7rem;
+  }
+}
+
+.glow {
+  position: absolute;
+  inset: auto -10% -30% auto;
+  width: min(42rem, 70vw);
+  height: min(42rem, 70vw);
+  border-radius: 50%;
+  background: rgb(243 130 28 / 0.12);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 2.5rem;
+  align-items: end;
+}
+
+@media (min-width: 1024px) {
+  .inner {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 3.5rem;
+  }
+}
+
+.copy {
+  max-width: 36rem;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+}
+
+.heading {
+  margin: 0 0 1.15rem;
+  max-width: 12ch;
+  color: var(--color-navy);
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+
+.rule {
+  width: 4rem;
+  height: 3px;
+  margin: 0 0 1.35rem;
+  background: var(--color-orange);
+}
+
+.lead {
+  margin: 0 0 2rem;
+  max-width: 28rem;
+  color: var(--color-body-gray);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1rem;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .side {
+    padding-bottom: 0.35rem;
+  }
+}
+
+.panel {
+  border-top: 1px solid rgb(38 33 122 / 0.14);
+  padding-top: 1.15rem;
+}
+
+.panelLabel {
+  margin: 0 0 0.45rem;
+  color: var(--color-blue);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.panelText {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.arc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.arcItem {
+  color: var(--color-navy);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.arcItem::after {
+  content: "·";
+  margin-left: 0.85rem;
+  color: rgb(38 33 122 / 0.35);
+}
+
+.arcItem:last-child::after {
+  content: none;
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 80" role="img" aria-label="WFP">
+  <rect width="220" height="80" fill="#ffffff"/>
+  <circle cx="40" cy="40" r="26" fill="#2A6EBB"/>
+  <path d="M28 48l6-20h6l4 12 4-12h6l6 20h-6l-3-12-4 12h-4l-4-12-3 12z" fill="#F7C948"/>
+  <text x="78" y="46" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#2A6EBB">WFP</text>
+</svg>
