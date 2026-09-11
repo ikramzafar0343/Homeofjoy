@@ -3,8 +3,52 @@
   inset: 0;
   z-index: 100;
   overflow: hidden;
-  background: var(--color-sky);
-  color: var(--color-navy);
+  background: var(--color-navy);
+  color: #fff;
+}
+
+.preloaderMedia {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+@media (min-width: 768px) {
+  .preloaderMedia {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+  }
+}
+
+.preloaderPanel {
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+  transform-origin: center;
+}
+
+.preloaderImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.preloaderScrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      105deg,
+      rgb(38 33 122 / 0.78) 0%,
+      rgb(38 33 122 / 0.52) 38%,
+      rgb(21 21 21 / 0.28) 68%,
+      rgb(21 21 21 / 0.18) 100%
+    ),
+    linear-gradient(to top, rgb(21 21 21 / 0.45) 0%, transparent 42%);
 }
 
 .preloaderStage {
@@ -25,7 +69,8 @@
   justify-self: start;
   font-size: clamp(5rem, 22vw, 8.5rem);
   line-height: 0.9;
-  color: var(--color-navy);
+  color: #fff;
+  text-shadow: 0 8px 28px rgb(0 0 0 / 0.28);
 }
 
 .preloaderMissionWrap {
@@ -38,7 +83,8 @@
   font-size: clamp(0.95rem, 2.6vw, 1.05rem);
   font-weight: 500;
   line-height: 1.5;
-  color: var(--color-navy);
+  color: rgb(255 255 255 / 0.92);
+  text-shadow: 0 4px 18px rgb(0 0 0 / 0.35);
 }
 
 .preloaderBands {

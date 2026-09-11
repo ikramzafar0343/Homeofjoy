@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -9,6 +10,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import PreloaderOdometer, {
   type PreloaderOdometerHandle,
 } from "@/components/preloader/PreloaderOdometer";
+import type { FieldPhoto } from "@/features/ourWork/ourWorkAreas";
+import { preloaderPhotos } from "@/components/preloader/preloaderPhotos";
 import { organizationContent } from "@/content/organizationContent";
 import { lockBodyScroll, releaseBodyScroll } from "@/lib/scrollLock";
 
@@ -18,6 +21,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const FAILSAFE_MS = 4200;
 const SCROLL_LOCK_OWNER = "sitePreloader";
+const PANEL_COUNT = 3;
 
 const MISSION_LINES = [
   organizationContent.designPrinciple,
@@ -31,13 +35,23 @@ function prefersReducedMotion(): boolean {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
+function panelPhotos(offset: number): FieldPhoto[] {
+  const slice: FieldPhoto[] = [];
+  for (let i = 0; i < PANEL_COUNT; i += 1) {
+    slice.push(preloaderPhotos[(offset + i) % preloaderPhotos.length]!);
+  }
+  return slice;
+}
+
 export default function SitePreloader() {
   const pathname = usePathname();
   const [isActive, setIsActive] = useState(true);
   const [playId, setPlayId] = useState(0);
   const [deadline, setDeadline] = useState(() => Date.now() + FAILSAFE_MS);
+  const [photoOffset, setPhotoOffset] = useState(0);
   const rootRef = useRef<HTMLDivElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
+  const mediaRef = useRef<HTMLDivElement>(null);
   const percentRef = useRef<HTMLDivElement>(null);
   const missionRef = useRef<HTMLDivElement>(null);
   const bandsRef = useRef<HTMLDivElement>(null);
@@ -61,7 +75,6 @@ export default function SitePreloader() {
       unlocked = true;
       setIsActive(false);
       window.dispatchEvent(new CustomEvent("hojPreloaderComplete"));
-      // Measure pins only once the overlay is unmounted and scrolling is free.
       requestAnimationFrame(() => ScrollTrigger.refresh());
     };
 
@@ -91,7 +104,6 @@ export default function SitePreloader() {
     );
   });
 
-  // Every soft navigation restarts the brand preloader.
   useEffect(() => {
     if (lastPathRef.current === null) {
       lastPathRef.current = pathname;
@@ -105,6 +117,7 @@ export default function SitePreloader() {
     exitTlRef.current?.kill();
     completedRef.current = false;
     lockBodyScroll(SCROLL_LOCK_OWNER);
+    setPhotoOffset((value) => (value + PANEL_COUNT) % preloaderPhotos.length);
     setDeadline(Date.now() + FAILSAFE_MS);
     setPlayId((id) => id + 1);
     setIsActive(true);
@@ -138,12 +151,15 @@ export default function SitePreloader() {
       gsap.set(rootRef.current, { yPercent: 0, clearProps: "transform" });
       gsap.set(stageRef.current, { opacity: 1 });
 
+      const panels = mediaRef.current?.querySelectorAll<HTMLElement>("[data-preloader-panel]");
+
       if (prefersReducedMotion()) {
         odometerRef.current?.setProgress(100);
-        gsap.set([percentRef.current, missionRef.current, bandsRef.current], {
+        gsap.set([percentRef.current, missionRef.current, bandsRef.current, panels], {
           opacity: 1,
           y: 0,
           yPercent: 0,
+          scale: 1,
         });
         const id = window.setTimeout(() => dismiss.current(), 220);
         return () => window.clearTimeout(id);
@@ -152,6 +168,9 @@ export default function SitePreloader() {
       gsap.set(percentRef.current, { opacity: 0, y: 36 });
       gsap.set(missionRef.current, { opacity: 0, y: 20 });
       gsap.set(bandsRef.current, { yPercent: 100 });
+      if (panels && panels.length > 0) {
+        gsap.set(panels, { opacity: 0, scale: 1.08 });
+      }
       odometerRef.current?.setProgress(0);
 
       const progressProxy = { value: 0 };
@@ -162,20 +181,34 @@ export default function SitePreloader() {
         },
       });
 
+      if (panels && panels.length > 0) {
+        master.to(
+          panels,
+          {
+            opacity: 1,
+            scale: 1,
+            duration: 0.85,
+            stagger: 0.12,
+            ease: "power2.out",
+          },
+          0,
+        );
+      }
+
       master.to(
         bandsRef.current,
         { yPercent: 0, duration: 0.45, ease: "power3.out" },
-        0,
+        0.15,
       );
       master.to(
         percentRef.current,
         { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" },
-        0.08,
+        0.2,
       );
       master.to(
         missionRef.current,
         { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" },
-        0.22,
+        0.34,
       );
       master.to(
         progressProxy,
@@ -187,7 +220,7 @@ export default function SitePreloader() {
             odometerRef.current?.setProgress(progressProxy.value);
           },
         },
-        0.15,
+        0.2,
       );
 
       return () => {
@@ -201,6 +234,8 @@ export default function SitePreloader() {
     return null;
   }
 
+  const panels = panelPhotos(photoOffset);
+
   return (
     <div
       ref={rootRef}
@@ -211,6 +246,26 @@ export default function SitePreloader() {
       aria-label={`Loading ${organizationContent.name}`}
       data-preloader-play={playId}
     >
+      <div ref={mediaRef} className={styles.preloaderMedia} aria-hidden="true">
+        {panels.map((photo, index) => (
+          <div
+            key={`${playId}-${photo.src}`}
+            data-preloader-panel
+            className={styles.preloaderPanel}
+          >
+            <Image
+              src={photo.src}
+              alt=""
+              fill
+              priority={index === 0}
+              sizes="(max-width: 768px) 100vw, 34vw"
+              className={styles.preloaderImage}
+            />
+          </div>
+        ))}
+        <div className={styles.preloaderScrim} />
+      </div>
+
       <div ref={stageRef} className={styles.preloaderStage}>
         <div ref={percentRef} className={styles.preloaderPercent}>
           <PreloaderOdometer key={playId} ref={odometerRef} />
