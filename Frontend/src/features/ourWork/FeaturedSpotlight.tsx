@@ -1,12 +1,12 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import AccentCta from "@/components/ui/AccentCta";
+import FieldPhotoStack from "@/components/ui/FieldPhotoStack";
 import ImageLightbox from "@/components/ui/ImageLightbox";
 import { spotlightSlides } from "@/features/ourWork/spotlightSlides";
 
@@ -146,13 +146,13 @@ export default function FeaturedSpotlight() {
       aria-label="Featured work stories"
     >
       <div ref={mediaRef} className={styles.media} aria-hidden="true">
-        <Image
-          key={slide.imageSrc}
-          src={slide.imageSrc}
-          alt=""
-          fill
+        <FieldPhotoStack
+          key={slide.id}
+          photos={slide.gallery}
           sizes="100vw"
-          className={styles.mediaImg}
+          intervalMs={3600}
+          pauseOnHover={false}
+          imageClassName={styles.mediaImg}
         />
       </div>
       <div className={styles.overlay} aria-hidden="true" />

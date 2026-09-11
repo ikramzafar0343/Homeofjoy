@@ -112,13 +112,13 @@
   background: var(--color-navy);
 }
 
-.cardMedia img {
+.cardImage {
   object-fit: cover;
   transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), filter 0.45s ease;
 }
 
-.card:hover .cardMedia img,
-.card:focus-visible .cardMedia img {
+.card:hover .cardImage,
+.card:focus-visible .cardImage {
   transform: scale(1.06);
   filter: brightness(0.92);
 }
@@ -248,11 +248,8 @@
   line-height: 1.75;
 }
 
-.modalMedia {
-  position: relative;
+.modalGrid {
   margin-top: 1.75rem;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
 }
 
 .modalLink {

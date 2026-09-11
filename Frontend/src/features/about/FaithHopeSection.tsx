@@ -103,7 +103,7 @@ export default function FaithHopeSection() {
     >
       <div ref={mediaRef} className={styles.media} aria-hidden="true">
         <Image
-          src="/images/sections/faith.jpg"
+          src="/images/sections/faith.webp"
           alt=""
           fill
           sizes="100vw"

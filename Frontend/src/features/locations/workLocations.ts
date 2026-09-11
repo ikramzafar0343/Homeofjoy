@@ -8,8 +8,8 @@ export type WorkLocationRegion = {
 export const workLocationRegions: readonly WorkLocationRegion[] = [
   {
     region: "Punjab / Central",
-    imageSrc: "/images/gallery/community-event.jpg",
-    imageAlt: "Community gathering in Punjab",
+    imageSrc: "/images/gallery/community-event.webp",
+    imageAlt: "Women and children gathered for an outdoor community meeting",
     locations: [
       "Sheikhupura",
       "Narowal",
@@ -21,8 +21,8 @@ export const workLocationRegions: readonly WorkLocationRegion[] = [
   },
   {
     region: "Islamabad / Northern",
-    imageSrc: "/images/sections/hero.jpg",
-    imageAlt: "Northern communities and outreach",
+    imageSrc: "/images/field/education/youth-literacy-workshop-swat-kalam.webp",
+    imageAlt: "Discipleship and literacy youth workshop in Swat Kalam",
     locations: [
       "Islamabad",
       "Northern Areas of Pakistan",
@@ -32,8 +32,8 @@ export const workLocationRegions: readonly WorkLocationRegion[] = [
   },
   {
     region: "Khyber Pakhtunkhwa",
-    imageSrc: "/images/sections/community.jpg",
-    imageAlt: "Communities served in Khyber Pakhtunkhwa",
+    imageSrc: "/images/sections/community.webp",
+    imageAlt: "Flood relief - carrying supplies through deep water",
     locations: [
       "Peshawar",
       "Kohat",
@@ -47,8 +47,8 @@ export const workLocationRegions: readonly WorkLocationRegion[] = [
   },
   {
     region: "Balochistan",
-    imageSrc: "/images/gallery/school-building.jpg",
-    imageAlt: "Outreach presence in Balochistan",
+    imageSrc: "/images/gallery/school-building.webp",
+    imageAlt: "Home of Joy School exterior",
     locations: ["Quetta, Balochistan"],
   },
 ] as const;

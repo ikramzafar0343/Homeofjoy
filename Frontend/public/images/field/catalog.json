@@ -1,0 +1,748 @@
+{
+  "generatedAt": "2026-09-11T15:36:35.116Z",
+  "count": 82,
+  "photos": [
+    {
+      "basename": "IMG_20250112_161615",
+      "category": "education",
+      "name": "girls-harmonium-music-lesson",
+      "alt": "Male instructor teaches young women harmonium in an alphabet-decorated classroom.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG_20250112_161615-1dca2208-8279-4ecc-b593-f4d64329246d.png",
+      "dest": "/images/field/education/girls-harmonium-music-lesson.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG_20250112_161616",
+      "category": "education",
+      "name": "harmonium-music-class-circle",
+      "alt": "Girls sit in a circle learning harmonium with an instructor in a colorful classroom.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG_20250112_161616-014edbc1-4e19-41f8-b5f4-aa49c8341ecd.png",
+      "dest": "/images/field/education/harmonium-music-class-circle.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG_20250112_161622",
+      "category": "education",
+      "name": "boys-tabla-music-lesson",
+      "alt": "Boys gather around an instructor during a tabla music lesson in a decorated classroom.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG_20250112_161622-6f200f5f-5d3f-4fbe-b05a-52b2e36ab758.png",
+      "dest": "/images/field/education/boys-tabla-music-lesson.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG_20250903_161258",
+      "category": "disaster",
+      "name": "carrying-relief-supplies-through-flood",
+      "alt": "People wade through floodwater carrying large white relief sacks on their heads.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG_20250903_161258-ebf7aefe-70ce-448b-86b5-5b47c105efff.png",
+      "dest": "/images/field/disaster/carrying-relief-supplies-through-flood.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG_20250904_125929",
+      "category": "disaster",
+      "name": "flood-relief-aid-distribution",
+      "alt": "Group receives food sacks and envelopes beside a flooded field during disaster relief.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG_20250904_125929-95df27c3-373c-4941-a6e4-d4bdfe645679.png",
+      "dest": "/images/field/disaster/flood-relief-aid-distribution.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG_20250312_074606",
+      "category": "celebration",
+      "name": "annual-result-day-schoolboys",
+      "alt": "Schoolboys with head boy and prefect sashes stand beside an Annual Result Day display board.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG_20250312_074606-6d120211-132f-4c83-97b7-3bc93e14de93.png",
+      "dest": "/images/field/celebration/annual-result-day-schoolboys.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG_20250312_074608",
+      "category": "celebration",
+      "name": "annual-result-day-uniform-students",
+      "alt": "Uniformed schoolboys pose with an Annual Result Day trophy poster outdoors.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG_20250312_074608-e0a27399-3ff5-4e88-bd02-0269434b3c43.png",
+      "dest": "/images/field/celebration/annual-result-day-uniform-students.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG_20250312_074612",
+      "category": "celebration",
+      "name": "annual-result-day-student-leaders",
+      "alt": "Students in uniform with head boy and prefect sashes at an Annual Result Day board.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG_20250312_074612-6501123a-d329-4b81-b148-2d80ea9e6e26.png",
+      "dest": "/images/field/celebration/annual-result-day-student-leaders.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250328-WA0024",
+      "category": "education",
+      "name": "children-learning-yellow-table",
+      "alt": "Young students read workbooks around a yellow table in a decorated classroom.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250328-WA0024-b834c3ed-2f20-42d1-b7c1-d7517b3c3383.png",
+      "dest": "/images/field/education/children-learning-yellow-table.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250328-WA0025",
+      "category": "education",
+      "name": "boys-displaying-classroom-artwork",
+      "alt": "Four boys in uniform show colored star and fruit drawings at a red table.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250328-WA0025-20d1a213-c276-4cbc-9559-d4d243763e38.png",
+      "dest": "/images/field/education/boys-displaying-classroom-artwork.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250328-WA0027",
+      "category": "education",
+      "name": "children-showing-textbooks-circle-table",
+      "alt": "Children at a blue table proudly display English and pear workbook pages.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250328-WA0027-0f3810bc-5e46-4ee8-beea-c9175d9ed248.png",
+      "dest": "/images/field/education/children-showing-textbooks-circle-table.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250328-WA0029",
+      "category": "education",
+      "name": "preschoolers-classroom-red-table",
+      "alt": "Young children with school supplies sit at a red classroom table with calendar wall decals.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250328-WA0029-ec5da2ae-07ee-4d47-9e55-f4af02d6e53c.png",
+      "dest": "/images/field/education/preschoolers-classroom-red-table.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250328-WA0030",
+      "category": "education",
+      "name": "students-showing-star-artwork",
+      "alt": "Three students display colored star and fruit work beside an English Primer textbook.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250328-WA0030-9c82d4df-828e-4175-8c0a-6e9a023eb5f9.png",
+      "dest": "/images/field/education/students-showing-star-artwork.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250328-WA0031",
+      "category": "education",
+      "name": "girls-showing-cotton-painting-work",
+      "alt": "Three girls hold cotton-painting pear worksheets and star sheets at a blue table.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250328-WA0031-c573d926-0050-4e6a-999d-15936735e7aa.png",
+      "dest": "/images/field/education/girls-showing-cotton-painting-work.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250227-WA0020",
+      "category": "education",
+      "name": "children-ring-toss-school-courtyard",
+      "alt": "Children play ring toss in a school courtyard with a Pakistani flag and back-to-school posters.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250227-WA0020-4e6f5d05-027d-49f8-918c-88725a77cfe4.png",
+      "dest": "/images/field/education/children-ring-toss-school-courtyard.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250227-WA0022",
+      "category": "celebration",
+      "name": "balloon-cup-game-courtyard",
+      "alt": "Two boys compete blowing balloons into cups at an outdoor school celebration watched by a crowd.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250227-WA0022-076d9064-2113-415e-8196-3c64b69b8049.png",
+      "dest": "/images/field/celebration/balloon-cup-game-courtyard.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250227-WA0023",
+      "category": "education",
+      "name": "girl-ball-toss-back-to-school",
+      "alt": "Girl throws a ball into a basket during a back-to-school play activity in a courtyard.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250227-WA0023-d46615c0-1e21-4f2b-a992-fbde75fd4c83.png",
+      "dest": "/images/field/education/girl-ball-toss-back-to-school.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250410-WA0061",
+      "category": "education",
+      "name": "children-at-apple-shaped-table",
+      "alt": "Uniformed children gather at an apple-shaped table viewing an educational fruit booklet.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250410-WA0061-0c4f23dd-13bd-469d-af57-8a5f92f140c2.png",
+      "dest": "/images/field/education/children-at-apple-shaped-table.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250411-WA0036",
+      "category": "care",
+      "name": "school-children-communal-lunch",
+      "alt": "A large group of uniformed children eat a communal lunch on a red carpet in a school courtyard.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250411-WA0036-7da7cb05-3f4c-43b5-bdc7-fc399eedcd6e.png",
+      "dest": "/images/field/care/school-children-communal-lunch.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250411-WA0037",
+      "category": "care",
+      "name": "school-children-communal-meal",
+      "alt": "Dozens of uniformed children eat a shared meal on a red carpet in a school courtyard.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250411-WA0037-ef44ac7a-b7fa-49b1-9e32-2bdb8fe927de.png",
+      "dest": "/images/field/care/school-children-communal-meal.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250418-WA0011",
+      "category": "education",
+      "name": "classroom-children-alphabet-posters",
+      "alt": "Young students work at colorful desks in an alphabet-decorated classroom.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250418-WA0011-aa1a0b0f-c0e3-4d85-9264-bdf48d01a08e.png",
+      "dest": "/images/field/education/classroom-children-alphabet-posters.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250418-WA0015",
+      "category": "education",
+      "name": "children-workbooks-red-table",
+      "alt": "Children in uniforms work on worksheets around a red classroom table.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250418-WA0015-9d3e70b4-2c67-49b7-974c-070883e5ac26.png",
+      "dest": "/images/field/education/children-workbooks-red-table.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250418-WA0019",
+      "category": "education",
+      "name": "coloring-at-apple-table",
+      "alt": "Eight children color flower worksheets at an apple-shaped red classroom table.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250418-WA0019-caf1942e-5569-4aec-969a-69f41375013a.png",
+      "dest": "/images/field/education/coloring-at-apple-table.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250419-WA0083",
+      "category": "education",
+      "name": "home-of-joy-school-exterior",
+      "alt": "Home of Joy School building with arched entrance sign and security gate under a blue sky.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250419-WA0083-fc92a810-2fd9-4a54-9462-98a22f11cc7d.png",
+      "dest": "/images/field/education/home-of-joy-school-exterior.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250419-WA0086",
+      "category": "education",
+      "name": "home-of-joy-school-building-front",
+      "alt": "Exterior view of Home of Joy School with foundation flag and gated entrance.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250419-WA0086-ea4688c7-2924-4d0b-b962-c61ef39daad3.png",
+      "dest": "/images/field/education/home-of-joy-school-building-front.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250228-WA0030",
+      "category": "education",
+      "name": "children-writing-clipboards-classroom",
+      "alt": "Students in uniforms write on clipboards at a yellow table with a teacher nearby.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250228-WA0030-536bbf64-c9b9-4ac2-b767-ed6bbff6a262.png",
+      "dest": "/images/field/education/children-writing-clipboards-classroom.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250329-WA0001",
+      "category": "celebration",
+      "name": "student-third-qasid-trophy-medals",
+      "alt": "Boy in uniform holds a third-place Qasid trophy, medals, and a star certificate.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250329-WA0001-4091e282-447f-403b-9c14-cf8542d4e1db.png",
+      "dest": "/images/field/celebration/student-third-qasid-trophy-medals.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250329-WA0003",
+      "category": "celebration",
+      "name": "student-mathew-trophy-certificate",
+      "alt": "Boy Mathew displays a gold trophy and star-decorated achievement certificate.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250329-WA0003-faf63002-c246-43fe-b8b4-09e8fdbc687c.png",
+      "dest": "/images/field/celebration/student-mathew-trophy-certificate.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20241008-WA0018",
+      "category": "education",
+      "name": "children-yellow-table-classroom",
+      "alt": "Group of children sit around a yellow table in a classroom with Urdu alphabet charts.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20241008-WA0018-e3ec2346-a7d2-45a2-aec4-da92f13c806f.png",
+      "dest": "/images/field/education/children-yellow-table-classroom.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20250120-WA0016",
+      "category": "education",
+      "name": "orange-themed-learning-activity",
+      "alt": "Children wear orange headbands and hold orange drawings during an O is for Orange activity.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20250120-WA0016-04021a96-de7f-437d-8391-63648ebf1ff5.png",
+      "dest": "/images/field/education/orange-themed-learning-activity.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20210708-WA0211",
+      "category": "education",
+      "name": "youth-literacy-workshop-swat-kalam",
+      "alt": "Group attends a Discipleship and Literacy Youth Workshop in a pine forest beneath a Swat Kalam banner.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20210708-WA0211-dfe5613c-6554-4db8-8fb0-c96ce53b4f1e.png",
+      "dest": "/images/field/education/youth-literacy-workshop-swat-kalam.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20210706-WA0043",
+      "category": "education",
+      "name": "workshop-pastors-presenting-banner",
+      "alt": "Two men stand before a literacy youth workshop banner while one gestures and speaks.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20210706-WA0043-53974653-b98c-4f4d-912c-862f966ab775.png",
+      "dest": "/images/field/education/workshop-pastors-presenting-banner.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20210708-WA0183",
+      "category": "education",
+      "name": "outdoor-workshop-forest-camp",
+      "alt": "Young adults take notes during an outdoor workshop seated on rugs in a pine forest campsite.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20210708-WA0183-a60fe5a2-90c5-4ef0-997c-be1e27585ac0.png",
+      "dest": "/images/field/education/outdoor-workshop-forest-camp.webp",
+      "skipped": true
+    },
+    {
+      "basename": "FB_IMG_1744802723190",
+      "category": "outreach",
+      "name": "brick-kiln-community-gathering",
+      "alt": "A speaker addresses women and children seated on rugs at a brick kiln outreach site.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_FB_IMG_1744802723190-2886647d-3399-40d6-8a9d-d904dd149a3a.png",
+      "dest": "/images/field/outreach/brick-kiln-community-gathering.webp",
+      "skipped": true
+    },
+    {
+      "basename": "8e85b937-75d8-46f5-a28c-d56e631cfee9",
+      "category": "outreach",
+      "name": "toy-distribution-under-canopy",
+      "alt": "A volunteer distributes toys to children and women gathered under a red patterned canopy.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_8e85b937-75d8-46f5-a28c-d56e631cfee9-e3e03b96-dc80-4a46-98c2-ef27518e0882.png",
+      "dest": "/images/field/outreach/toy-distribution-under-canopy.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20210710-WA0010",
+      "category": "community",
+      "name": "youth-activity-pine-forest-camp",
+      "alt": "Young men gather for an outdoor activity near a camping tent in a sunlit pine forest.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20210710-WA0010-35fb3ee7-5299-4e6a-979e-9c5d3d4029fe.png",
+      "dest": "/images/field/community/youth-activity-pine-forest-camp.webp",
+      "skipped": true
+    },
+    {
+      "basename": "FB_IMG_1626441685557",
+      "category": "outreach",
+      "name": "man-holding-child-aid-shelter",
+      "alt": "A smiling man holds a young child during aid distribution inside a rustic community shelter.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_FB_IMG_1626441685557-7ec820cb-318a-47d9-9302-aab68a82368a.png",
+      "dest": "/images/field/outreach/man-holding-child-aid-shelter.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20210713-WA0028",
+      "category": "community",
+      "name": "men-circle-meeting-floor",
+      "alt": "Seven men sit in a circle on the floor for a community meeting and discussion.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20210713-WA0028-784b4d24-7986-47a4-832a-b68906f61627.png",
+      "dest": "/images/field/community/men-circle-meeting-floor.webp",
+      "skipped": true
+    },
+    {
+      "basename": "FB_IMG_1692525048122",
+      "category": "outreach",
+      "name": "carrying-food-aid-sacks",
+      "alt": "People carry large white food-aid sacks during an outdoor relief distribution.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_FB_IMG_1692525048122-04b777c8-f3f9-4191-a5f1-e66e39e4c4d2.png",
+      "dest": "/images/field/outreach/carrying-food-aid-sacks.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20210710-WA0003",
+      "category": "education",
+      "name": "forest-educational-gathering",
+      "alt": "A group listens to a man holding a blue book in a sunny pine forest clearing.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20210710-WA0003-cafd2954-ff94-4337-9ce6-f9db0568a24f.png",
+      "dest": "/images/field/education/forest-educational-gathering.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20210706-WA0124",
+      "category": "education",
+      "name": "discipleship-literacy-workshop-whiteboard",
+      "alt": "An instructor leads a Discipleship and Literacy Youth Workshop using a whiteboard outdoors.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20210706-WA0124__1_-73084e57-66fd-41a1-8635-af08072b9d1f.png",
+      "dest": "/images/field/education/discipleship-literacy-workshop-whiteboard.webp",
+      "skipped": true
+    },
+    {
+      "basename": "ecd5ac36-5077-4372-ad3b-0e73fc081423",
+      "category": "celebration",
+      "name": "children-toy-distribution-canopy",
+      "alt": "Children joyfully hold new toys and blue balls during a gift event under a red canopy.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_ecd5ac36-5077-4372-ad3b-0e73fc081423-4e551f82-6001-442d-b5ce-051a38f4fd10.png",
+      "dest": "/images/field/celebration/children-toy-distribution-canopy.webp",
+      "skipped": true
+    },
+    {
+      "basename": "FB_IMG_1744802720749",
+      "category": "community",
+      "name": "outdoor-community-meeting-rugs",
+      "alt": "A large group of women and children participate in an outdoor community meeting on patterned rugs.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_FB_IMG_1744802720749-406e36cf-21d5-4659-81b6-16aaa065c169.png",
+      "dest": "/images/field/community/outdoor-community-meeting-rugs.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20210708-WA0210",
+      "category": "education",
+      "name": "forest-workshop-presenter-board",
+      "alt": "An instructor leads an educational workshop for seated participants in a pine forest camp.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20210708-WA0210-da23e482-ac79-40fd-ac21-fa1000d443b5.png",
+      "dest": "/images/field/education/forest-workshop-presenter-board.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20221023-WA0081",
+      "category": "care",
+      "name": "two-children-holding-hands-portrait",
+      "alt": "A young boy and girl stand together holding hands in an indoor portrait on a red carpet.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20221023-WA0081-61b0787f-1b51-42c0-a01c-0f5c73e75911.png",
+      "dest": "/images/field/care/two-children-holding-hands-portrait.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20230822-WA0071",
+      "category": "disaster",
+      "name": "burned-electrical-meter-fire",
+      "alt": "A man stands beside a melted electrical meter hanging by charred wires after a fire.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20230822-WA0071-76bf35b7-e6c1-423f-9551-e844d6d6683b.png",
+      "dest": "/images/field/disaster/burned-electrical-meter-fire.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20230822-WA0052",
+      "category": "disaster",
+      "name": "man-in-fire-damaged-room",
+      "alt": "A man stands in a soot-blackened room with burnt belongings following a house fire.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20230822-WA0052-5cacfc48-90a0-401c-850f-f3f075852393.png",
+      "dest": "/images/field/disaster/man-in-fire-damaged-room.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20230822-WA0099",
+      "category": "disaster",
+      "name": "fire-damage-building-debris",
+      "alt": "A man stands before a fire-scorched building and twisted metal debris while others look on.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20230822-WA0099-dd73aa32-e0c2-4311-b2dd-27b9c0c96b54.png",
+      "dest": "/images/field/disaster/fire-damage-building-debris.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20210713-WA0029",
+      "category": "community",
+      "name": "community-meeting-note-taking",
+      "alt": "Men sit in a circle during a community meeting while one participant takes notes.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20210713-WA0029-866635c8-02ef-4812-aeec-03f8580bbdd3.png",
+      "dest": "/images/field/community/community-meeting-note-taking.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20230822-WA0072",
+      "category": "disaster",
+      "name": "charred-electrical-box-doorway",
+      "alt": "A man inspects a severely burned electrical box hanging by charred wires in a scorched doorway.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20230822-WA0072-45f2cf4d-0239-480d-a6c0-6a6032a70b62.png",
+      "dest": "/images/field/disaster/charred-electrical-box-doorway.webp",
+      "skipped": true
+    },
+    {
+      "basename": "20180727_114505",
+      "category": "outreach",
+      "name": "children-eating-outdoor-meal",
+      "alt": "Children and women eat a shared meal outdoors on dusty ground in a rural area.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_20180727_114505-ae77e04b-1c2a-4a9c-a351-d6b933dcaa4a.png",
+      "dest": "/images/field/outreach/children-eating-outdoor-meal.webp",
+      "skipped": true
+    },
+    {
+      "basename": "20180727_114507",
+      "category": "outreach",
+      "name": "children-sharing-meal-plate",
+      "alt": "Children sit together sharing food from a metal plate during a foundation outreach meal.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_20180727_114507-f013c368-c030-41aa-a13f-cbfde5c18fa7.png",
+      "dest": "/images/field/outreach/children-sharing-meal-plate.webp",
+      "skipped": true
+    },
+    {
+      "basename": "DSCN0408",
+      "category": "outreach",
+      "name": "man-visiting-children-rural-village",
+      "alt": "A man crouches smiling with children before thatched-roof huts in a rural village.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_DSCN0408-6a071aeb-4a8f-47a1-b7a7-75bd0cffb583.png",
+      "dest": "/images/field/outreach/man-visiting-children-rural-village.webp",
+      "skipped": true
+    },
+    {
+      "basename": "DSCN0497",
+      "category": "outreach",
+      "name": "grain-aid-distribution-sindhi-women",
+      "alt": "A volunteer hands a bag of grain to a woman in traditional Sindhi dress during outreach.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_DSCN0497-fe04668c-4361-42d9-9d72-633489427077.png",
+      "dest": "/images/field/outreach/grain-aid-distribution-sindhi-women.webp",
+      "skipped": true
+    },
+    {
+      "basename": "DSCN0401",
+      "category": "community",
+      "name": "volunteers-rural-village-huts",
+      "alt": "Children and volunteers stand before traditional thatched-roof huts in a rural village.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_DSCN0401-9ee1fe92-4ae8-46e2-8ad2-07f1ea09c02b.png",
+      "dest": "/images/field/community/volunteers-rural-village-huts.webp",
+      "skipped": true
+    },
+    {
+      "basename": "20180727_112453",
+      "category": "community",
+      "name": "gathering-under-tree-speakers",
+      "alt": "A large group of men, women, and children gather under a tree listening to two speakers.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_20180727_112453-f4ac8333-0a04-468e-b447-5ba1e65332f7.png",
+      "dest": "/images/field/community/gathering-under-tree-speakers.webp",
+      "skipped": true
+    },
+    {
+      "basename": "DSCN0403",
+      "category": "outreach",
+      "name": "volunteer-with-boys-thatched-hut",
+      "alt": "A man in a Sindhi cap stands with boys and seated families outside a thatched hut.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_DSCN0403-53970aa1-1175-49ef-842f-aefb0c19aa22.png",
+      "dest": "/images/field/outreach/volunteer-with-boys-thatched-hut.webp",
+      "skipped": true
+    },
+    {
+      "basename": "20180727_114357",
+      "category": "care",
+      "name": "man-serving-rice-to-children",
+      "alt": "A man serves rice from a bucket to children seated in a circle outdoors.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_20180727_114357-705f0fa1-e6a3-4779-874c-1b4f684b71ab.png",
+      "dest": "/images/field/care/man-serving-rice-to-children.webp",
+      "skipped": true
+    },
+    {
+      "basename": "DSCN0500",
+      "category": "outreach",
+      "name": "handing-aid-package-woman",
+      "alt": "A volunteer hands a wrapped relief package to a woman during an outreach distribution.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_DSCN0500-1208c774-c44b-4032-a810-be9755545219.png",
+      "dest": "/images/field/outreach/handing-aid-package-woman.webp",
+      "skipped": true
+    },
+    {
+      "basename": "DSCN0499",
+      "category": "outreach",
+      "name": "embroidered-cloth-distribution",
+      "alt": "A man hands an embroidered garment to a woman wearing traditional blue clothing and white bangles.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_DSCN0499-8342582d-3548-4810-8497-1dc7fd09a7b9.png",
+      "dest": "/images/field/outreach/embroidered-cloth-distribution.webp",
+      "skipped": true
+    },
+    {
+      "basename": "20180725_123715",
+      "category": "care",
+      "name": "woman-caring-for-child-food",
+      "alt": "A woman in blue traditional dress smiles at a toddler in her lap while they share food.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_20180725_123715-673fc5f4-4197-452d-81d0-5bf8f78ea4d2.png",
+      "dest": "/images/field/care/woman-caring-for-child-food.webp",
+      "skipped": true
+    },
+    {
+      "basename": "20180725_123722",
+      "category": "outreach",
+      "name": "community-gathering-veiled-woman-child",
+      "alt": "A woman in a red veil with silver bangles sits with a toddler and others on a mat during outreach.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_20180725_123722-eb282844-2687-472c-aefe-3a9ca3e579b0.png",
+      "dest": "/images/field/outreach/community-gathering-veiled-woman-child.webp",
+      "skipped": true
+    },
+    {
+      "basename": "20180727_112536",
+      "category": "outreach",
+      "name": "village-meeting-under-tree",
+      "alt": "A foundation member speaks to villagers gathered under a tree beside a thatched hut.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_20180727_112536-b379e214-b5e1-4f68-b110-c52a4ad89782.png",
+      "dest": "/images/field/outreach/village-meeting-under-tree.webp",
+      "skipped": true
+    },
+    {
+      "basename": "20180727_114132",
+      "category": "outreach",
+      "name": "children-sharing-meal-rural-village",
+      "alt": "Children and women share a meal from communal plates in a rural village setting.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_20180727_114132-8e0d0ee4-aa4f-413c-b398-f8e53f63fa0e.png",
+      "dest": "/images/field/outreach/children-sharing-meal-rural-village.webp",
+      "skipped": true
+    },
+    {
+      "basename": "20180727_114138",
+      "category": "outreach",
+      "name": "communal-meal-rural-gathering",
+      "alt": "A large group of women and children eat together outdoors during a rural outreach meal.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_20180727_114138-c1e8167e-6774-42bd-9c19-d7765bf9316a.png",
+      "dest": "/images/field/outreach/communal-meal-rural-gathering.webp",
+      "skipped": true
+    },
+    {
+      "basename": "20180727_114415",
+      "category": "care",
+      "name": "serving-food-children-circle",
+      "alt": "A man ladles food from a bucket to children seated in a circle on sandy ground.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_20180727_114415-0b102a4f-7990-4e21-8397-aa51346606da.png",
+      "dest": "/images/field/care/serving-food-children-circle.webp",
+      "skipped": true
+    },
+    {
+      "basename": "20180727_114456",
+      "category": "community",
+      "name": "children-sharing-communal-meal",
+      "alt": "Four children share a meal from a large metal platter on a village courtyard floor.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_20180727_114456-6a79afca-1ed9-4780-989a-de9d13ebd399.png",
+      "dest": "/images/field/community/children-sharing-communal-meal.webp",
+      "skipped": true
+    },
+    {
+      "basename": "20180727_114457",
+      "category": "outreach",
+      "name": "four-children-communal-meal",
+      "alt": "Four children eat together from a communal silver platter during an outdoor outreach meal.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_20180727_114457-ae994da9-86e2-4cc2-88d1-ad3ec5191b92.png",
+      "dest": "/images/field/outreach/four-children-communal-meal.webp",
+      "skipped": true
+    },
+    {
+      "basename": "20180727_114502",
+      "category": "care",
+      "name": "children-sharing-rice-platter",
+      "alt": "Children sit on the ground sharing rice from a large communal metal plate in a rural setting.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_20180727_114502-0476587e-6719-42bf-91d2-e01f7baaf310.png",
+      "dest": "/images/field/care/children-sharing-rice-platter.webp",
+      "skipped": true
+    },
+    {
+      "basename": "DSCN0498",
+      "category": "outreach",
+      "name": "relief-package-thatched-hut",
+      "alt": "A man hands a large wrapped relief package to a woman outside a traditional thatched hut.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_DSCN0498-02d70d60-af66-4f5f-b361-6456c97e7633.png",
+      "dest": "/images/field/outreach/relief-package-thatched-hut.webp",
+      "skipped": true
+    },
+    {
+      "basename": "DSCN0505",
+      "category": "outreach",
+      "name": "rural-outreach-thatched-hut-group",
+      "alt": "A man and women in traditional dress gather outside a thatched hut during a rural outreach visit.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_DSCN0505-1ccb6b4f-6561-46e3-828e-4e02b924ef06.png",
+      "dest": "/images/field/outreach/rural-outreach-thatched-hut-group.webp",
+      "skipped": true
+    },
+    {
+      "basename": "DSCN0506",
+      "category": "outreach",
+      "name": "man-women-traditional-sindhi-hut",
+      "alt": "A man poses with three veiled women in colorful Sindhi dress before a thatched dwelling.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_DSCN0506-f5fb8856-be27-452a-ba91-dc76647a26e7.png",
+      "dest": "/images/field/outreach/man-women-traditional-sindhi-hut.webp",
+      "skipped": true
+    },
+    {
+      "basename": "DSCN0512",
+      "category": "outreach",
+      "name": "man-women-bangles-thatched-hut",
+      "alt": "A man and three women in traditional Sindhi attire with white bangles stand before a straw hut.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_DSCN0512-094d8381-6ea7-4e4b-bdff-7b3bdb1c6586.png",
+      "dest": "/images/field/outreach/man-women-bangles-thatched-hut.webp",
+      "skipped": true
+    },
+    {
+      "basename": "IMG-20220426-WA0020",
+      "category": "care",
+      "name": "two-girls-brick-courtyard",
+      "alt": "Two barefoot girls stand in a sunlit brick courtyard with laundry drying on a line.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_IMG-20220426-WA0020-317d1a1b-149e-4cb3-ba86-997ebc82d9fa.png",
+      "dest": "/images/field/care/two-girls-brick-courtyard.webp",
+      "skipped": true
+    },
+    {
+      "basename": "signal-2022-08-23-06-35-28-898",
+      "category": "education",
+      "name": "girls-school-uniform-backpacks",
+      "alt": "Two smiling girls in navy school uniforms with orange backpacks stand by a wooden door.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_signal-2022-08-23-06-35-28-898-835533e4-6765-49ab-b0e6-d51ab16b8571.png",
+      "dest": "/images/field/education/girls-school-uniform-backpacks.webp"
+    },
+    {
+      "basename": "signal-2022-08-30-19-03-58-596",
+      "category": "outreach",
+      "name": "ration-distribution-mud-wall",
+      "alt": "Volunteers distribute white supply bags to community members beside a mud-brick wall.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_signal-2022-08-30-19-03-58-596-656b5d1c-582e-4feb-b2f4-d93f5c6ee688.png",
+      "dest": "/images/field/outreach/ration-distribution-mud-wall.webp"
+    },
+    {
+      "basename": "signal-2022-08-31-18-07-42-533-1",
+      "category": "disaster",
+      "name": "relief-distribution-truck-crowd",
+      "alt": "Volunteers distribute relief supplies from a truck to a large waiting crowd.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_signal-2022-08-31-18-07-42-533-1-f175d339-3141-45cc-8525-33059de3c50c.png",
+      "dest": "/images/field/disaster/relief-distribution-truck-crowd.webp"
+    },
+    {
+      "basename": "signal-2023-08-30-18-23-48-083",
+      "category": "outreach",
+      "name": "yellow-sack-distribution-truck",
+      "alt": "A man in a truck bed hands a large yellow aid sack to recipients during a distribution.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_signal-2023-08-30-18-23-48-083-2ae4d882-5890-445f-ac7d-a821e489b57a.png",
+      "dest": "/images/field/outreach/yellow-sack-distribution-truck.webp"
+    },
+    {
+      "basename": "signal-2023-08-30-18-23-59-409",
+      "category": "outreach",
+      "name": "aid-distribution-van-crowd",
+      "alt": "A coordinator records names as aid is distributed from a vehicle to a waiting crowd.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_signal-2023-08-30-18-23-59-409-b20f9684-d928-43e8-b8c6-f23d0cd38100.png",
+      "dest": "/images/field/outreach/aid-distribution-van-crowd.webp"
+    },
+    {
+      "basename": "signal-2023-08-30-18-24-06-120-1",
+      "category": "outreach",
+      "name": "bedding-distribution-truck",
+      "alt": "A truck loaded with quilts and charpai frames distributes household supplies to families.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_signal-2023-08-30-18-24-06-120-1-405efd0a-fd9b-4d62-aafb-42c23dd25973.png",
+      "dest": "/images/field/outreach/bedding-distribution-truck.webp"
+    },
+    {
+      "basename": "signal-2023-08-30-18-24-06-120-3",
+      "category": "outreach",
+      "name": "flour-sack-distribution-truck",
+      "alt": "A man hands a large flour sack labeled Pakistan from a truck during food aid outreach.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_signal-2023-08-30-18-24-06-120-3-8086165d-0562-4037-a1bc-de9f1277771a.png",
+      "dest": "/images/field/outreach/flour-sack-distribution-truck.webp"
+    },
+    {
+      "basename": "signal-2023-09-22-19-50-29-047-1",
+      "category": "education",
+      "name": "teacher-whiteboard-children-carpet",
+      "alt": "A female teacher instructs children seated on a red carpet beside a classroom whiteboard.",
+      "src": "c__Users_HP_AppData_Roaming_Cursor_User_workspaceStorage_de09be3fadf1d235fc2d73540c519d4a_images_signal-2023-09-22-19-50-29-047-1-44f4957f-a95b-411b-9f66-9e81e0e01282.png",
+      "dest": "/images/field/education/teacher-whiteboard-children-carpet.webp"
+    }
+  ],
+  "sectionAliases": {
+    "sections/hero.webp": "education/home-of-joy-school-exterior.webp",
+    "sections/education.webp": "education/children-learning-yellow-table.webp",
+    "sections/orphanage.webp": "care/school-children-communal-meal.webp",
+    "sections/child-protection.webp": "care/two-children-holding-hands-portrait.webp",
+    "sections/evangelism.webp": "education/discipleship-literacy-workshop-whiteboard.webp",
+    "sections/community.webp": "disaster/carrying-relief-supplies-through-flood.webp",
+    "sections/faith.webp": "education/outdoor-workshop-forest-camp.webp",
+    "gallery/children-smiling.webp": "community/children-sharing-communal-meal.webp",
+    "gallery/community-event.webp": "community/outdoor-community-meeting-rugs.webp",
+    "gallery/school-building.webp": "education/home-of-joy-school-building-front.webp"
+  }
+}

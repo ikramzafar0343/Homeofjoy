@@ -64,7 +64,7 @@ export default function ChildProtection() {
           data-protect-reveal
           className="relative min-h-[320px] overflow-hidden md:min-h-[420px]"
         >
-          <SplashVisual tone="navy" imageSrc="/images/sections/child-protection.jpg" imageAlt="Children playing safely in a community playground" className="absolute inset-0 h-full w-full" />
+          <SplashVisual tone="navy" imageSrc="/images/sections/child-protection.webp" imageAlt="Two children holding hands in a safe Home of Joy setting" className="absolute inset-0 h-full w-full" />
         </div>
       </div>
     </section>

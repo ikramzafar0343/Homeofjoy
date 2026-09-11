@@ -188,11 +188,8 @@
   line-height: 1.75;
 }
 
-.modalMedia {
-  position: relative;
+.modalGrid {
   margin-top: 1.5rem;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
 }
 
 .srOnly {

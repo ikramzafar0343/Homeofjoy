@@ -55,7 +55,7 @@ export default function EducationStory() {
           data-edu-reveal
           className="relative min-h-[320px] overflow-hidden md:min-h-[480px] lg:min-h-[560px]"
         >
-          <SplashVisual tone="sky" imageSrc="/images/sections/education.jpg" imageAlt="Child studying at a desk with books" className="absolute inset-0 h-full w-full" />
+          <SplashVisual tone="sky" imageSrc="/images/sections/education.webp" imageAlt="Young students reading workbooks at Home of Joy School" className="absolute inset-0 h-full w-full" />
         </div>
 
         <div>

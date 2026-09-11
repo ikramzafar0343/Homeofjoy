@@ -8,10 +8,11 @@ export const storySectionLabel = "Our Story";
  * real video asset — the modal then shows still media + statement instead.
  */
 export const storyMedia = {
-  imageSrc: "/images/sections/education.jpg",
-  imageAlt: "Children learning together with care and hope",
+  imageSrc: "/images/field/outreach/man-women-bangles-thatched-hut.webp",
+  imageAlt:
+    "Home of Joy founder standing with community members before a traditional thatched hut",
   href: "/about",
   ctaLabel: "Watch our story",
   videoSrc: undefined as string | undefined,
-  videoPoster: "/images/sections/education.jpg",
+  videoPoster: "/images/field/outreach/man-women-bangles-thatched-hut.webp",
 } as const;

@@ -48,8 +48,8 @@ export type ImpactSlide = {
 export const impactSlides: readonly ImpactSlide[] = [
   {
     id: "care",
-    imageSrc: "/images/gallery/children-smiling.jpg",
-    imageAlt: "Children smiling with hope and joy",
+    imageSrc: "/images/gallery/children-smiling.webp",
+    imageAlt: "Four children sharing a communal meal in a village courtyard",
     items: [
       {
         value: 2840,
@@ -70,8 +70,8 @@ export const impactSlides: readonly ImpactSlide[] = [
   },
   {
     id: "presence",
-    imageSrc: "/images/sections/faith.jpg",
-    imageAlt: "Compassionate presence in community ministry",
+    imageSrc: "/images/sections/faith.webp",
+    imageAlt: "Outdoor discipleship workshop in a pine forest campsite",
     items: [
       {
         value: 38,
@@ -94,8 +94,8 @@ export const impactSlides: readonly ImpactSlide[] = [
   },
   {
     id: "outreach",
-    imageSrc: "/images/sections/community.jpg",
-    imageAlt: "Community outreach and practical support",
+    imageSrc: "/images/sections/community.webp",
+    imageAlt: "Carrying relief supplies through floodwater",
     items: [
       {
         value: 420,

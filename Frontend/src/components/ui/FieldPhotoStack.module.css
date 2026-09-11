@@ -1,0 +1,14 @@
+.stack {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+  inset: 0;
+}
+
+.layer img {
+  object-fit: cover;
+}

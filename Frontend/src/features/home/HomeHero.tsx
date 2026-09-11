@@ -88,7 +88,7 @@ export default function HomeHero() {
     >
       <div ref={mediaRef} className="absolute inset-0 will-change-transform">
         <Image
-          src="/images/sections/hero.jpg"
+          src="/images/sections/hero.webp"
           alt=""
           fill
           priority

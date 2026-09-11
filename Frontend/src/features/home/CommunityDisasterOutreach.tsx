@@ -86,7 +86,7 @@ export default function CommunityDisasterOutreach() {
           data-outreach-reveal
           className="relative mb-12 min-h-[240px] overflow-hidden md:mb-16 md:min-h-[360px]"
         >
-          <SplashVisual tone="warm" imageSrc="/images/sections/community.jpg" imageAlt="Volunteers distributing aid to community members" className="absolute inset-0 h-full w-full" />
+          <SplashVisual tone="warm" imageSrc="/images/sections/community.webp" imageAlt="Carrying relief supplies through floodwater during disaster response" className="absolute inset-0 h-full w-full" />
         </div>
 
         <ul className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">

@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import AccentCta from "@/components/ui/AccentCta";
+import FieldPhotoGrid from "@/components/ui/FieldPhotoGrid";
+import FieldPhotoStack from "@/components/ui/FieldPhotoStack";
 import Modal from "@/components/ui/Modal";
 import {
   howWeServeTopics,
@@ -217,12 +218,11 @@ export default function HowWeServeSection() {
 
             <div className={styles.mediaCol}>
               <div ref={mediaRef} className={styles.mediaFrame}>
-                <Image
-                  key={topic.imageSrc}
-                  src={topic.imageSrc}
-                  alt={topic.imageAlt}
-                  fill
+                <FieldPhotoStack
+                  key={topic.id}
+                  photos={topic.gallery}
                   sizes="(max-width: 1024px) 100vw, 42vw"
+                  intervalMs={3000}
                 />
               </div>
             </div>
@@ -245,15 +245,11 @@ export default function HowWeServeSection() {
             </h3>
             <p className={styles.modalBody}>{modalTopic.summary}</p>
             <p className={styles.modalBody}>{modalTopic.detail}</p>
-            <div className={styles.modalMedia}>
-              <Image
-                src={modalTopic.imageSrc}
-                alt={modalTopic.imageAlt}
-                fill
-                sizes="540px"
-                className="object-cover"
-              />
-            </div>
+            <FieldPhotoGrid
+              photos={modalTopic.gallery}
+              className={styles.modalGrid}
+              sizes="(max-width: 768px) 45vw, 260px"
+            />
           </div>
         ) : (
           <h3 id={titleId} className={styles.srOnly}>

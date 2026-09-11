@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import AccentCta from "@/components/ui/AccentCta";
+import FieldPhotoGrid from "@/components/ui/FieldPhotoGrid";
+import FieldPhotoStack from "@/components/ui/FieldPhotoStack";
 import Modal from "@/components/ui/Modal";
 import { organizationContent } from "@/content/organizationContent";
 import {
@@ -158,11 +159,11 @@ export default function WorkGallerySection() {
                   aria-expanded={activeArea?.number === area.number && isModalOpen}
                 >
                   <div className={styles.cardMedia}>
-                    <Image
-                      src={area.imageSrc}
-                      alt={area.imageAlt}
-                      fill
+                    <FieldPhotoStack
+                      photos={area.gallery}
                       sizes="(max-width: 768px) 60vw, 280px"
+                      intervalMs={2800 + Number(area.number) * 180}
+                      imageClassName={styles.cardImage}
                     />
                     <span className={styles.cardAction} aria-hidden="true">
                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -213,15 +214,11 @@ export default function WorkGallerySection() {
             </h3>
             <p className={styles.modalRole}>{activeArea.description}</p>
             <p className={styles.modalBody}>{activeArea.detail}</p>
-            <div className={styles.modalMedia}>
-              <Image
-                src={activeArea.imageSrc}
-                alt={activeArea.imageAlt}
-                fill
-                sizes="540px"
-                className="object-cover"
-              />
-            </div>
+            <FieldPhotoGrid
+              photos={activeArea.gallery}
+              className={styles.modalGrid}
+              sizes="(max-width: 768px) 45vw, 260px"
+            />
             <div className={styles.modalLink}>
               <AccentCta href={activeArea.href} tone="sky">
                 View this work
