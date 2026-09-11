@@ -31,14 +31,19 @@ export default function FieldPhotoStack({
   const rootRef = useRef<HTMLDivElement>(null);
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [photosKey, setPhotosKey] = useState(() =>
+    photos.map((photo) => photo.src).join("|"),
+  );
   const prevIndexRef = useRef(0);
+  const nextPhotosKey = photos.map((photo) => photo.src).join("|");
   const safePhotos = photos.length > 0 ? photos : [];
-  const active = safePhotos[index] ?? safePhotos[0];
 
-  useEffect(() => {
+  if (photosKey !== nextPhotosKey) {
+    setPhotosKey(nextPhotosKey);
     setIndex(0);
-    prevIndexRef.current = 0;
-  }, [photos]);
+  }
+
+  const active = safePhotos[index] ?? safePhotos[0];
 
   useEffect(() => {
     if (safePhotos.length <= 1 || paused) {

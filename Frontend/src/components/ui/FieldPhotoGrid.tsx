@@ -44,11 +44,17 @@ export default function FieldPhotoGrid({
   const rootRef = useRef<HTMLDivElement>(null);
   const pageCount = Math.max(1, Math.ceil(photos.length / PAGE_SIZE));
   const [page, setPage] = useState(0);
-  const visible = pageSlice(photos, page);
+  const [photosKey, setPhotosKey] = useState(() =>
+    photos.map((photo) => photo.src).join("|"),
+  );
+  const nextPhotosKey = photos.map((photo) => photo.src).join("|");
 
-  useEffect(() => {
+  if (photosKey !== nextPhotosKey) {
+    setPhotosKey(nextPhotosKey);
     setPage(0);
-  }, [photos]);
+  }
+
+  const visible = pageSlice(photos, page);
 
   useEffect(() => {
     if (photos.length <= PAGE_SIZE) {

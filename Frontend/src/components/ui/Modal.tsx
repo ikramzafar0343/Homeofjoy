@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 
 import { syncBodyScrollLock } from "@/lib/scrollLock";
@@ -20,6 +20,10 @@ export type ModalProps = {
   readonly className?: string;
 };
 
+function subscribeNowhere() {
+  return () => undefined;
+}
+
 export default function Modal({
   open,
   onClose,
@@ -30,15 +34,11 @@ export default function Modal({
   closeLabel = "Close",
   className = "",
 }: ModalProps) {
-  const [mounted, setMounted] = useState(false);
+  const mounted = useSyncExternalStore(subscribeNowhere, () => true, () => false);
   const panelRef = useRef<HTMLDivElement>(null);
   const previouslyFocused = useRef<HTMLElement | null>(null);
   const reactId = useId();
   const owner = `${lockOwner}-${reactId}`;
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   useEffect(() => syncBodyScrollLock(owner, open), [open, owner]);
 

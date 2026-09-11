@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 
 import SplashVisual from "@/features/home/SplashVisual";
 import { prefersReducedMotion } from "@/lib/scrollAnimations";
@@ -12,6 +12,17 @@ type HeroVideoProps = {
   readonly children?: React.ReactNode;
 };
 
+function subscribeDesktop(onChange: () => void) {
+  const desktop = window.matchMedia("(min-width: 1024px)");
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+  desktop.addEventListener("change", onChange);
+  reduced.addEventListener("change", onChange);
+  return () => {
+    desktop.removeEventListener("change", onChange);
+    reduced.removeEventListener("change", onChange);
+  };
+}
+
 export default function HeroVideo({
   videoSrc,
   posterSrc,
@@ -19,13 +30,13 @@ export default function HeroVideo({
   children,
 }: HeroVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [canPlayVideo, setCanPlayVideo] = useState(false);
-
-  useEffect(() => {
-    const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
-    const reduced = prefersReducedMotion();
-    setCanPlayVideo(Boolean(videoSrc) && isDesktop && !reduced);
-  }, [videoSrc]);
+  const [playFailed, setPlayFailed] = useState(false);
+  const canAttemptVideo = useSyncExternalStore(
+    subscribeDesktop,
+    () => Boolean(videoSrc) && window.matchMedia("(min-width: 1024px)").matches && !prefersReducedMotion(),
+    () => false,
+  );
+  const canPlayVideo = canAttemptVideo && !playFailed;
 
   useEffect(() => {
     const video = videoRef.current;
@@ -37,7 +48,7 @@ export default function HeroVideo({
       try {
         await video.play();
       } catch {
-        setCanPlayVideo(false);
+        setPlayFailed(true);
       }
     };
 
@@ -53,20 +64,17 @@ export default function HeroVideo({
   }
 
   return (
-    <div className={`heroSplash absolute inset-0 overflow-hidden ${className}`.trim()}>
+    <div className={`absolute inset-0 ${className}`.trim()}>
       <video
         ref={videoRef}
         className="h-full w-full object-cover"
+        src={videoSrc}
         poster={posterSrc}
         muted
         playsInline
         loop
-        autoPlay
-        preload="metadata"
         aria-hidden="true"
-      >
-        <source src={videoSrc} type="video/mp4" />
-      </video>
+      />
       {children}
     </div>
   );

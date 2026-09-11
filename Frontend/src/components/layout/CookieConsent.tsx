@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useState } from "react";
+import { useId, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 
 import Modal from "@/components/ui/Modal";
@@ -12,20 +12,28 @@ const STORAGE_KEY = "hojCookieConsent";
 
 type ConsentValue = "accepted" | "necessary";
 
-export default function CookieConsent() {
-  const [open, setOpen] = useState(false);
-  const titleId = useId();
+function subscribeNowhere() {
+  return () => undefined;
+}
 
-  useEffect(() => {
-    try {
-      const stored = window.localStorage.getItem(STORAGE_KEY);
-      if (stored !== "accepted" && stored !== "necessary") {
-        setOpen(true);
-      }
-    } catch {
-      setOpen(true);
-    }
-  }, []);
+function readNeedsConsent(): boolean {
+  try {
+    const stored = window.localStorage.getItem(STORAGE_KEY);
+    return stored !== "accepted" && stored !== "necessary";
+  } catch {
+    return true;
+  }
+}
+
+export default function CookieConsent() {
+  const titleId = useId();
+  const needsConsent = useSyncExternalStore(
+    subscribeNowhere,
+    readNeedsConsent,
+    () => false,
+  );
+  const [dismissed, setDismissed] = useState(false);
+  const open = needsConsent && !dismissed;
 
   const save = (value: ConsentValue) => {
     try {
@@ -33,7 +41,7 @@ export default function CookieConsent() {
     } catch {
       /* Ignore storage failures; dialog can still dismiss for this session. */
     }
-    setOpen(false);
+    setDismissed(true);
   };
 
   return (

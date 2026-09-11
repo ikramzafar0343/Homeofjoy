@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useSyncExternalStore } from "react";
 import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -18,27 +18,26 @@ import styles from "./HomeHero.module.css";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
+function subscribePreloader(onChange: () => void) {
+  window.addEventListener("hojPreloaderComplete", onChange);
+  return () => window.removeEventListener("hojPreloaderComplete", onChange);
+}
+
+function isPreloaderDone() {
+  return !document.querySelector('[data-preloader-play][aria-busy="true"]');
+}
+
 export default function HomeHero() {
   const sectionRef = useRef<HTMLElement>(null);
   const mediaRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLHeadingElement>(null);
   const ctaWrapRef = useRef<HTMLDivElement>(null);
   const welcomeRef = useRef<HTMLDivElement>(null);
-  const [canAnimate, setCanAnimate] = useState(false);
-
-  useEffect(() => {
-    const enable = () => setCanAnimate(true);
-    window.addEventListener("hojPreloaderComplete", enable);
-
-    const preloaderOpen = document.querySelector(
-      '[data-preloader-play][aria-busy="true"]',
-    );
-    if (!preloaderOpen) {
-      setCanAnimate(true);
-    }
-
-    return () => window.removeEventListener("hojPreloaderComplete", enable);
-  }, []);
+  const canAnimate = useSyncExternalStore(
+    subscribePreloader,
+    isPreloaderDone,
+    () => false,
+  );
 
   useGSAP(
     () => {
