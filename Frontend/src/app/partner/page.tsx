@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
+import design from "@/components/design/designShared.module.css";
 import PageHero from "@/components/sections/PageHero";
 import SectionBand from "@/components/sections/SectionBand";
 import Button from "@/components/ui/Button";
+import { pageHeroGalleries } from "@/content/pageHeroGalleries";
 import { partnerContent } from "@/content/partnerContent";
 
 const PartnersMarquee = dynamic(() => import("@/features/impact/PartnersMarquee"));
@@ -21,21 +23,29 @@ export default function PartnerPage() {
         eyebrow={partnerContent.eyebrow}
         title={partnerContent.title}
         description={partnerContent.description}
-        tone="light"
+        gallery={pageHeroGalleries.partner}
         ctaLabel="Contact about partnership"
         ctaHref="/contact"
       />
       <SectionBand tone="white">
-        <p className="typeLabel mb-4">{partnerContent.bodyTitle}</p>
-        <h2 className="typeSection mb-5 max-w-3xl">Shared commitment, clear reporting</h2>
-        <p className="typeBody max-w-3xl">{partnerContent.body}</p>
+        <p className={`${design.eyebrow} mb-4`} style={{ color: "var(--landing-blue)" }}>
+          {partnerContent.bodyTitle}
+        </p>
+        <h2 className={`${design.heading} mb-5`}>Shared commitment, clear reporting</h2>
+        <p className={design.body} style={{ maxWidth: "58ch" }}>
+          {partnerContent.body}
+        </p>
       </SectionBand>
       <PartnersMarquee />
       <SectionBand tone="soft">
-        <p className="typeLabel mb-4">{partnerContent.nextTitle}</p>
-        <h2 className="typeSection mb-5 max-w-3xl">Open a partnership conversation</h2>
-        <p className="typeBody mb-8 max-w-3xl">{partnerContent.nextBody}</p>
-        <Button href="/contact" variant="primary">
+        <p className={`${design.eyebrow} mb-4`} style={{ color: "var(--landing-blue)" }}>
+          {partnerContent.nextTitle}
+        </p>
+        <h2 className={`${design.heading} mb-5`}>Open a partnership conversation</h2>
+        <p className={`${design.body} mb-8`} style={{ maxWidth: "58ch" }}>
+          {partnerContent.nextBody}
+        </p>
+        <Button href="/contact" variant="yellow">
           Contact about partnership
         </Button>
       </SectionBand>

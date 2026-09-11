@@ -1,208 +1,102 @@
 .section {
   position: relative;
-  background: var(--color-navy);
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--landing-blue);
+  padding: calc(var(--landing-curve) + 56px) 0 calc(var(--landing-curve) + 64px);
 }
 
-.pin {
-  position: relative;
-  display: flex;
-  min-height: auto;
-  align-items: stretch;
-  overflow: visible;
-  color: #fff;
+@media (min-width: 768px) {
+  .section {
+    padding-block: calc(var(--landing-curve) + 90px);
+  }
+}
+
+.head {
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .head {
+    margin-bottom: 56px;
+  }
+}
+
+.note {
+  max-width: 48ch;
+  margin: 14px auto 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
 }
 
 @media (min-width: 1024px) {
-  .pin {
-    min-height: 100vh;
+  .grid {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: clamp(48px, 6vw, 96px);
     align-items: center;
-    overflow: hidden;
   }
 }
 
 .media {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  min-height: 100%;
-}
-
-.media img {
-  object-fit: cover;
-  object-position: center;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background:
-    linear-gradient(
-      100deg,
-      rgb(38 33 122 / 0.82) 0%,
-      rgb(38 33 122 / 0.55) 48%,
-      rgb(0 0 0 / 0.4) 100%
-    );
-}
-
-.inner {
   position: relative;
-  z-index: 2;
-  display: grid;
-  width: 100%;
-  gap: 2.5rem;
-  padding: 5rem 0 3.5rem;
+  width: min(86vw, 380px);
+  aspect-ratio: 4 / 5;
+  margin-inline: auto;
+  overflow: hidden;
+  background: var(--landing-blue-deep);
 }
 
 @media (min-width: 1024px) {
-  .inner {
-    grid-template-columns: auto minmax(0, 1fr);
-    gap: 3rem;
-    align-items: center;
-    padding: 6.5rem 0 5rem;
-  }
-}
-
-.rail {
-  display: none;
-  align-items: center;
-  gap: 1rem;
-}
-
-@media (min-width: 1024px) {
-  .rail {
-    display: flex;
-  }
-}
-
-.railTrack {
-  position: relative;
-  display: flex;
-  width: 2px;
-  height: 7.5rem;
-  flex-direction: column;
-  justify-content: space-between;
-  background: rgb(255 255 255 / 0.28);
-}
-
-.railDot {
-  position: relative;
-  left: 50%;
-  width: 8px;
-  height: 8px;
-  border: 1px solid rgb(255 255 255 / 0.7);
-  background: transparent;
-  transform: translateX(-50%);
-}
-
-.railDotActive {
-  border-color: #fff;
-  background: #fff;
-}
-
-.railTitleWrap {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-}
-
-.railLine {
-  width: 3.5rem;
-  height: 1px;
-  background: rgb(255 255 255 / 0.55);
-}
-
-.railTitle {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-}
-
-.content {
-  min-width: 0;
-}
-
-.mobileTitle {
-  margin: 0 0 1.75rem;
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-}
-
-@media (min-width: 1024px) {
-  .mobileTitle {
-    display: none;
+  .media {
+    width: 100%;
+    max-width: 440px;
+    margin-inline: 0;
   }
 }
 
 .stats {
   display: grid;
-  gap: 1.75rem;
+  grid-template-columns: 1fr;
+  gap: 22px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .stats {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
   }
 }
 
-.statValue {
-  margin: 0 0 0.65rem;
-  font-size: clamp(2.1rem, 4.2vw, 3.35rem);
+.stat {
+  padding: 18px 0;
+  border-top: 1px solid rgb(255 255 255 / 0.18);
+}
+
+.value {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: clamp(32px, 5vw, 44px);
   font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.03em;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
-.statCopy {
+.copy {
   margin: 0;
-  max-width: 16rem;
-  color: rgb(255 255 255 / 0.84);
-  font-size: 0.92rem;
-  font-weight: 400;
-  line-height: 1.55;
+  max-width: 28ch;
 }
 
-.cta {
+.actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.75rem;
-}
-
-@media (min-width: 768px) {
-  .cta {
-    margin-top: 2rem;
-  }
-}
-
-.mobileDots {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 1.75rem;
-}
-
-@media (min-width: 1024px) {
-  .mobileDots {
-    display: none;
-  }
-}
-
-.mobileDot {
-  width: 0.85rem;
-  height: 0.85rem;
-  padding: 0;
-  border: 1px solid rgb(255 255 255 / 0.55);
-  background: transparent;
-  cursor: pointer;
-}
-
-.mobileDotActive {
-  background: #fff;
-  border-color: #fff;
+  gap: 12px;
+  margin-top: 28px;
 }

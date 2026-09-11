@@ -1,281 +1,89 @@
-"use client";
+import Link from "next/link";
 
-import { useEffect, useId, useRef, useState } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-import AccentCta from "@/components/ui/AccentCta";
-import FieldPhotoGrid from "@/components/ui/FieldPhotoGrid";
+import SectionCurve from "@/components/design/SectionCurve";
+import design from "@/components/design/designShared.module.css";
 import FieldPhotoStack from "@/components/ui/FieldPhotoStack";
-import Modal from "@/components/ui/Modal";
-import {
-  howWeServeTopics,
-  type HowWeServeTopic,
-} from "@/features/ourWork/howWeServeTopics";
-import { pinnedSectionDefaults, pinRefreshPriority } from "@/lib/pinnedSection";
+import { howWeServeTopics } from "@/features/ourWork/howWeServeTopics";
 
 import styles from "./HowWeServeSection.module.css";
 
-gsap.registerPlugin(useGSAP, ScrollToPlugin, ScrollTrigger);
-
-const TOPIC_COUNT = howWeServeTopics.length;
+const accents = [
+  design.pillPurple,
+  design.pillYellow,
+  design.pillPink,
+  design.pillGreen,
+  design.pillPurple,
+] as const;
 
 export default function HowWeServeSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const pinRef = useRef<HTMLDivElement>(null);
-  const copyRef = useRef<HTMLDivElement>(null);
-  const mediaRef = useRef<HTMLDivElement>(null);
-  const scrollTriggerRef = useRef<ScrollTrigger | null>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [modalOpen, setModalOpen] = useState(false);
-  const [modalTopic, setModalTopic] = useState<HowWeServeTopic | null>(null);
-  const closeTimerRef = useRef<number | null>(null);
-  const activeIndexRef = useRef(0);
-  const isFirstIndexEffect = useRef(true);
-  const titleId = useId();
-  const topic = howWeServeTopics[activeIndex] ?? howWeServeTopics[0];
-
-  useGSAP(
-    () => {
-      const section = sectionRef.current;
-      const pin = pinRef.current;
-      if (!section || !pin) {
-        return;
-      }
-
-      const mm = gsap.matchMedia();
-
-      mm.add(
-        {
-          isDesktop: "(min-width: 1024px)",
-          reduceMotion: "(prefers-reduced-motion: reduce)",
-        },
-        (context) => {
-          const { isDesktop, reduceMotion } = context.conditions as {
-            isDesktop: boolean;
-            reduceMotion: boolean;
-          };
-
-          if (!isDesktop || reduceMotion) {
-            scrollTriggerRef.current = null;
-            return;
-          }
-
-          const trigger = ScrollTrigger.create({
-            id: "how-we-serve",
-            trigger: section,
-            start: "top top",
-            end: () => `+=${Math.round(window.innerHeight * TOPIC_COUNT * 0.5)}`,
-            pin,
-            ...pinnedSectionDefaults,
-            refreshPriority: pinRefreshPriority.howWeServe,
-            onUpdate: (self) => {
-              const nextIndex = Math.min(
-                TOPIC_COUNT - 1,
-                Math.floor(self.progress * TOPIC_COUNT),
-              );
-              if (nextIndex !== activeIndexRef.current) {
-                activeIndexRef.current = nextIndex;
-                setActiveIndex(nextIndex);
-              }
-            },
-          });
-
-          scrollTriggerRef.current = trigger;
-
-          return () => {
-            trigger.kill();
-            scrollTriggerRef.current = null;
-          };
-        },
-      );
-
-      return () => {
-        mm.revert();
-      };
-    },
-    { scope: sectionRef },
-  );
-
-  useEffect(() => {
-    activeIndexRef.current = activeIndex;
-  }, [activeIndex]);
-
-  useEffect(() => {
-    if (isFirstIndexEffect.current) {
-      isFirstIndexEffect.current = false;
-      return;
-    }
-
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduced) {
-      gsap.set([copyRef.current, mediaRef.current], { opacity: 1, y: 0 });
-      return;
-    }
-
-    gsap.fromTo(
-      [copyRef.current, mediaRef.current],
-      { opacity: 0.35, y: 10 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.35,
-        ease: "power2.out",
-        overwrite: true,
-      },
-    );
-  }, [activeIndex]);
-
-  const selectTopic = (index: number) => {
-    if (!howWeServeTopics[index]) {
-      return;
-    }
-
-    const trigger = scrollTriggerRef.current;
-    if (!trigger) {
-      activeIndexRef.current = index;
-      setActiveIndex(index);
-      return;
-    }
-
-    const progress = (index + 0.08) / TOPIC_COUNT;
-    const target =
-      trigger.start + (trigger.end - trigger.start) * Math.min(0.999, progress);
-
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      window.scrollTo(0, target);
-      return;
-    }
-
-    gsap.to(window, {
-      duration: 0.6,
-      ease: "power2.out",
-      scrollTo: { y: target, autoKill: false },
-      overwrite: true,
-    });
-  };
-
-  const openModal = () => {
-    if (!topic) {
-      return;
-    }
-    if (closeTimerRef.current) {
-      window.clearTimeout(closeTimerRef.current);
-      closeTimerRef.current = null;
-    }
-    setModalTopic(topic);
-    window.requestAnimationFrame(() => setModalOpen(true));
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-    if (closeTimerRef.current) {
-      window.clearTimeout(closeTimerRef.current);
-    }
-    closeTimerRef.current = window.setTimeout(() => {
-      setModalTopic(null);
-      closeTimerRef.current = null;
-    }, 480);
-  };
-
-  useEffect(() => {
-    return () => {
-      if (closeTimerRef.current) {
-        window.clearTimeout(closeTimerRef.current);
-      }
-    };
-  }, []);
-
-  if (!topic) {
-    return null;
-  }
-
   return (
-    <>
-      <section
-        ref={sectionRef}
-        id="how-we-serve"
-        data-nav-theme="light"
-        className={styles.section}
-      >
-        <div ref={pinRef} className={styles.pin}>
-          <div className={`siteContainer ${styles.layout}`}>
-            <div className={styles.mediaCol}>
-              <div ref={mediaRef} className={styles.mediaFrame}>
-                <FieldPhotoStack
-                  key={topic.id}
-                  photos={topic.gallery}
-                  sizes="(max-width: 1024px) 100vw, 42vw"
-                  intervalMs={3000}
-                />
-              </div>
-            </div>
+    <section
+      id="how-we-serve"
+      data-nav-theme="dark"
+      className={styles.section}
+      aria-labelledby="how-we-serve-title"
+    >
+      <SectionCurve position="top" fill="var(--landing-blue)" />
 
-            <div className={styles.copyCol}>
-              <p className={styles.label}>How we serve</p>
+      <div className={design.container}>
+        <div className={styles.head}>
+          <p className={`${design.eyebrow}`} style={{ color: "rgb(255 255 255 / 0.85)" }}>
+            How we serve
+          </p>
+          <h2
+            id="how-we-serve-title"
+            className={`${design.heading} ${design.headingLight}`}
+          >
+            Protect. Educate. Serve. Empower. Bring Hope.
+          </h2>
+          <p className={`${design.body} ${design.bodyLight} ${styles.intro}`}>
+            Five pathways that guide our work with children and families across Pakistan.
+          </p>
+        </div>
 
-              <div ref={copyRef} className={styles.copyBlock}>
-                <h2 className={styles.heading}>{topic.heading}</h2>
-                <p className={styles.summary}>{topic.summary}</p>
-                <div className={styles.ctaRow}>
-                  <AccentCta tone="sky" onClick={openModal}>
-                    More Information
-                  </AccentCta>
+        <div className={styles.rows}>
+          {howWeServeTopics.map((topic, index) => {
+            const mediaFirst = index % 2 === 1;
+
+            return (
+              <div
+                key={topic.id}
+                className={`${styles.row} ${
+                  mediaFirst ? styles.mediaFirst : styles.copyFirst
+                }`}
+              >
+                <div className={styles.mediaCol}>
+                  <div className={`${styles.media} ${design.shapeCircle}`}>
+                    <FieldPhotoStack
+                      photos={topic.gallery}
+                      sizes="(max-width: 1024px) 68vw, 300px"
+                      intervalMs={3400 + index * 280}
+                    />
+                  </div>
+                </div>
+
+                <div className={styles.copyCol}>
+                  <p className={`${design.eyebrow} ${styles.eyebrow}`}>{topic.label}</p>
+                  <h3 className={`${design.subHeading} ${styles.rowHeading}`}>
+                    {topic.label}
+                  </h3>
+                  <p className={`${design.body} ${design.bodyLight} ${styles.rowBody}`}>
+                    {topic.summary}
+                  </p>
+                  <Link
+                    href="/our-work"
+                    className={`${design.pill} ${accents[index] ?? design.pillYellow}`}
+                  >
+                    Learn More
+                  </Link>
                 </div>
               </div>
-
-              <ul className={styles.menu}>
-                {howWeServeTopics.map((item, index) => {
-                  const isActive = index === activeIndex;
-                  return (
-                    <li key={item.id} className={styles.menuItem}>
-                      <button
-                        type="button"
-                        className={`${styles.menuBtn} ${isActive ? styles.menuBtnActive : ""}`}
-                        aria-current={isActive ? "true" : undefined}
-                        onClick={() => selectTopic(index)}
-                      >
-                        <span>{item.label}</span>
-                        <span className={styles.menuIndicator} aria-hidden="true" />
-                      </button>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-          </div>
+            );
+          })}
         </div>
-      </section>
+      </div>
 
-      <Modal
-        open={modalOpen}
-        onClose={closeModal}
-        titleId={titleId}
-        lockOwner="howWeServeModal"
-        variant="drawer"
-      >
-        {modalTopic ? (
-          <div className={styles.modalScroll}>
-            <p className={styles.modalEyebrow}>{modalTopic.label}</p>
-            <h3 id={titleId} className={styles.modalTitle}>
-              {modalTopic.label}
-            </h3>
-            <p className={styles.modalBody}>{modalTopic.summary}</p>
-            <p className={styles.modalBody}>{modalTopic.detail}</p>
-            <FieldPhotoGrid
-              photos={modalTopic.gallery}
-              className={styles.modalGrid}
-              sizes="(max-width: 768px) 45vw, 260px"
-            />
-          </div>
-        ) : (
-          <h3 id={titleId} className={styles.srOnly}>
-            How we serve details
-          </h3>
-        )}
-      </Modal>
-    </>
+      <SectionCurve position="bottom" fill="#ffffff" />
+    </section>
   );
 }

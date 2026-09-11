@@ -1,0 +1,54 @@
+.section {
+  position: relative;
+  background: #fff;
+  padding-block: 64px;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-block: 90px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-block: 110px;
+  }
+}
+
+.head {
+  margin-bottom: 28px;
+}
+
+@media (min-width: 768px) {
+  .head {
+    margin-bottom: 36px;
+  }
+}
+
+.statement {
+  margin: 0;
+  max-width: 42rem;
+  color: var(--landing-body);
+  font-size: clamp(1.45rem, 3.4vw, 2.35rem);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  text-wrap: pretty;
+}
+
+.link {
+  color: rgb(85 85 85 / 0.55);
+}
+
+.toneInk {
+  color: var(--landing-ink);
+}
+
+.toneBlue {
+  color: var(--landing-blue);
+}
+
+.toneYellow {
+  color: var(--landing-yellow);
+}

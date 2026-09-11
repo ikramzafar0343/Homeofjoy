@@ -6,12 +6,13 @@ import gsap from "gsap";
 import Link from "next/link";
 
 import HomeOfJoyLogo from "@/components/brand/HomeOfJoyLogo";
-import AccentCta from "@/components/ui/AccentCta";
 import { siteNavItems, supportCta } from "@/constants/siteNavigation";
-import useNavTheme from "@/hooks/useNavTheme";
 import { syncBodyScrollLock } from "@/lib/scrollLock";
 
 gsap.registerPlugin(useGSAP);
+
+const headerPillClass =
+  "inline-flex items-center justify-center rounded-full bg-[color:var(--landing-yellow)] px-[22px] py-[10px] text-[13px] font-semibold text-[color:var(--landing-ink)] transition-[opacity,filter] duration-200 hover:opacity-[0.92] hover:brightness-[1.03]";
 
 export default function SiteHeader() {
   const headerRef = useRef<HTMLElement>(null);
@@ -19,7 +20,6 @@ export default function SiteHeader() {
   const linksRef = useRef<HTMLElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   const mobilePanelRef = useRef<HTMLDivElement>(null);
-  const navTheme = useNavTheme();
   const [isCompact, setIsCompact] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasIntroPlayed, setHasIntroPlayed] = useState(false);
@@ -83,16 +83,12 @@ export default function SiteHeader() {
     { dependencies: [hasIntroPlayed], scope: headerRef },
   );
 
-  const useLightChrome = navTheme === "dark" && !isCompact;
-  const linkClass = useLightChrome
-    ? "text-white after:bg-white"
-    : "text-navy after:bg-navy";
-  const menuButtonClass = useLightChrome ? "text-white" : "text-navy";
-  const brandTextClass = useLightChrome ? "text-white" : "text-navy";
-  const dropdownChevronClass = useLightChrome ? "text-white/75" : "text-navy/50";
-  const navItemClass = `group relative text-[13px] font-medium tracking-[0.02em] transition-opacity duration-300 hover:opacity-100 ${
-    useLightChrome ? "opacity-90" : "opacity-90"
-  } ${linkClass}`;
+  // Reference design: the header is always an opaque white bar above the hero.
+  const menuButtonClass = "text-navy";
+  const brandTextClass = "text-navy";
+  const dropdownChevronClass = "text-navy/50";
+  const navItemClass =
+    "group relative text-[13px] font-medium tracking-[0.02em] text-navy opacity-90 transition-opacity duration-300 after:bg-navy hover:opacity-100";
   const navUnderlineClass =
     "after:pointer-events-none after:absolute after:bottom-[-6px] after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-out group-hover:after:scale-x-100";
 
@@ -100,13 +96,11 @@ export default function SiteHeader() {
     <>
       <header
         ref={headerRef}
-        className={`fixed inset-x-0 top-0 z-50 transition-[background-color,backdrop-filter,padding] duration-300 ${
-          isCompact
-            ? "bg-background/90 py-3 shadow-[0_1px_0_rgb(233_233_233/0.8)] backdrop-blur-md"
-            : "bg-transparent py-5"
+        className={`fixed inset-x-0 top-0 z-50 border-b border-[color:var(--landing-line)] bg-white transition-shadow duration-300 ${
+          isCompact ? "shadow-[0_2px_16px_rgb(17_17_17/0.06)]" : ""
         }`}
       >
-        <div className="siteContainer flex items-center justify-between gap-6">
+        <div className="mx-auto flex min-h-[var(--header-height)] w-full max-w-[1200px] items-center justify-between gap-6 px-5 md:px-9 xl:px-12">
           <Link
             ref={logoWrapRef}
             href="/"
@@ -115,7 +109,7 @@ export default function SiteHeader() {
           >
             <HomeOfJoyLogo size="nav" priority />
             <span
-              className={`hidden text-sm font-bold leading-tight sm:block ${brandTextClass}`}
+              className={`hidden text-[15px] font-bold leading-tight tracking-[-0.01em] sm:block ${brandTextClass}`}
             >
               Home of Joy
             </span>
@@ -200,10 +194,10 @@ export default function SiteHeader() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <div ref={ctaRef} className="hidden sm:block">
-              <AccentCta href={supportCta.href} tone="orange">
+            <div ref={ctaRef} className="hidden lg:block">
+              <Link href={supportCta.href} className={headerPillClass}>
                 {supportCta.label}
-              </AccentCta>
+              </Link>
             </div>
 
             <button
@@ -310,10 +304,14 @@ export default function SiteHeader() {
               </Link>
             ),
           )}
-          <div className="mt-4" onClick={() => setIsMenuOpen(false)}>
-            <AccentCta href={supportCta.href} tone="orange">
+          <div className="mt-4">
+            <Link
+              href={supportCta.href}
+              className={headerPillClass}
+              onClick={() => setIsMenuOpen(false)}
+            >
               {supportCta.label}
-            </AccentCta>
+            </Link>
           </div>
         </div>
       </div>

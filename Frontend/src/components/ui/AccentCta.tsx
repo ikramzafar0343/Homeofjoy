@@ -2,46 +2,42 @@
 
 import Link from "next/link";
 
-import styles from "./AccentCta.module.css";
+import design from "@/components/design/designShared.module.css";
+
+type AccentTone = "sky" | "orange" | "yellow" | "blue" | "pink" | "green" | "purple" | "white";
 
 type AccentCtaProps = {
   readonly children: React.ReactNode;
   readonly className?: string;
-  readonly tone?: "sky" | "orange";
+  readonly tone?: AccentTone;
   readonly href?: string;
   readonly onClick?: () => void;
+};
+
+const toneClass: Record<AccentTone, string> = {
+  sky: design.pillBlue ?? "",
+  orange: design.pillYellow ?? "",
+  yellow: design.pillYellow ?? "",
+  blue: design.pillBlue ?? "",
+  pink: design.pillPink ?? "",
+  green: design.pillGreen ?? "",
+  purple: design.pillPurple ?? "",
+  white: design.pillWhite ?? "",
 };
 
 export default function AccentCta({
   children,
   className = "",
-  tone = "sky",
+  tone = "yellow",
   href,
   onClick,
 }: AccentCtaProps) {
-  const classes = `${styles.cta} ${tone === "orange" ? styles.ctaOrange : styles.ctaSky} ${className}`.trim();
-
-  const inner = (
-    <>
-      <span className={styles.ctaLabel}>{children}</span>
-      <span className={styles.ctaArrow} aria-hidden="true">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <path
-            d="M2.5 8h11M9.5 3.5 14 8l-4.5 4.5"
-            stroke="currentColor"
-            strokeWidth="1.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </span>
-    </>
-  );
+  const classes = `${design.pill} ${toneClass[tone]} ${className}`.trim();
 
   if (onClick && !href) {
     return (
       <button type="button" className={classes} onClick={onClick}>
-        {inner}
+        {children}
       </button>
     );
   }
@@ -52,7 +48,7 @@ export default function AccentCta({
 
   return (
     <Link href={href} className={classes}>
-      {inner}
+      {children}
     </Link>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
 import PageHero from "@/components/sections/PageHero";
+import { pageHeroGalleries } from "@/content/pageHeroGalleries";
 
 const MissionIntroduction = dynamic(
   () => import("@/features/about/MissionIntroduction"),
@@ -31,9 +32,11 @@ export default function AboutPage() {
         eyebrow="About"
         title="A foundation rooted in care and hope"
         description="We serve vulnerable communities across Pakistan with practical support, education, protection, and respectful, faith-aware compassion."
-        tone="light"
+        gallery={pageHeroGalleries.about}
         ctaLabel="Contact Us"
         ctaHref="/contact"
+        secondaryLabel="Our Work"
+        secondaryHref="/our-work"
       />
       <MissionIntroduction />
       <DesignPrincipleBand />

@@ -1,59 +1,74 @@
-import BrandMotif from "@/components/ui/BrandMotif";
-import Button from "@/components/ui/Button";
+import Link from "next/link";
 
-type PageHeroProps = {
+import SectionCurve from "@/components/design/SectionCurve";
+import design from "@/components/design/designShared.module.css";
+import FieldPhotoStack from "@/components/ui/FieldPhotoStack";
+import type { FieldPhoto } from "@/features/ourWork/ourWorkAreas";
+
+import styles from "./PageHero.module.css";
+
+export type PageHeroProps = {
   readonly eyebrow: string;
   readonly title: string;
   readonly description: string;
-  readonly tone?: "light" | "dark" | "sky";
-  readonly ctaLabel?: string;
-  readonly ctaHref?: string;
+  readonly gallery: readonly FieldPhoto[];
+  readonly ctaLabel?: string | undefined;
+  readonly ctaHref?: string | undefined;
+  readonly secondaryLabel?: string | undefined;
+  readonly secondaryHref?: string | undefined;
+  readonly align?: "center" | "left" | undefined;
+  /** @deprecated Kept for callers; photo hero is always dark-overlaid. */
+  readonly tone?: "light" | "dark" | "sky" | undefined;
 };
 
 export default function PageHero({
   eyebrow,
   title,
   description,
-  tone = "light",
+  gallery,
   ctaLabel,
   ctaHref,
+  secondaryLabel,
+  secondaryHref,
+  align = "center",
 }: PageHeroProps) {
-  const isDark = tone === "dark";
-  const isSky = tone === "sky";
+  const alignClass = align === "left" ? styles.left : styles.center;
 
   return (
-    <section
-      data-nav-theme={isDark ? "dark" : "light"}
-      className={`relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28 ${
-        isDark
-          ? "bg-navy text-white"
-          : isSky
-            ? "bg-sky/35 text-navy"
-            : "bg-white text-navy"
-      }`}
-    >
-      <BrandMotif
-        variant="circle"
-        className={`top-10 right-[-3rem] h-56 w-56 ${isDark ? "text-sky/25" : ""}`}
-      />
-      <div className="siteContainer relative z-10 max-w-4xl">
-        <p className={`typeLabel mb-5 ${isDark ? "text-sky" : ""}`}>{eyebrow}</p>
-        <h1 className={`typeSection mb-6 max-w-3xl ${isDark ? "text-white" : ""}`}>
-          {title}
-        </h1>
-        <p
-          className={`typeBody mb-10 max-w-2xl ${
-            isDark ? "text-white/75" : "text-bodyGray"
-          }`}
-        >
-          {description}
-        </p>
+    <section data-nav-theme="light" className={styles.hero} aria-label={title}>
+      <div className={styles.media}>
+        <FieldPhotoStack
+          photos={gallery}
+          sizes="100vw"
+          intervalMs={4200}
+          pauseOnHover={false}
+          imageClassName={styles.mediaImg}
+        />
+      </div>
+      <div className={styles.overlay} aria-hidden="true" />
+
+      <div className={`${design.container} ${styles.inner} ${alignClass}`}>
+        <p className={`${design.eyebrow} ${styles.eyebrow}`}>{eyebrow}</p>
+        <h1 className={styles.title}>{title}</h1>
+        <p className={styles.body}>{description}</p>
         {ctaLabel && ctaHref ? (
-          <Button href={ctaHref} variant={isDark ? "accent" : "primary"}>
-            {ctaLabel}
-          </Button>
+          <div className={styles.ctaRow}>
+            <Link href={ctaHref} className={`${design.pill} ${design.pillYellow}`}>
+              {ctaLabel}
+            </Link>
+            {secondaryLabel && secondaryHref ? (
+              <Link
+                href={secondaryHref}
+                className={`${design.pill} ${design.pillWhite}`}
+              >
+                {secondaryLabel}
+              </Link>
+            ) : null}
+          </div>
         ) : null}
       </div>
+
+      <SectionCurve position="bottom" fill="#ffffff" />
     </section>
   );
 }

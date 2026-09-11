@@ -1,0 +1,152 @@
+.wrap {
+  position: relative;
+  background: #fff;
+  padding-block: 12px 32px;
+  overflow-x: clip;
+}
+
+@media (min-width: 768px) {
+  .wrap {
+    padding-block: 40px 64px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrap {
+    padding-block: 56px 80px;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  align-items: center;
+  justify-items: center;
+  padding-block: 40px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .row {
+    padding-block: 56px;
+    gap: 36px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .row {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr);
+    justify-content: space-between;
+    justify-items: stretch;
+    gap: clamp(64px, 8vw, 120px);
+    padding-block: 80px;
+    text-align: left;
+  }
+}
+
+.mediaCol {
+  display: flex;
+  justify-content: center;
+  order: 1;
+  width: 100%;
+}
+
+.copyCol {
+  order: 2;
+  min-width: 0;
+  max-width: 34rem;
+  width: 100%;
+}
+
+/* Half-capsule frames — taller portrait, one flat end. */
+.media {
+  position: relative;
+  width: min(86vw, 320px);
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--landing-line);
+}
+
+@media (min-width: 768px) {
+  .media {
+    width: min(52vw, 400px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .media {
+    width: 100%;
+    max-width: 440px;
+  }
+}
+
+/* Vision / circle frames stay square. */
+.mediaCircle {
+  width: min(76vw, 280px);
+  aspect-ratio: 1;
+}
+
+@media (min-width: 768px) {
+  .mediaCircle {
+    width: min(48vw, 360px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .mediaCircle {
+    width: 100%;
+    max-width: 420px;
+  }
+}
+
+.media img {
+  object-fit: cover;
+}
+
+.heading {
+  margin-bottom: 14px;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    margin-bottom: 20px;
+  }
+}
+
+.paragraph {
+  margin-inline: auto;
+}
+
+.paragraph + .paragraph {
+  margin-top: 14px;
+}
+
+@media (min-width: 1024px) {
+  .mediaFirst .mediaCol {
+    order: 1;
+  }
+
+  .mediaFirst .copyCol {
+    order: 2;
+    text-align: left;
+  }
+
+  .copyFirst .copyCol {
+    order: 1;
+    text-align: left;
+    margin-inline-end: auto;
+  }
+
+  .copyFirst .mediaCol {
+    order: 2;
+  }
+
+  .mediaFirst .copyCol {
+    margin-inline-start: auto;
+  }
+
+  .paragraph {
+    margin-inline: 0;
+  }
+}

@@ -1,0 +1,135 @@
+.section {
+  position: relative;
+  isolation: isolate;
+  background: var(--landing-blue);
+  padding: calc(var(--landing-curve) + 56px) 0 calc(var(--landing-curve) + 64px);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-block: calc(var(--landing-curve) + 90px) calc(var(--landing-curve) + 100px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-block: calc(var(--landing-curve) + 110px) calc(var(--landing-curve) + 120px);
+  }
+}
+
+.heading {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    margin-bottom: 72px;
+  }
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+@media (min-width: 768px) {
+  .rows {
+    gap: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .rows {
+    gap: clamp(80px, 8vw, 120px);
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .row {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: clamp(64px, 8vw, 120px);
+    justify-items: stretch;
+    text-align: left;
+  }
+}
+
+.mediaCol {
+  display: flex;
+  justify-content: center;
+  order: 1;
+}
+
+.copyCol {
+  order: 2;
+  min-width: 0;
+  max-width: 34rem;
+  width: 100%;
+}
+
+.media {
+  position: relative;
+  width: clamp(210px, 68vw, 280px);
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--landing-blue-deep);
+  box-shadow: 0 0 0 6px rgb(255 255 255 / 0.1);
+}
+
+@media (min-width: 1024px) {
+  .media {
+    width: clamp(220px, 22vw, 300px);
+  }
+}
+
+.media img {
+  object-fit: cover;
+}
+
+.rowHeading {
+  margin: 0 0 12px;
+  color: #fff;
+}
+
+.rowBody {
+  margin: 0 auto 22px;
+  max-width: 34ch;
+}
+
+@media (min-width: 1024px) {
+  .rowBody {
+    margin-inline: 0;
+    max-width: 48ch;
+  }
+
+  .mediaFirst {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .mediaFirst .mediaCol {
+    order: 1;
+  }
+
+  .mediaFirst .copyCol {
+    order: 2;
+  }
+
+  .copyFirst .copyCol {
+    order: 1;
+  }
+
+  .copyFirst .mediaCol {
+    order: 2;
+  }
+}

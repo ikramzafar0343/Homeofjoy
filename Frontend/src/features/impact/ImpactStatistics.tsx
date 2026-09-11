@@ -1,219 +1,81 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import AccentCta from "@/components/ui/AccentCta";
-import ImageLightbox from "@/components/ui/ImageLightbox";
-import { impactSlides } from "@/content/impactStatements";
-import ImpactStatCounter from "@/features/impact/ImpactStatCounter";
-import { pinnedSectionDefaults, pinRefreshPriority } from "@/lib/pinnedSection";
+import SectionCurve from "@/components/design/SectionCurve";
+import design from "@/components/design/designShared.module.css";
+import { impactStatements } from "@/content/impactStatements";
+import { pageHeroGalleries } from "@/content/pageHeroGalleries";
 
 import styles from "./ImpactStatistics.module.css";
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
-
-const SLIDE_COUNT = impactSlides.length;
+function formatCount(value: number): string {
+  return value.toLocaleString("en-US");
+}
 
 export default function ImpactStatistics() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const pinRef = useRef<HTMLDivElement>(null);
-  const panelRef = useRef<HTMLDivElement>(null);
-  const mediaRef = useRef<HTMLDivElement>(null);
-  const activeIndexRef = useRef(0);
-  const isFirstSwap = useRef(true);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const slide = impactSlides[activeIndex] ?? impactSlides[0];
-
-  useGSAP(
-    () => {
-      const section = sectionRef.current;
-      const pin = pinRef.current;
-      if (!section || !pin) {
-        return;
-      }
-
-      const mm = gsap.matchMedia();
-
-      mm.add(
-        {
-          isDesktop: "(min-width: 1024px)",
-          reduceMotion: "(prefers-reduced-motion: reduce)",
-        },
-        (context) => {
-          const { isDesktop, reduceMotion } = context.conditions as {
-            isDesktop: boolean;
-            reduceMotion: boolean;
-          };
-
-          if (!isDesktop || reduceMotion) {
-            return;
-          }
-
-          const trigger = ScrollTrigger.create({
-            id: "impact-statistics",
-            trigger: section,
-            start: "top top",
-            end: () => `+=${Math.round(window.innerHeight * SLIDE_COUNT * 0.55)}`,
-            pin,
-            ...pinnedSectionDefaults,
-            refreshPriority: pinRefreshPriority.impact,
-            onUpdate: (self) => {
-              const nextIndex = Math.min(
-                SLIDE_COUNT - 1,
-                Math.floor(self.progress * SLIDE_COUNT),
-              );
-              if (nextIndex !== activeIndexRef.current) {
-                activeIndexRef.current = nextIndex;
-                setActiveIndex(nextIndex);
-              }
-            },
-          });
-
-          return () => {
-            trigger.kill();
-          };
-        },
-      );
-
-      return () => {
-        mm.revert();
-      };
-    },
-    { scope: sectionRef },
-  );
-
-  useEffect(() => {
-    activeIndexRef.current = activeIndex;
-  }, [activeIndex]);
-
-  useEffect(() => {
-    if (isFirstSwap.current) {
-      isFirstSwap.current = false;
-      return;
-    }
-
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduced) {
-      gsap.set([panelRef.current, mediaRef.current], { opacity: 1 });
-      return;
-    }
-
-    gsap.fromTo(
-      [panelRef.current, mediaRef.current],
-      { opacity: 0.25 },
-      {
-        opacity: 1,
-        duration: 0.4,
-        ease: "power2.out",
-        overwrite: true,
-      },
-    );
-  }, [activeIndex]);
-
-  if (!slide) {
-    return null;
-  }
+  const media = pageHeroGalleries.impact[0]!;
 
   return (
     <section
-      ref={sectionRef}
       id="impact"
       data-nav-theme="dark"
       className={styles.section}
-      aria-label="Our Impact"
+      aria-labelledby="impact-title"
     >
-      <div ref={pinRef} className={styles.pin}>
-        <div ref={mediaRef} className={styles.media} aria-hidden="true">
-          <Image
-            key={slide.imageSrc}
-            src={slide.imageSrc}
-            alt=""
-            fill
-            sizes="100vw"
-          />
-        </div>
-        <div className={styles.overlay} aria-hidden="true" />
+      <SectionCurve position="top" fill="var(--landing-blue)" />
 
-        <div className={`siteContainer ${styles.inner}`}>
-          <div className={styles.rail} aria-hidden="true">
-            <div className={styles.railTrack}>
-              {impactSlides.map((item, index) => (
-                <span
-                  key={item.id}
-                  className={`${styles.railDot} ${
-                    index === activeIndex ? styles.railDotActive : ""
-                  }`}
-                />
-              ))}
-            </div>
-            <div className={styles.railTitleWrap}>
-              <span className={styles.railLine} />
-              <p className={styles.railTitle}>Our Impact</p>
-            </div>
+      <div className={design.container}>
+        <div className={styles.head}>
+          <p className={design.eyebrow} style={{ color: "rgb(255 255 255 / 0.85)" }}>
+            Our Impact
+          </p>
+          <h2 id="impact-title" className={`${design.heading} ${design.headingLight}`}>
+            Measured with integrity
+          </h2>
+          <p className={`${design.body} ${design.bodyLight} ${styles.note}`}>
+            Figures below are demo placeholders for layout. Verified totals will replace
+            them when confirmed by the foundation.
+          </p>
+        </div>
+
+        <div className={styles.grid}>
+          <div className={`${styles.media} ${design.shapeA}`}>
+            <Image
+              src={media.src}
+              alt={media.alt}
+              fill
+              sizes="(max-width: 1024px) 86vw, 440px"
+            />
           </div>
 
-          <div ref={panelRef} className={styles.content}>
-            <p className={styles.mobileTitle}>Our Impact</p>
-
+          <div>
             <ul className={styles.stats}>
-              {slide.items.map((item, index) => (
-                <li key={`${slide.id}-${item.value}-${item.statement}`}>
-                  <p className={styles.statValue}>
-                    <ImpactStatCounter
-                      value={item.value}
-                      suffix={item.suffix}
-                      animateKey={`${slide.id}-${activeIndex}-${index}`}
-                    />
+              {impactStatements.map((item) => (
+                <li key={`${item.value}-${item.statement}`} className={styles.stat}>
+                  <p className={styles.value}>
+                    {formatCount(item.value)}
+                    {item.suffix}
                   </p>
-                  <p className={styles.statCopy}>{item.statement}</p>
-                  {index === 0 ? (
-                    <div className={styles.cta}>
-                      <AccentCta href="/impact" tone="sky">
-                        View All Stats
-                      </AccentCta>
-                      <AccentCta tone="sky" onClick={() => setLightboxOpen(true)}>
-                        View image
-                      </AccentCta>
-                    </div>
-                  ) : null}
+                  <p className={`${design.body} ${design.bodyLight} ${styles.copy}`}>
+                    {item.statement}
+                  </p>
                 </li>
               ))}
             </ul>
 
-            <div className={styles.mobileDots} role="tablist" aria-label="Impact slides">
-              {impactSlides.map((item, index) => (
-                <button
-                  key={`m-${item.id}`}
-                  type="button"
-                  className={`${styles.mobileDot} ${
-                    index === activeIndex ? styles.mobileDotActive : ""
-                  }`}
-                  aria-label={`Show impact slide ${index + 1}`}
-                  aria-current={index === activeIndex ? "true" : undefined}
-                  onClick={() => {
-                    activeIndexRef.current = index;
-                    setActiveIndex(index);
-                  }}
-                />
-              ))}
+            <div className={styles.actions}>
+              <Link href="/our-work" className={`${design.pill} ${design.pillYellow}`}>
+                Explore Our Work
+              </Link>
+              <Link href="/locations" className={`${design.pill} ${design.pillWhite}`}>
+                View Locations
+              </Link>
             </div>
           </div>
         </div>
       </div>
 
-      <ImageLightbox
-        open={lightboxOpen}
-        onClose={() => setLightboxOpen(false)}
-        src={slide.imageSrc}
-        alt={slide.imageAlt}
-        caption="Our Impact"
-        lockOwner="impactLightbox"
-      />
+      <SectionCurve position="bottom" fill="#fafaf8" />
     </section>
   );
 }

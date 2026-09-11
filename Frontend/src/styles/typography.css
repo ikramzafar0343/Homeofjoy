@@ -3,7 +3,7 @@
   line-height: 1.05;
   font-weight: 900;
   letter-spacing: -0.02em;
-  color: var(--color-navy);
+  color: var(--landing-ink);
 }
 
 .typeSection {
@@ -11,14 +11,14 @@
   line-height: 1.1;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: var(--color-navy);
+  color: var(--landing-ink);
 }
 
 .typeSub {
   font-size: clamp(1.25rem, 2vw, 1.75rem);
   line-height: 1.35;
   font-weight: 500;
-  color: var(--color-navy);
+  color: var(--landing-ink);
 }
 
 .typeBody {
@@ -32,7 +32,7 @@
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-blue);
+  color: var(--landing-blue);
 }
 
 @media (min-width: 768px) {

@@ -43,4 +43,31 @@
   --space-section-sm: 3.75rem;
   --space-section-md: 5.25rem;
   --space-section-lg: 6.75rem;
+
+  /*
+   * Landing reference design system. Values are px-based on purpose: the root
+   * font-size is scaled by --ui-scale, so rem would shrink the reference
+   * proportions. Swap these four blues/accents to rebrand the landing page.
+   */
+  --landing-blue: #247ba8;
+  --landing-blue-deep: #1e668d;
+  --landing-off-white: #fafaf8;
+  --landing-ink: #111111;
+  --landing-body: #555555;
+  --landing-line: #ededed;
+
+  --landing-purple: #9b4d96;
+  --landing-pink: #e91e63;
+  --landing-yellow: #f4b62a;
+  --landing-green: #72b982;
+
+  --landing-curve: clamp(56px, 12vw, 120px);
+  --header-height: 72px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --landing-curve: clamp(64px, 8vw, 120px);
+    --header-height: 78px;
+  }
 }

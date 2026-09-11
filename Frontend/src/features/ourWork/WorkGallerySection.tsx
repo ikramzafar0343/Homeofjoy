@@ -1,228 +1,95 @@
-"use client";
+import Link from "next/link";
 
-import { useEffect, useId, useRef, useState } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-import AccentCta from "@/components/ui/AccentCta";
-import FieldPhotoGrid from "@/components/ui/FieldPhotoGrid";
+import SectionCurve from "@/components/design/SectionCurve";
+import design from "@/components/design/designShared.module.css";
 import FieldPhotoStack from "@/components/ui/FieldPhotoStack";
-import Modal from "@/components/ui/Modal";
 import { organizationContent } from "@/content/organizationContent";
-import {
-  ourWorkAreas,
-  type OurWorkArea,
-} from "@/features/ourWork/ourWorkAreas";
+import { ourWorkAreas } from "@/features/ourWork/ourWorkAreas";
 
 import styles from "./WorkGallerySection.module.css";
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
-
-function splitTitle(title: string): { primary: string; secondary: string | null } {
-  if (title.includes("&")) {
-    const [left, right] = title.split(/\s*&\s*/);
-    return {
-      primary: left?.trim() ?? title,
-      secondary: right ? `& ${right.trim()}` : null,
-    };
-  }
-  const parts = title.split(/\s+/);
-  if (parts.length < 2) {
-    return { primary: title, secondary: null };
-  }
-  return {
-    primary: parts[0] ?? title,
-    secondary: parts.slice(1).join(" "),
-  };
-}
+const accents = [
+  design.pillPurple,
+  design.pillYellow,
+  design.pillPink,
+  design.pillGreen,
+  design.pillPurple,
+  design.pillYellow,
+] as const;
 
 export default function WorkGallerySection() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const headingRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const galleryRef = useRef<HTMLDivElement>(null);
-  const [activeArea, setActiveArea] = useState<OurWorkArea | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const titleId = useId();
-  const closeTimerRef = useRef<number | null>(null);
-
-  useGSAP(
-    () => {
-      const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (reduced) {
-        return;
-      }
-
-      const nodes = sectionRef.current?.querySelectorAll<HTMLElement>("[data-reveal]");
-      if (!nodes || nodes.length === 0) {
-        return;
-      }
-
-      gsap.set(nodes, { opacity: 0, y: 28 });
-
-      const triggers = Array.from(nodes).map((node) =>
-        ScrollTrigger.create({
-          trigger: node,
-          start: "top 90%",
-          once: true,
-          onEnter: () => {
-            gsap.to(node, {
-              opacity: 1,
-              y: 0,
-              duration: 0.65,
-              ease: "power3.out",
-              overwrite: true,
-            });
-          },
-        }),
-      );
-
-      ScrollTrigger.refresh();
-
-      return () => {
-        triggers.forEach((trigger) => trigger.kill());
-      };
-    },
-    { scope: sectionRef },
-  );
-
-  const openModal = (area: OurWorkArea) => {
-    if (closeTimerRef.current) {
-      window.clearTimeout(closeTimerRef.current);
-      closeTimerRef.current = null;
-    }
-    setActiveArea(area);
-    window.requestAnimationFrame(() => {
-      setIsModalOpen(true);
-    });
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    if (closeTimerRef.current) {
-      window.clearTimeout(closeTimerRef.current);
-    }
-    closeTimerRef.current = window.setTimeout(() => {
-      setActiveArea(null);
-      closeTimerRef.current = null;
-    }, 480);
-  };
-
-  useEffect(() => {
-    return () => {
-      if (closeTimerRef.current) {
-        window.clearTimeout(closeTimerRef.current);
-      }
-    };
-  }, []);
-
-  const modalTitle = activeArea ? splitTitle(activeArea.title) : null;
-
   return (
-    <>
-      <section
-        ref={sectionRef}
-        id="our-work"
-        data-nav-theme="light"
-        className={styles.section}
-      >
-        <div className={`siteContainer ${styles.layout}`}>
-          <div ref={headingRef} className={styles.headingBlock}>
-            <p data-reveal className={styles.label}>
-              What We Do
-            </p>
-            <h2 data-reveal className={styles.title}>
-              {organizationContent.shortName}
-              <span className={styles.titleMuted}>Foundation</span>
-            </h2>
-          </div>
+    <section
+      id="what-we-do"
+      data-nav-theme="dark"
+      className={styles.section}
+      aria-labelledby="what-we-do-title"
+    >
+      <SectionCurve position="top" fill="var(--landing-blue)" />
 
-          <div ref={contentRef} className={styles.content}>
-            <div ref={galleryRef} className={styles.gallery}>
-              {ourWorkAreas.map((area) => (
-                <button
-                  key={area.number}
-                  type="button"
-                  data-reveal
-                  className={styles.card}
-                  onClick={() => openModal(area)}
-                  aria-haspopup="dialog"
-                  aria-expanded={activeArea?.number === area.number && isModalOpen}
-                >
-                  <div className={styles.cardMedia}>
+      <div className={design.container}>
+        <div className={styles.head}>
+          <p className={design.eyebrow} style={{ color: "rgb(255 255 255 / 0.85)" }}>
+            What We Do
+          </p>
+          <h2
+            id="what-we-do-title"
+            className={`${design.heading} ${design.headingLight}`}
+          >
+            Six areas of compassionate service
+          </h2>
+          <p className={`${design.body} ${design.bodyLight} ${styles.intro}`}>
+            {organizationContent.mission} Across education, child care, protection,
+            discipleship, and community outreach, we serve so hope can take root in
+            Pakistan.
+          </p>
+        </div>
+
+        <div className={styles.rows}>
+          {ourWorkAreas.map((area, index) => {
+            const mediaFirst = index % 2 === 1;
+
+            return (
+              <div
+                key={area.number}
+                className={`${styles.row} ${
+                  mediaFirst ? styles.mediaFirst : styles.copyFirst
+                }`}
+              >
+                <div className={styles.mediaCol}>
+                  <div className={`${styles.media} ${design.shapeCircle}`}>
                     <FieldPhotoStack
                       photos={area.gallery}
-                      sizes="(max-width: 768px) 60vw, 280px"
-                      intervalMs={2800 + Number(area.number) * 180}
-                      imageClassName={styles.cardImage}
+                      sizes="(max-width: 1024px) 68vw, 300px"
+                      intervalMs={3200 + index * 280}
                     />
-                    <span className={styles.cardAction} aria-hidden="true">
-                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                        <path
-                          d="M2.5 7h9M8 3.5 11.5 7 8 10.5"
-                          stroke="currentColor"
-                          strokeWidth="1.6"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </span>
                   </div>
-                  <p className={styles.cardCaption}>{area.title}</p>
-                </button>
-              ))}
-            </div>
+                </div>
 
-            <div data-reveal className={styles.copy}>
-              <p className={styles.lead}>{organizationContent.mission}</p>
-              <p className={styles.body}>
-                Across education, child care, protection, discipleship, and community
-                outreach, we serve with compassion so hope can take root in Pakistan.
-              </p>
-              <AccentCta href="/our-work" tone="sky">
-                Explore Our Work
-              </AccentCta>
-            </div>
-          </div>
+                <div className={styles.copyCol}>
+                  <p className={`${design.eyebrow} ${styles.eyebrow}`}>
+                    Area {area.number}
+                  </p>
+                  <h3 className={`${design.subHeading} ${styles.rowHeading}`}>
+                    {area.title}
+                  </h3>
+                  <p className={`${design.body} ${design.bodyLight} ${styles.rowBody}`}>
+                    {area.detail || area.description}
+                  </p>
+                  <Link
+                    href={area.href}
+                    className={`${design.pill} ${accents[index] ?? design.pillYellow}`}
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
         </div>
-      </section>
+      </div>
 
-      <Modal
-        open={isModalOpen}
-        onClose={closeModal}
-        titleId={titleId}
-        lockOwner="workGalleryModal"
-        variant="drawer"
-      >
-        {activeArea && modalTitle ? (
-          <div className={styles.modalScroll}>
-            <p className={styles.modalEyebrow}>Area {activeArea.number}</p>
-            <h3 id={titleId} className={styles.modalTitle}>
-              {modalTitle.primary}{" "}
-              {modalTitle.secondary ? (
-                <span className={styles.modalTitleMuted}>{modalTitle.secondary}</span>
-              ) : null}
-            </h3>
-            <p className={styles.modalRole}>{activeArea.description}</p>
-            <p className={styles.modalBody}>{activeArea.detail}</p>
-            <FieldPhotoGrid
-              photos={activeArea.gallery}
-              className={styles.modalGrid}
-              sizes="(max-width: 768px) 45vw, 260px"
-            />
-            <div className={styles.modalLink}>
-              <AccentCta href={activeArea.href} tone="sky">
-                View this work
-              </AccentCta>
-            </div>
-          </div>
-        ) : (
-          <h3 id={titleId} className={styles.srOnly}>
-            Work area details
-          </h3>
-        )}
-      </Modal>
-    </>
+      <SectionCurve position="bottom" fill="var(--landing-blue)" />
+    </section>
   );
 }

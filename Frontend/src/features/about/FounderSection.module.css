@@ -1,64 +1,70 @@
 .section {
   position: relative;
-  overflow: hidden;
-  background:
-    linear-gradient(
-      135deg,
-      #f7f9fb 0%,
-      #ffffff 48%,
-      rgb(143 209 244 / 0.22) 100%
-    );
-  padding: 5rem 0 5.5rem;
+  background: var(--landing-off-white);
+  padding-block: 64px;
+  overflow-x: clip;
 }
 
 @media (min-width: 768px) {
   .section {
-    padding: 6.5rem 0 7rem;
+    padding-block: 90px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-block: 110px;
   }
 }
 
 .layout {
   display: grid;
-  gap: 2.5rem;
+  grid-template-columns: 1fr;
+  gap: 28px;
   align-items: center;
+  justify-items: center;
+  text-align: center;
 }
 
 @media (min-width: 1024px) {
   .layout {
-    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-    gap: 3.5rem;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr);
+    gap: clamp(48px, 7vw, 100px);
+    justify-items: stretch;
+    text-align: left;
   }
+}
+
+.mediaCol {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .portrait {
   position: relative;
-  isolation: isolate;
-  min-height: 22rem;
+  width: min(86vw, 320px);
+  aspect-ratio: 4 / 5;
   overflow: hidden;
-  background: var(--color-navy);
+  background: var(--landing-line);
 }
 
 @media (min-width: 768px) {
   .portrait {
-    min-height: 30rem;
+    width: min(52vw, 400px);
   }
 }
 
 @media (min-width: 1024px) {
   .portrait {
-    min-height: 36rem;
+    width: 100%;
+    max-width: 440px;
   }
-}
-
-.portraitMedia {
-  position: absolute;
-  inset: 0;
 }
 
 .portraitButton {
   position: absolute;
   inset: 0;
-  z-index: 0;
   display: block;
   width: 100%;
   height: 100%;
@@ -68,98 +74,104 @@
   cursor: zoom-in;
 }
 
+.portraitButton:focus-visible {
+  outline: 2px solid var(--landing-blue);
+  outline-offset: 4px;
+}
+
+.portraitMedia {
+  position: absolute;
+  inset: 0;
+}
+
 .portraitMedia img {
   object-fit: cover;
   object-position: center 18%;
 }
 
-.portraitFrame {
-  position: absolute;
-  inset: 1rem;
-  z-index: 1;
-  border: 1px solid rgb(255 255 255 / 0.35);
-  pointer-events: none;
+.copy {
+  min-width: 0;
+  max-width: 34rem;
+  width: 100%;
 }
 
-@media (min-width: 768px) {
-  .portraitFrame {
-    inset: 1.25rem;
+@media (min-width: 1024px) {
+  .copy {
+    margin-inline-start: auto;
   }
 }
 
-.portraitAccent {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: 2;
-  width: 38%;
-  height: 4px;
-  background: var(--color-orange);
-}
-
-.copy {
-  max-width: 34rem;
-}
-
 .eyebrow {
-  margin: 0 0 1rem;
+  margin-bottom: 12px;
+  color: var(--landing-blue);
 }
 
 .name {
-  margin: 0 0 0.85rem;
-  color: var(--color-navy);
-  font-size: clamp(2rem, 4vw, 3.25rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
+  margin: 0 0 10px;
 }
 
 .role {
-  margin: 0 0 1.5rem;
-  color: var(--color-blue);
-  font-size: 0.78rem;
-  font-weight: 700;
+  margin: 0 0 18px;
+  color: var(--landing-blue);
+  font-size: 11px;
+  font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
-.divider {
-  width: 3.5rem;
-  height: 2px;
-  margin: 0 0 1.5rem;
-  background: var(--color-orange);
+.lead {
+  margin: 0 0 22px;
+  max-width: 36ch;
 }
 
-.lead {
-  margin: 0 0 2rem;
-  color: var(--color-body-gray);
-  font-size: 1.05rem;
-  font-weight: 400;
-  line-height: 1.65;
-  max-width: 30rem;
+@media (min-width: 1024px) {
+  .lead {
+    margin-inline: 0;
+    max-width: 48ch;
+  }
 }
 
 .meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem 1.5rem;
-  margin: 0 0 2rem;
+  justify-content: center;
+  gap: 18px 28px;
+  margin: 0 0 28px;
   padding: 0;
   list-style: none;
 }
 
+@media (min-width: 1024px) {
+  .meta {
+    justify-content: flex-start;
+  }
+}
+
 .metaItem {
-  color: var(--color-navy);
-  font-size: 0.88rem;
+  color: var(--landing-ink);
+  font-size: 0.95rem;
   font-weight: 600;
 }
 
 .metaItem span {
   display: block;
-  margin-bottom: 0.2rem;
-  color: var(--color-muted-gray);
-  font-size: 0.7rem;
+  margin-bottom: 4px;
+  color: var(--landing-body);
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+@media (min-width: 1024px) {
+  .actions {
+    justify-content: flex-start;
+  }
 }

@@ -1,0 +1,70 @@
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .row {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: clamp(48px, 6vw, 96px);
+    justify-items: stretch;
+    text-align: left;
+  }
+}
+
+.mediaCol {
+  display: flex;
+  justify-content: center;
+  order: 1;
+  width: 100%;
+}
+
+.copyCol {
+  order: 2;
+  min-width: 0;
+  max-width: 36rem;
+}
+
+.media {
+  position: relative;
+  width: min(86vw, 320px);
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--landing-line);
+}
+
+.mediaCircle {
+  width: min(76vw, 280px);
+  aspect-ratio: 1;
+}
+
+@media (min-width: 1024px) {
+  .media {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .mediaCircle {
+    max-width: 400px;
+  }
+
+  .mediaFirst .mediaCol {
+    order: 1;
+  }
+
+  .mediaFirst .copyCol {
+    order: 2;
+  }
+
+  .copyFirst .copyCol {
+    order: 1;
+  }
+
+  .copyFirst .mediaCol {
+    order: 2;
+  }
+}

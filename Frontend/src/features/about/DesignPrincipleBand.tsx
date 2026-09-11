@@ -1,126 +1,42 @@
-"use client";
-
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import SectionCurve from "@/components/design/SectionCurve";
+import design from "@/components/design/designShared.module.css";
 import { organizationContent } from "@/content/organizationContent";
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
-
-const promiseSegments = [
-  { text: "A Home of Joy", tone: "navy", highlight: true },
-  { text: " for ", highlight: false },
-  { text: "Those Who Need Hope", tone: "blue", highlight: true },
-  { text: ".", highlight: false },
-] as const;
+import styles from "./DesignPrincipleBand.module.css";
 
 export default function DesignPrincipleBand() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const statementRef = useRef<HTMLParagraphElement>(null);
-
-  useGSAP(
-    () => {
-      const highlights = gsap.utils.toArray<HTMLElement>(
-        statementRef.current?.querySelectorAll("[data-promise-highlight]") ?? [],
-      );
-
-      if (highlights.length === 0) {
-        return;
-      }
-
-      const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      if (reduced) {
-        highlights.forEach((node) => node.classList.add("isActive"));
-        return;
-      }
-
-      const triggers = highlights.map((node) =>
-        ScrollTrigger.create({
-          trigger: node,
-          start: "top 82%",
-          onEnter: () => node.classList.add("isActive"),
-          onEnterBack: () => node.classList.add("isActive"),
-          onLeaveBack: () => node.classList.remove("isActive"),
-        }),
-      );
-
-      const arcItems = gsap.utils.toArray<HTMLElement>(
-        sectionRef.current?.querySelectorAll("[data-promise-arc]") ?? [],
-      );
-
-      const arcTriggers = arcItems.map((node) =>
-        ScrollTrigger.create({
-          trigger: node,
-          start: "top 88%",
-          onEnter: () => node.classList.add("isActive"),
-          onEnterBack: () => node.classList.add("isActive"),
-          onLeaveBack: () => node.classList.remove("isActive"),
-        }),
-      );
-
-      return () => {
-        triggers.forEach((trigger) => trigger.kill());
-        arcTriggers.forEach((trigger) => trigger.kill());
-      };
-    },
-    { scope: sectionRef },
-  );
-
   return (
     <section
-      ref={sectionRef}
-      data-nav-theme="light"
-      className="relative overflow-hidden bg-white pb-16 pt-10 md:pb-20 md:pt-12 lg:pb-24 lg:pt-14"
+      data-nav-theme="dark"
+      className={styles.section}
+      aria-labelledby="promise-title"
     >
-      <div className="siteContainer">
-        <p className="typeLabel mb-5 md:mb-7">Our Promise</p>
-        <h2 className="sr-only">{organizationContent.designPrinciple}</h2>
-        <p
-          ref={statementRef}
-          className="w-full whitespace-nowrap text-[clamp(0.92rem,2.35vw,1.85rem)] font-normal uppercase leading-none tracking-[0.08em] text-mutedGray"
-        >
-          {promiseSegments.map((segment, index) => {
-            if (!segment.highlight) {
-              return (
-                <span key={`link-${index}`} className="text-mutedGray/55">
-                  {segment.text}
-                </span>
-              );
-            }
+      <SectionCurve position="top" fill="var(--landing-blue)" />
 
-            const toneClass =
-              segment.tone === "blue"
-                ? "[&.isActive]:text-primary"
-                : "[&.isActive]:text-navy";
+      <div className={`${design.container} ${styles.inner}`}>
+        <div className={styles.head}>
+          <p
+            className={design.eyebrow}
+            style={{ color: "rgb(255 255 255 / 0.85)" }}
+          >
+            Our Promise
+          </p>
+          <h2 id="promise-title" className="sr-only">
+            {organizationContent.designPrinciple}
+          </h2>
+        </div>
 
-            return (
-              <span
-                key={`${segment.text}-${index}`}
-                data-promise-highlight
-                className={`text-mutedGray/45 transition-colors duration-500 ease-out ${toneClass}`}
-              >
-                {segment.text}
-              </span>
-            );
-          })}
+        <p className={styles.statement}>
+          A Home of Joy for{" "}
+          <span className={styles.accent}>Those Who Need Hope</span>.
         </p>
 
-        <ol className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-3 text-xs font-medium uppercase tracking-[0.18em] text-mutedGray/50 md:mt-10 md:gap-x-4 md:text-sm">
+        <ol className={styles.arc}>
           {organizationContent.storyArc.map((step, index) => (
-            <li
-              key={step}
-              data-promise-arc
-              className={`inline-flex items-center gap-3 transition-colors duration-500 ease-out md:gap-4 [&.isActive]:text-navy ${
-                index === organizationContent.storyArc.length - 1
-                  ? "[&.isActive]:text-secondary"
-                  : ""
-              }`}
-            >
+            <li key={step} className={styles.arcItem}>
               <span>{step}</span>
               {index < organizationContent.storyArc.length - 1 ? (
-                <span className="text-primary/50" aria-hidden="true">
+                <span className={styles.arrow} aria-hidden="true">
                   →
                 </span>
               ) : null}
@@ -128,6 +44,8 @@ export default function DesignPrincipleBand() {
           ))}
         </ol>
       </div>
+
+      <SectionCurve position="bottom" fill="var(--landing-off-white)" />
     </section>
   );
 }

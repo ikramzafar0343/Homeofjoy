@@ -1,0 +1,164 @@
+/* Shared primitives for the landing reference design. */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 18px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-inline: 36px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-inline: 48px;
+  }
+}
+
+.heading {
+  margin: 0;
+  color: var(--landing-ink);
+  font-size: clamp(28px, 7vw, 48px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.022em;
+}
+
+.headingLight {
+  color: #fff;
+}
+
+.subHeading {
+  margin: 0;
+  color: var(--landing-ink);
+  font-size: clamp(22px, 5.5vw, 32px);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+}
+
+.body {
+  margin: 0;
+  color: var(--landing-body);
+  font-size: clamp(14px, 3.7vw, 17px);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.bodyLight {
+  color: rgb(255 255 255 / 0.9);
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 26px;
+  min-width: 148px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease,
+    filter 200ms ease;
+}
+
+.pill:hover,
+.pill:focus-visible {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+.pill:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.pillPurple {
+  background: var(--landing-purple);
+}
+
+.pillPink {
+  background: var(--landing-pink);
+}
+
+.pillYellow {
+  background: var(--landing-yellow);
+  color: var(--landing-ink);
+}
+
+.pillGreen {
+  background: var(--landing-green);
+}
+
+.pillBlue {
+  background: var(--landing-blue);
+}
+
+.pillWhite {
+  background: #fff;
+  color: var(--landing-blue);
+}
+
+/*
+ * Reference image frames (Chatteris):
+ * - shapeA: half-capsule, rounded on the LEFT, flat on the RIGHT
+ * - shapeB: half-capsule, flat on the LEFT, rounded on the RIGHT
+ * - shapeC / shapeCircle: perfect circle
+ * - shapeSoft: large rounded rectangle (Our Work cards, panels)
+ */
+.shapeA {
+  border-radius: 999px 0 0 999px;
+}
+
+.shapeB {
+  border-radius: 0 999px 999px 0;
+}
+
+.shapeC,
+.shapeCircle {
+  border-radius: 50%;
+}
+
+.shapeSoft {
+  border-radius: 22px;
+}
+
+@media (min-width: 768px) {
+  .shapeSoft {
+    border-radius: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pill {
+    transition: none;
+  }
+
+  .pill:hover,
+  .pill:focus-visible {
+    transform: none;
+    filter: none;
+  }
+}

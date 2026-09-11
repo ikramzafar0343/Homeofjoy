@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
 import PageHero from "@/components/sections/PageHero";
+import { pageHeroGalleries } from "@/content/pageHeroGalleries";
 import OurWorkAreasDetail from "@/features/ourWork/OurWorkAreasDetail";
 
 const WorkGallerySection = dynamic(
@@ -28,9 +29,11 @@ export default function OurWorkPage() {
         eyebrow="Our Work"
         title="Practical care across six areas of service"
         description="From education and protection to community response, our work is designed to uphold dignity and open pathways to hope."
-        tone="sky"
+        gallery={pageHeroGalleries.ourWork}
         ctaLabel="Support the mission"
         ctaHref="/donate"
+        secondaryLabel="Contact Us"
+        secondaryHref="/contact"
       />
       <WorkGallerySection />
       <HowWeServeSection />

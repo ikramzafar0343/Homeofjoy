@@ -69,7 +69,7 @@ export default function FooterSubscribeForm() {
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           placeholder="Your email"
-          className="flex-1 rounded-md border border-white/15 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/35 transition-colors focus:border-primary focus:outline-none"
+          className="flex-1 rounded-full border border-white/35 bg-transparent px-4 py-2.5 text-sm text-white placeholder:text-white/45 transition-colors focus:border-white focus:outline-none"
           aria-label="Email address"
           autoComplete="email"
         />

@@ -18,14 +18,14 @@ export default function SiteFooter() {
 
   return (
     <footer id="site-footer" data-nav-theme="dark" className={styles.footer}>
-      <div className="siteContainer py-16 md:py-20 lg:py-24">
-        <div className="grid gap-12 border-b border-white/15 pb-14 lg:grid-cols-[1.3fr_1fr_1fr_1fr] lg:gap-16">
+      <div className={styles.footerInner}>
+        <div className="grid gap-12 border-b border-white/25 pb-14 lg:grid-cols-[1.3fr_1fr_1fr_1fr] lg:gap-16">
           <div>
             <div className="mb-6 flex items-center gap-4">
               <HomeOfJoyLogo size="nav" />
               <div>
                 <p className="text-sm font-bold tracking-wide text-white">HOME OF JOY</p>
-                <p className="text-xs font-semibold tracking-[0.14em] text-sky">
+                <p className="text-xs font-semibold tracking-[0.14em] text-white/75">
                   WELFARE FOUNDATION
                 </p>
               </div>
@@ -39,7 +39,7 @@ export default function SiteFooter() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/60 transition-all hover:border-primary hover:text-primary"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/25 text-white/60 transition-all hover:border-white hover:text-white"
                 aria-label="Facebook"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -50,7 +50,7 @@ export default function SiteFooter() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/60 transition-all hover:border-primary hover:text-primary"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/25 text-white/60 transition-all hover:border-white hover:text-white"
                 aria-label="Instagram"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -61,7 +61,7 @@ export default function SiteFooter() {
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/60 transition-all hover:border-secondary hover:text-secondary"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/25 text-white/60 transition-all hover:border-white hover:text-white"
                 aria-label="YouTube"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -133,7 +133,7 @@ export default function SiteFooter() {
           </div>
         </div>
 
-        <div className="grid gap-8 border-b border-white/15 py-10 md:grid-cols-2">
+        <div className="grid gap-8 border-b border-white/25 py-10 md:grid-cols-2">
           <div>
             <h2
               className={`${styles.footerAccent} mb-3 text-xs font-semibold uppercase tracking-[0.16em]`}

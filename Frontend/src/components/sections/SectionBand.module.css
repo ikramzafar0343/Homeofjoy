@@ -1,0 +1,65 @@
+.band {
+  position: relative;
+  overflow: hidden;
+  padding-block: 64px;
+}
+
+@media (min-width: 768px) {
+  .band {
+    padding-block: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .band {
+    padding-block: 120px;
+  }
+}
+
+.white {
+  background: #fff;
+  color: var(--landing-ink);
+}
+
+.soft {
+  background: var(--landing-off-white);
+  color: var(--landing-ink);
+}
+
+.blue {
+  background: var(--landing-blue);
+  color: #fff;
+}
+
+.deep {
+  background: var(--landing-blue-deep);
+  color: #fff;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  margin-bottom: 14px;
+}
+
+.heading {
+  margin-bottom: 16px;
+  max-width: 20ch;
+}
+
+.lead {
+  max-width: 58ch;
+}
+
+.lead + .actions {
+  margin-top: 28px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
