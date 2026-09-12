@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
 import PageHero from "@/components/sections/PageHero";
+import StudentStoryBand from "@/components/sections/StudentStoryBand";
 import { pageHeroGalleries } from "@/content/pageHeroGalleries";
+import { qasidStudentStory } from "@/content/studentStories";
 import OurWorkAreasDetail from "@/features/ourWork/OurWorkAreasDetail";
 
 const WorkGallerySection = dynamic(
@@ -37,6 +39,11 @@ export default function OurWorkPage() {
       />
       <WorkGallerySection />
       <HowWeServeSection />
+      <StudentStoryBand
+        story={qasidStudentStory}
+        mediaFirst
+        bottomFill="var(--landing-blue-deep)"
+      />
       <FeaturedSpotlight />
       <OurWorkAreasDetail />
       <FinalCtaSection />

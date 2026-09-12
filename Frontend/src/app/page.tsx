@@ -2,6 +2,7 @@ import LandingCtaBand from "@/features/landing/LandingCtaBand";
 import LandingFocusPanel from "@/features/landing/LandingFocusPanel";
 import LandingHero from "@/features/landing/LandingHero";
 import LandingIntroSections from "@/features/landing/LandingIntroSections";
+import LandingMatthewStory from "@/features/landing/LandingMatthewStory";
 import LandingOurWork from "@/features/landing/LandingOurWork";
 import LandingWhatWeDo from "@/features/landing/LandingWhatWeDo";
 import TrustAccountabilityBand from "@/components/sections/TrustAccountabilityBand";
@@ -14,6 +15,7 @@ export default function Home() {
       <TrustAccountabilityBand tone="soft" />
       <LandingWhatWeDo />
       <LandingFocusPanel />
+      <LandingMatthewStory />
       <LandingCtaBand />
       <LandingOurWork />
     </>
