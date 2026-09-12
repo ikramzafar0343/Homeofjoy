@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import HomeOfJoyLogo from "@/components/brand/HomeOfJoyLogo";
+import BrandWordmark from "@/components/brand/BrandWordmark";
 import FooterBackToTop from "@/components/layout/FooterBackToTop";
 import FooterSubscribeForm from "@/components/layout/FooterSubscribeForm";
 import { organizationContent } from "@/content/organizationContent";
@@ -23,12 +24,7 @@ export default function SiteFooter() {
           <div>
             <div className="mb-6 flex items-center gap-4">
               <HomeOfJoyLogo size="nav" />
-              <div>
-                <p className="text-sm font-bold tracking-wide text-white">HOME OF JOY</p>
-                <p className="text-xs font-semibold tracking-[0.14em] text-white/75">
-                  WELFARE FOUNDATION
-                </p>
-              </div>
+              <BrandWordmark size="footer" tone="light" />
             </div>
             <p className="max-w-md text-sm leading-relaxed text-white/70 md:text-base">
               {organizationContent.mission}

@@ -17,7 +17,7 @@ const sizeMap = {
 } as const;
 
 const logoBlurDataUrl =
-  "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Crect width='8' height='8' fill='%238FD1F4'/%3E%3C/svg%3E";
+  "data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Crect width='8' height='8' fill='%23fafaf8'/%3E%3C/svg%3E";
 
 export default function HomeOfJoyLogo({
   className = "",
@@ -28,7 +28,7 @@ export default function HomeOfJoyLogo({
 
   return (
     <Image
-      src="/images/homeOfJoyLogo.webp"
+      src="/images/homeOfJoyLogo.png"
       alt="Home of Joy Welfare Foundation"
       width={sizeConfig.width}
       height={sizeConfig.height}

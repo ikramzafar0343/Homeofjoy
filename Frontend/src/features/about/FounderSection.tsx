@@ -10,7 +10,7 @@ import { organizationContent } from "@/content/organizationContent";
 
 import styles from "./FounderSection.module.css";
 
-const founderImageSrc = "/images/sections/founder.png";
+const founderImageSrc = "/images/sections/founder.webp";
 
 export default function FounderSection() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -25,7 +25,7 @@ export default function FounderSection() {
     >
       <div className={`${design.container} ${styles.layout}`}>
         <div className={styles.mediaCol}>
-          <div className={`${styles.portrait} ${design.shapeA}`}>
+          <div className={`${styles.portrait} ${design.shapeSoft}`}>
             <button
               type="button"
               className={styles.portraitButton}

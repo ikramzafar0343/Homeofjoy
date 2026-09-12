@@ -1,0 +1,68 @@
+.inner {
+  max-width: 920px;
+  margin-inline: auto;
+}
+
+.head {
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .head {
+    margin-bottom: 48px;
+  }
+}
+
+.heading {
+  margin: 12px 0 16px;
+}
+
+.lead {
+  max-width: 54ch;
+  margin-inline: auto;
+}
+
+.points {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .points {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+    text-align: left;
+  }
+}
+
+.point {
+  min-width: 0;
+}
+
+.pointTitle {
+  margin: 0 0 10px;
+  font-size: clamp(18px, 2.4vw, 22px);
+}
+
+.pointBody {
+  margin: 0;
+  max-width: 28ch;
+}
+
+@media (min-width: 768px) {
+  .pointBody {
+    margin-inline: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .pointBody {
+    margin-inline: auto;
+  }
+}

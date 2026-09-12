@@ -9,12 +9,12 @@ export const siteNavItems: readonly SiteNavItem[] = [
     label: "Our Work",
     href: "/our-work",
     children: [
-      { label: "Education", href: "/our-work#education" },
-      { label: "Orphanage & Child Care", href: "/our-work#orphanage" },
-      { label: "Child Labour Prevention", href: "/our-work#child-labour" },
-      { label: "Child Protection", href: "/our-work#child-protection" },
-      { label: "Evangelism & Discipleship", href: "/our-work#evangelism" },
-      { label: "Community Outreach", href: "/our-work#outreach" },
+      { label: "Education", href: "/our-work/education" },
+      { label: "Orphanage & Child Care", href: "/our-work/orphanage" },
+      { label: "Child Labour Prevention", href: "/our-work/child-labour" },
+      { label: "Child Protection", href: "/our-work/child-protection" },
+      { label: "Evangelism & Discipleship", href: "/our-work/evangelism" },
+      { label: "Community Outreach", href: "/our-work/outreach" },
     ],
   },
   {

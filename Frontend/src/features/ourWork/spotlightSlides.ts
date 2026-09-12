@@ -19,7 +19,7 @@ export const spotlightSlides: readonly SpotlightSlide[] = [
     heading: "Opening doors through learning.",
     body: "We provide quality education, literacy programs, and school support so children with limited access can grow in knowledge, confidence, and hope.",
     ctaLabel: "Explore Education",
-    ctaHref: "/our-work#education",
+    ctaHref: "/our-work/education",
     imageSrc: "/images/field/education/children-workbooks-red-table.webp",
     imageAlt: "Young students reading workbooks at Home of Joy School",
     gallery: [
@@ -47,7 +47,7 @@ export const spotlightSlides: readonly SpotlightSlide[] = [
     heading: "A safe home for every child.",
     body: "Vulnerable children receive shelter, nourishment, clothing, medical care, and the dignity of belonging in a protective, loving environment.",
     ctaLabel: "Explore Child Care",
-    ctaHref: "/our-work#orphanage",
+    ctaHref: "/our-work/orphanage",
     imageSrc: "/images/field/care/school-children-communal-meal.webp",
     imageAlt: "Children sharing a communal meal in the school courtyard",
     gallery: [
@@ -75,7 +75,7 @@ export const spotlightSlides: readonly SpotlightSlide[] = [
     heading: "Protecting dignity and safety.",
     body: "We create safe environments with attentive supervision so girls and boys under our care can grow with security and respect.",
     ctaLabel: "Explore Protection",
-    ctaHref: "/our-work#child-protection",
+    ctaHref: "/our-work/child-protection",
     imageSrc: "/images/field/care/two-children-holding-hands-portrait.webp",
     imageAlt: "Two children holding hands in a protective setting",
     gallery: [
@@ -103,7 +103,7 @@ export const spotlightSlides: readonly SpotlightSlide[] = [
     heading: "Standing with communities in need.",
     body: "When families face poverty, displacement, or disaster, we respond with practical care that upholds dignity across Pakistan.",
     ctaLabel: "Explore Outreach",
-    ctaHref: "/our-work#outreach",
+    ctaHref: "/our-work/outreach",
     imageSrc: "/images/field/disaster/carrying-relief-supplies-through-flood.webp",
     imageAlt: "Carrying relief supplies through floodwater",
     gallery: [

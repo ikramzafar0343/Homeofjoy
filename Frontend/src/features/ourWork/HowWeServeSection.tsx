@@ -15,6 +15,14 @@ const accents = [
   design.pillPurple,
 ] as const;
 
+const topicStoryHref: Record<string, string> = {
+  protect: "/our-work/child-protection",
+  educate: "/our-work/education",
+  serve: "/our-work/orphanage",
+  empower: "/our-work/child-labour",
+  "bring-hope": "/our-work/evangelism",
+};
+
 export default function HowWeServeSection() {
   return (
     <section
@@ -71,7 +79,7 @@ export default function HowWeServeSection() {
                     {topic.summary}
                   </p>
                   <Link
-                    href="/our-work"
+                    href={topicStoryHref[topic.id] ?? "/our-work"}
                     className={`${design.pill} ${accents[index] ?? design.pillYellow}`}
                   >
                     Learn More

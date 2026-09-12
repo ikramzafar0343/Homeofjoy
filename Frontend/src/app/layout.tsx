@@ -73,9 +73,9 @@ export const metadata: Metadata = {
     description: siteSeo.description,
     images: [
       {
-        url: "/images/homeOfJoyLogo.webp",
-        width: 512,
-        height: 512,
+        url: "/images/homeOfJoyLogo.png",
+        width: 1024,
+        height: 1024,
         alt: organizationContent.name,
       },
     ],
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteSeo.title,
     description: siteSeo.description,
-    images: ["/images/homeOfJoyLogo.webp"],
+    images: ["/images/homeOfJoyLogo.png"],
   },
   robots: {
     index: true,
@@ -92,10 +92,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "32x32" },
-      { url: "/images/homeOfJoyLogo.webp", type: "image/webp" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
+      { url: "/images/homeOfJoyLogo.png", type: "image/png", sizes: "1024x1024" },
     ],
-    apple: [{ url: "/images/homeOfJoyLogo.webp", type: "image/webp" }],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
     shortcut: ["/favicon.ico"],
   },
 };

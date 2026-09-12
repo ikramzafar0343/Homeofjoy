@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
 import PageHero from "@/components/sections/PageHero";
+import TrustAccountabilityBand from "@/components/sections/TrustAccountabilityBand";
 import { pageHeroGalleries } from "@/content/pageHeroGalleries";
 
 const MissionIntroduction = dynamic(
@@ -22,7 +23,7 @@ const FinalCtaSection = dynamic(() => import("@/features/support/FinalCtaSection
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn who Home of Joy Welfare Foundation is—our mission, vision, founder, values, and presence across Pakistan.",
+    "Learn who Home of Joy Welfare Foundation is—our mission, vision, founder, values, accountability, and presence across Pakistan.",
 };
 
 export default function AboutPage() {
@@ -39,6 +40,7 @@ export default function AboutPage() {
         secondaryHref="/our-work"
       />
       <MissionIntroduction />
+      <TrustAccountabilityBand tone="soft" />
       <DesignPrincipleBand />
       <FounderSection />
       <StoryBlock />

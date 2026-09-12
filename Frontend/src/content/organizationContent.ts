@@ -32,6 +32,26 @@ export const organizationContent = {
     "Evangelism & Discipleship",
     "Community & Disaster Outreach",
   ] as const,
+  accountability: {
+    eyebrow: "Accountability",
+    heading: "Registered. Transparent. Responsible.",
+    lead:
+      "Home of Joy Welfare Foundation operates as a registered organization in Pakistan. We are registered with the Charity Commission, and we work within the Economic Affairs Division (EAD) framework of the Government of Pakistan for foreign funding arrangements.",
+    points: [
+      {
+        title: "Charity Commission",
+        body: "We are registered with the Charity Commission, reflecting our commitment to lawful charitable work.",
+      },
+      {
+        title: "Economic Affairs Division",
+        body: "We work within the EAD framework of the Government of Pakistan for foreign funding arrangements.",
+      },
+      {
+        title: "Responsible stewardship",
+        body: "Gifts and support are received and used through proper organizational channels, with care for the people we serve.",
+      },
+    ],
+  },
 } as const;
 
 export const siteSeo = {

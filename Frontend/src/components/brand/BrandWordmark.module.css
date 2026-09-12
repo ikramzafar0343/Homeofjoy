@@ -1,0 +1,94 @@
+.lockup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  min-width: 0;
+}
+
+.primary {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0;
+  color: inherit;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.primary > span {
+  flex: 0 0 auto;
+}
+
+.secondary {
+  display: block;
+  width: 100%;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.22em;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Header */
+.nav {
+  gap: 6px;
+}
+
+.nav .primary {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+
+.nav .secondary {
+  font-size: 9px;
+  letter-spacing: 0.28em;
+}
+
+@media (min-width: 768px) {
+  .nav .primary {
+    font-size: 14px;
+    letter-spacing: 0.12em;
+  }
+
+  .nav .secondary {
+    font-size: 10px;
+    letter-spacing: 0.32em;
+  }
+}
+
+/* Footer */
+.footer {
+  gap: 5px;
+}
+
+.footer .primary {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+
+.footer .secondary {
+  font-size: 10px;
+  letter-spacing: 0.26em;
+}
+
+.dark .primary {
+  color: var(--landing-ink);
+}
+
+.dark .secondary {
+  color: var(--landing-blue);
+}
+
+.light .primary {
+  color: #fff;
+}
+
+.light .secondary {
+  color: rgb(255 255 255 / 0.78);
+}

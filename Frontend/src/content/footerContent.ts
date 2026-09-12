@@ -19,10 +19,10 @@ export const footerLegalItems = [
 ] as const;
 
 export const footerMinistryAreas = [
-  { label: "Education", href: "/our-work#education" },
-  { label: "Child Care", href: "/our-work#orphanage" },
-  { label: "Child Protection", href: "/our-work#child-protection" },
-  { label: "Child Labour Prevention", href: "/our-work#child-labour" },
-  { label: "Evangelism & Discipleship", href: "/our-work#evangelism" },
-  { label: "Disaster Outreach", href: "/our-work#outreach" },
+  { label: "Education", href: "/our-work/education" },
+  { label: "Child Care", href: "/our-work/orphanage" },
+  { label: "Child Protection", href: "/our-work/child-protection" },
+  { label: "Child Labour Prevention", href: "/our-work/child-labour" },
+  { label: "Evangelism & Discipleship", href: "/our-work/evangelism" },
+  { label: "Disaster Outreach", href: "/our-work/outreach" },
 ] as const;

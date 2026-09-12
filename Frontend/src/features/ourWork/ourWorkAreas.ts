@@ -5,6 +5,7 @@ export type FieldPhoto = {
 
 export type OurWorkArea = {
   readonly number: string;
+  readonly slug: string;
   readonly title: string;
   readonly description: string;
   readonly href: string;
@@ -13,19 +14,24 @@ export type OurWorkArea = {
   /** Primary still — first gallery photo (kept for any single-image consumers). */
   readonly imageSrc: string;
   readonly imageAlt: string;
-  /** Field photos for this work area — cards rotate; modal shows a grid. */
+  /** Field photos for this work area — cards rotate; story pages show a full gallery. */
   readonly gallery: readonly FieldPhoto[];
 };
+
+export function getWorkAreaBySlug(slug: string): OurWorkArea | undefined {
+  return ourWorkAreas.find((area) => area.slug === slug);
+}
 
 export const ourWorkAreas: readonly OurWorkArea[] = [
   {
     number: "01",
+    slug: "education",
     title: "Education",
     description:
       "Quality education, literacy programs, and school support for children with limited access.",
     detail:
       "We walk with children and families so learning can replace barriers—through literacy support, school encouragement, and steady pathways into opportunity.",
-    href: "/our-work#education",
+    href: "/our-work/education",
     tone: "sky",
     imageSrc: "/images/field/education/children-workbooks-red-table.webp",
     imageAlt:
@@ -59,12 +65,13 @@ export const ourWorkAreas: readonly OurWorkArea[] = [
   },
   {
     number: "02",
+    slug: "orphanage",
     title: "Orphanage & Child Care",
     description:
       "Safe accommodation, food, clothing, medical care, and a loving environment for vulnerable children.",
     detail:
       "Children in our care receive shelter, nourishment, clothing, education, medical attention, and the dignity of belonging in a protective home.",
-    href: "/our-work#orphanage",
+    href: "/our-work/orphanage",
     tone: "warm",
     imageSrc: "/images/field/care/school-children-communal-meal.webp",
     imageAlt:
@@ -98,12 +105,13 @@ export const ourWorkAreas: readonly OurWorkArea[] = [
   },
   {
     number: "03",
+    slug: "child-labour",
     title: "Child Labour Prevention",
     description:
       "Walking with families and brick-kiln communities to move children from labour risk into education.",
     detail:
       "Poverty can push children toward labour. We accompany families and communities toward education, protection, and a safer future.",
-    href: "/our-work#child-labour",
+    href: "/our-work/child-labour",
     tone: "navy",
     imageSrc: "/images/field/outreach/brick-kiln-community-gathering.webp",
     imageAlt:
@@ -137,12 +145,13 @@ export const ourWorkAreas: readonly OurWorkArea[] = [
   },
   {
     number: "04",
+    slug: "child-protection",
     title: "Child Protection",
     description:
       "Safe environments, supervision, and dignity for girls and boys under foundation care.",
     detail:
       "Every child deserves a safe place to grow. Protection means secure care, attentive supervision, and respect for each child’s dignity.",
-    href: "/our-work#child-protection",
+    href: "/our-work/child-protection",
     tone: "sky",
     imageSrc: "/images/field/care/two-children-holding-hands-portrait.webp",
     imageAlt:
@@ -176,12 +185,13 @@ export const ourWorkAreas: readonly OurWorkArea[] = [
   },
   {
     number: "05",
+    slug: "evangelism",
     title: "Evangelism & Discipleship",
     description:
       "Supporting missionaries, small groups, and church-planting teams through compassionate relationships.",
     detail:
       "Hope is shared through respectful relationships—supporting missionaries, small groups, and discipleship with compassion at the center.",
-    href: "/our-work#evangelism",
+    href: "/our-work/evangelism",
     tone: "faith",
     imageSrc: "/images/field/education/youth-literacy-workshop-swat-kalam.webp",
     imageAlt:
@@ -215,12 +225,13 @@ export const ourWorkAreas: readonly OurWorkArea[] = [
   },
   {
     number: "06",
+    slug: "outreach",
     title: "Community & Disaster Outreach",
     description:
       "Responding to poverty, displacement, emergencies, and critical community needs across Pakistan.",
     detail:
       "When communities face disaster, displacement, or sudden crisis, we respond with practical care that upholds dignity.",
-    href: "/our-work#outreach",
+    href: "/our-work/outreach",
     tone: "warm",
     imageSrc: "/images/field/disaster/carrying-relief-supplies-through-flood.webp",
     imageAlt: "Community members carrying relief supplies through floodwater",

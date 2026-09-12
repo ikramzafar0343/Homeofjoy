@@ -207,7 +207,7 @@ export const landingFocusPanel = {
     "Where poverty pushes children toward labour, we accompany families and communities toward learning, protection, and opportunity.",
   ],
   ctaLabel: "See Our Education Work",
-  ctaHref: "/our-work#education",
+  ctaHref: "/our-work/education",
   gallery: [
     photo(
       "/images/field/education/home-of-joy-school-building-front.webp",

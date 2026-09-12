@@ -6,6 +6,7 @@ import gsap from "gsap";
 import Link from "next/link";
 
 import HomeOfJoyLogo from "@/components/brand/HomeOfJoyLogo";
+import BrandWordmark from "@/components/brand/BrandWordmark";
 import { siteNavItems, supportCta } from "@/constants/siteNavigation";
 import { syncBodyScrollLock } from "@/lib/scrollLock";
 
@@ -85,7 +86,6 @@ export default function SiteHeader() {
 
   // Reference design: the header is always an opaque white bar above the hero.
   const menuButtonClass = "text-navy";
-  const brandTextClass = "text-navy";
   const dropdownChevronClass = "text-navy/50";
   const navItemClass =
     "group relative text-[13px] font-medium tracking-[0.02em] text-navy opacity-90 transition-opacity duration-300 after:bg-navy hover:opacity-100";
@@ -104,15 +104,11 @@ export default function SiteHeader() {
           <Link
             ref={logoWrapRef}
             href="/"
-            className="relative z-10 flex shrink-0 items-center gap-3"
+            className="relative z-10 flex shrink-0 items-center gap-3 md:gap-4"
             aria-label="Home of Joy Welfare Foundation home"
           >
             <HomeOfJoyLogo size="nav" priority />
-            <span
-              className={`hidden text-[15px] font-bold leading-tight tracking-[-0.01em] sm:block ${brandTextClass}`}
-            >
-              Home of Joy
-            </span>
+            <BrandWordmark className="hidden sm:flex" size="nav" tone="dark" />
           </Link>
 
           <nav
@@ -128,14 +124,10 @@ export default function SiteHeader() {
                   onMouseEnter={() => setActiveDropdown(item.label)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
-                  <button
-                    type="button"
+                  <Link
+                    href={item.href}
                     className={`flex items-center gap-1.5 ${navItemClass} ${navUnderlineClass}`}
-                    onClick={() =>
-                      setActiveDropdown(
-                        activeDropdown === item.label ? null : item.label,
-                      )
-                    }
+                    onClick={() => setActiveDropdown(null)}
                   >
                     {item.label}
                     <svg
@@ -143,6 +135,7 @@ export default function SiteHeader() {
                       height="10"
                       viewBox="0 0 10 10"
                       fill="none"
+                      aria-hidden="true"
                       className={`transition-transform duration-200 ${
                         activeDropdown === item.label ? "rotate-180" : ""
                       } ${dropdownChevronClass}`}
@@ -155,9 +148,8 @@ export default function SiteHeader() {
                         strokeLinejoin="round"
                       />
                     </svg>
-                  </button>
+                  </Link>
 
-                  {/* Dropdown panel */}
                   <div
                     className={`absolute left-1/2 top-full z-50 min-w-[240px] -translate-x-1/2 pt-3 transition-all duration-200 ${
                       activeDropdown === item.label
@@ -244,34 +236,45 @@ export default function SiteHeader() {
           {siteNavItems.map((item) =>
             item.children ? (
               <div key={item.href}>
-                <button
-                  type="button"
-                  className="flex w-full items-center justify-between text-2xl font-semibold text-background md:text-3xl"
-                  onClick={() =>
-                    setMobileAccordion(
-                      mobileAccordion === item.label ? null : item.label,
-                    )
-                  }
-                >
-                  {item.label}
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    className={`transition-transform duration-200 ${
-                      mobileAccordion === item.label ? "rotate-180" : ""
-                    }`}
+                <div className="flex w-full items-center gap-3">
+                  <Link
+                    href={item.href}
+                    className="flex-1 text-2xl font-semibold text-background md:text-3xl"
+                    onClick={() => setIsMenuOpen(false)}
                   >
-                    <path
-                      d="M4 6L8 10L12 6"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
+                    {item.label}
+                  </Link>
+                  <button
+                    type="button"
+                    className="inline-flex h-11 w-11 shrink-0 items-center justify-center text-background"
+                    aria-expanded={mobileAccordion === item.label}
+                    aria-label={`${mobileAccordion === item.label ? "Hide" : "Show"} ${item.label} links`}
+                    onClick={() =>
+                      setMobileAccordion(
+                        mobileAccordion === item.label ? null : item.label,
+                      )
+                    }
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      aria-hidden="true"
+                      className={`transition-transform duration-200 ${
+                        mobileAccordion === item.label ? "rotate-180" : ""
+                      }`}
+                    >
+                      <path
+                        d="M4 6L8 10L12 6"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
                 <div
                   className={`overflow-hidden transition-all duration-300 ${
                     mobileAccordion === item.label

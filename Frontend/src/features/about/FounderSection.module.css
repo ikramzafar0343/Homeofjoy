@@ -43,22 +43,22 @@
 
 .portrait {
   position: relative;
-  width: min(86vw, 320px);
-  aspect-ratio: 4 / 5;
+  width: min(88vw, 340px);
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   background: var(--landing-line);
 }
 
 @media (min-width: 768px) {
   .portrait {
-    width: min(52vw, 400px);
+    width: min(56vw, 420px);
   }
 }
 
 @media (min-width: 1024px) {
   .portrait {
     width: 100%;
-    max-width: 440px;
+    max-width: 460px;
   }
 }
 
