@@ -20,7 +20,9 @@ export const footerLegalItems = [
 
 export const footerMinistryAreas = [
   { label: "Education", href: "/our-work/education" },
-  { label: "Child Care", href: "/our-work/orphanage" },
+  { label: "Literacy Program", href: "/our-work/literacy" },
+  { label: "Orphanage", href: "/our-work/orphanage" },
+  { label: "Women Empowerment & Skills", href: "/our-work/women-empowerment" },
   { label: "Child Protection", href: "/our-work/child-protection" },
   { label: "Child Labour Prevention", href: "/our-work/child-labour" },
   { label: "Evangelism & Discipleship", href: "/our-work/evangelism" },

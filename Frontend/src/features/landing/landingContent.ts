@@ -155,7 +155,7 @@ export const landingIntroSections: readonly LandingIntroSection[] = [
   },
 ] as const;
 
-const featuredAreaIds = ["01", "02", "04", "06"] as const;
+const featuredAreaIds = ["02", "03", "04", "01"] as const;
 const rowAccents: readonly LandingAccent[] = [
   "purple",
   "yellow",
@@ -201,17 +201,21 @@ export const landingServiceRows: readonly LandingServiceRow[] = featuredAreaIds.
 );
 
 export const landingFocusPanel = {
-  heading: "Education in Pakistan",
+  heading: "Literacy & Education in Pakistan",
   paragraphs: [
-    "We provide quality education, literacy programs, and school support so children with limited access can grow in knowledge, confidence, and hope for a safer future.",
+    "We provide literacy programs, classroom learning, and school support so children with limited access can grow in knowledge, confidence, and hope for a safer future.",
     "Where poverty pushes children toward labour, we accompany families and communities toward learning, protection, and opportunity.",
   ],
-  ctaLabel: "See Our Education Work",
-  ctaHref: "/our-work/education",
+  ctaLabel: "See Our Literacy Program",
+  ctaHref: "/our-work/literacy",
   gallery: [
     photo(
-      "/images/field/education/home-of-joy-school-building-front.webp",
-      "The Home of Joy school building",
+      "/images/field/education/youth-literacy-workshop-swat-kalam.webp",
+      "Youth literacy workshop in the field",
+    ),
+    photo(
+      "/images/field/education/discipleship-literacy-workshop-whiteboard.webp",
+      "Literacy workshop at a whiteboard",
     ),
     photo(
       "/images/field/education/children-workbooks-red-table.webp",
@@ -224,10 +228,6 @@ export const landingFocusPanel = {
     photo(
       "/images/field/education/children-writing-clipboards-classroom.webp",
       "Children writing on clipboards in the classroom",
-    ),
-    photo(
-      "/images/field/education/boys-tabla-music-lesson.webp",
-      "Boys learning tabla in a music lesson",
     ),
   ],
 } as const;
@@ -276,7 +276,7 @@ export type LandingWorkCard = {
 
 export const landingOurWork = {
   heading: "Our Work",
-  body: "Six areas of service across Pakistan — from classrooms and daily care to protection, discipleship, and emergency response.",
+  body: "Eight areas of service across Pakistan — from literacy, orphanage care, and women empowerment to education, protection, discipleship, and emergency response.",
   ctaLabel: "View All Our Work",
   ctaHref: "/our-work",
   cards: ourWorkAreas.map(

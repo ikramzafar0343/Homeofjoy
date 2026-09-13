@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import design from "@/components/design/designShared.module.css";
 import PageHero from "@/components/sections/PageHero";
 import SectionBand from "@/components/sections/SectionBand";
+import Button from "@/components/ui/Button";
 import { contactIntro } from "@/content/contactContent";
 import { organizationContent } from "@/content/organizationContent";
 import { pageHeroGalleries } from "@/content/pageHeroGalleries";
@@ -49,6 +50,14 @@ export default function ContactPage() {
               </div>
               <div>
                 <dt className="font-semibold" style={{ color: "var(--landing-ink)" }}>
+                  SECP registration
+                </dt>
+                <dd className={design.body}>
+                  CUIN {organizationContent.registration.secpCuin}
+                </dd>
+              </div>
+              <div>
+                <dt className="font-semibold" style={{ color: "var(--landing-ink)" }}>
                   Country
                 </dt>
                 <dd className={design.body}>{organizationContent.country}</dd>
@@ -58,6 +67,20 @@ export default function ContactPage() {
                   Founder
                 </dt>
                 <dd className={design.body}>{organizationContent.founderName}</dd>
+              </div>
+              <div>
+                <dt className="font-semibold" style={{ color: "var(--landing-ink)" }}>
+                  Bank transfer
+                </dt>
+                <dd className={`${design.body} mb-4`}>
+                  Donations are accepted by transfer to{" "}
+                  {organizationContent.bankAccount.accountTitle} (
+                  {organizationContent.bankAccount.bankName}). Full IBAN and SWIFT
+                  details are on the Donate page.
+                </dd>
+                <Button href="/donate#bank-transfer" variant="yellow">
+                  View bank details
+                </Button>
               </div>
             </dl>
           </div>

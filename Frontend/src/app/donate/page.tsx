@@ -7,6 +7,7 @@ import SectionBand from "@/components/sections/SectionBand";
 import Button from "@/components/ui/Button";
 import { donateContent } from "@/content/donateContent";
 import { pageHeroGalleries } from "@/content/pageHeroGalleries";
+import BankTransferDetails from "@/features/donate/BankTransferDetails";
 
 const FinalCtaSection = dynamic(() => import("@/features/support/FinalCtaSection"));
 
@@ -23,9 +24,12 @@ export default function DonatePage() {
         title={donateContent.title}
         description={donateContent.description}
         gallery={pageHeroGalleries.donate}
-        ctaLabel="Contact to support"
-        ctaHref="/contact"
+        ctaLabel="View bank details"
+        ctaHref="#bank-transfer"
+        secondaryLabel="Contact Us"
+        secondaryHref="/contact"
       />
+
       <SectionBand tone="white">
         <p className={`${design.eyebrow} mb-4`} style={{ color: "var(--landing-blue)" }}>
           {donateContent.whyTitle}
@@ -35,34 +39,41 @@ export default function DonatePage() {
           {donateContent.whyBody}
         </p>
       </SectionBand>
-      <SectionBand tone="soft">
+
+      <SectionBand id="bank-transfer" tone="soft">
         <p className={`${design.eyebrow} mb-4`} style={{ color: "var(--landing-blue)" }}>
           {donateContent.howTitle}
         </p>
-        <h2 className={`${design.heading} mb-5`}>Start with a conversation</h2>
+        <h2 className={`${design.heading} mb-5`}>{donateContent.detailsTitle}</h2>
         <p className={`${design.body} mb-8`} style={{ maxWidth: "58ch" }}>
           {donateContent.howBody}
         </p>
-        <div className="flex flex-wrap gap-3">
+        <BankTransferDetails />
+        <div className="mt-8 flex flex-wrap gap-3">
           <Button href="/contact" variant="yellow">
-            Contact to support
+            {donateContent.contactCtaLabel}
           </Button>
           <Button href="/our-work" variant="blue">
-            See our work
+            {donateContent.workCtaLabel}
           </Button>
         </div>
       </SectionBand>
+
       <SectionBand tone="blue">
-        <p className={`${design.eyebrow} mb-4`} style={{ color: "rgb(255 255 255 / 0.85)" }}>
+        <p
+          className={`${design.eyebrow} mb-4`}
+          style={{ color: "rgb(255 255 255 / 0.85)" }}
+        >
           {donateContent.integrityTitle}
         </p>
         <h2 className={`${design.heading} ${design.headingLight} mb-5`}>
-          No unverified giving channels
+          Verified foundation account
         </h2>
         <p className={`${design.body} ${design.bodyLight}`} style={{ maxWidth: "58ch" }}>
           {donateContent.integrityBody}
         </p>
       </SectionBand>
+
       <FinalCtaSection
         primaryLabel="Contact Us"
         primaryHref="/contact"

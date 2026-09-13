@@ -26,18 +26,36 @@ export const organizationContent = {
   ] as const,
   workAreas: [
     "Education",
-    "Orphanage & Child Care",
+    "Literacy Program",
+    "Orphanage",
+    "Women Empowerment & Skills",
     "Child Labour Prevention",
     "Child Protection",
     "Evangelism & Discipleship",
     "Community & Disaster Outreach",
   ] as const,
+  registration: {
+    secpLabel: "SECP",
+    secpFullName: "Securities and Exchange Commission of Pakistan",
+    secpCuin: "0224436",
+  },
+  bankAccount: {
+    accountTitle: "Home of Joy Welfare Foundation",
+    iban: "PK44ALFH0368001010909598",
+    swiftCode: "ALFHPKKAXXX",
+    bankName: "Bank Alfalah",
+    country: "Pakistan",
+  },
   accountability: {
     eyebrow: "Accountability",
     heading: "Registered. Transparent. Responsible.",
     lead:
-      "Home of Joy Welfare Foundation operates as a registered organization in Pakistan. We are registered with the Charity Commission, and we work within the Economic Affairs Division (EAD) framework of the Government of Pakistan for foreign funding arrangements.",
+      "Home of Joy Welfare Foundation is a registered organization in Pakistan. We are registered with the Securities and Exchange Commission of Pakistan (SECP), CUIN 0224436, and with the Charity Commission. We also work within the Economic Affairs Division (EAD) framework of the Government of Pakistan for foreign funding arrangements.",
     points: [
+      {
+        title: "SECP registration",
+        body: "Registered with the Securities and Exchange Commission of Pakistan. CUIN 0224436.",
+      },
       {
         title: "Charity Commission",
         body: "We are registered with the Charity Commission, reflecting our commitment to lawful charitable work.",
@@ -45,10 +63,6 @@ export const organizationContent = {
       {
         title: "Economic Affairs Division",
         body: "We work within the EAD framework of the Government of Pakistan for foreign funding arrangements.",
-      },
-      {
-        title: "Responsible stewardship",
-        body: "Gifts and support are received and used through proper organizational channels, with care for the people we serve.",
       },
     ],
   },

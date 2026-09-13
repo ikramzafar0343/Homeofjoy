@@ -24,6 +24,10 @@ export default function OrganizationJsonLd({ siteUrl }: OrganizationJsonLdProps)
     knowsAbout: [
       "Child protection",
       "Education",
+      "Literacy programs",
+      "Orphanage care",
+      "Women empowerment",
+      "Skills training",
       "Child labour prevention",
       "Community outreach",
       "Discipleship",

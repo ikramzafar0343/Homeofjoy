@@ -63,7 +63,7 @@ export default function OrphanageChildCare() {
 
         <div className="mx-auto max-w-3xl text-center">
           <p data-care-reveal className="typeLabel mb-4">
-            02 · Orphanage & Child Care
+            03 · Orphanage
           </p>
           <h2 data-care-reveal className="typeSection mb-6">
             A safe place to belong

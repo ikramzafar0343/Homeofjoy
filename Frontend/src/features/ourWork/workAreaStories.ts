@@ -29,12 +29,12 @@ const storyCopy: Record<
     kicker: "Education",
     headline: "Opening doors through learning",
     lead:
-      "We walk with children and families so learning can replace barriers—through literacy support, school encouragement, and steady pathways into opportunity.",
+      "We walk with children and families so learning can replace barriers—through classroom support, school encouragement, and steady pathways into opportunity.",
     sections: [
       {
         heading: "Learning where access is limited",
         body:
-          "Across Pakistan, many children grow up with limited access to quality education. Home of Joy provides literacy programs, classroom support, and school encouragement so girls and boys can grow in knowledge, confidence, and hope—not as a privilege for a few, but as a pathway for those most often left behind.",
+          "Across Pakistan, many children grow up with limited access to quality education. Home of Joy provides classroom support and school encouragement so girls and boys can grow in knowledge, confidence, and hope—not as a privilege for a few, but as a pathway for those most often left behind.",
       },
       {
         heading: "Classrooms that build confidence",
@@ -44,33 +44,64 @@ const storyCopy: Record<
       {
         heading: "A foundation for safer futures",
         body:
-          "Education is one of the clearest ways to break cycles of poverty and child labour. When a child can read, write, and imagine a different tomorrow, families gain a stronger foothold—and communities gain hope that is rooted in real opportunity.",
+          "Education is one of the clearest ways to break cycles of poverty and child labour. When a child can learn and imagine a different tomorrow, families gain a stronger foothold—and communities gain hope that is rooted in real opportunity.",
       },
     ],
     practiceTitle: "How education takes shape",
     practices: [
-      "Literacy support and classroom learning for children with limited access",
+      "Classroom learning for children with limited access",
       "School encouragement that helps children stay present and motivated",
       "Steady pathways that connect education to protection and hope",
     ],
     closing:
       "When learning becomes possible, hope becomes tangible. Education remains central to our mission: practical support that opens doors for vulnerable children across Pakistan.",
   },
+  literacy: {
+    kicker: "Literacy Program",
+    headline: "Reading and writing that open futures",
+    lead:
+      "Our literacy program helps children and youth build reading and writing skills through workshops, classroom practice, and encouragement that makes learning feel possible.",
+    sections: [
+      {
+        heading: "Foundational skills that change a life",
+        body:
+          "Literacy is more than letters on a page. When a child can read and write, doors open to schooling, safer choices, and the confidence to participate in community life. Home of Joy runs literacy work so foundational learning is not left to chance.",
+      },
+      {
+        heading: "Workshops and classroom practice",
+        body:
+          "From outdoor literacy workshops to whiteboard lessons and clipboard practice in the classroom, our program meets learners where they are. We create space for repetition, encouragement, and the quiet victories that turn unfamiliar letters into usable skill.",
+      },
+      {
+        heading: "Confidence that carries forward",
+        body:
+          "Literacy strengthens every other part of our mission. Children who can read are better prepared for school, protection pathways, and hope that is grounded in real ability—not only in good intention.",
+      },
+    ],
+    practiceTitle: "How the literacy program works",
+    practices: [
+      "Reading and writing support for children and youth",
+      "Literacy workshops and classroom practice",
+      "Encouragement that builds confidence alongside skill",
+    ],
+    closing:
+      "Every learner deserves the chance to read their own future. Our literacy program keeps that promise practical, patient, and close to the communities we serve.",
+  },
   orphanage: {
-    kicker: "Orphanage & Child Care",
+    kicker: "Orphanage",
     headline: "A safe home for every child",
     lead:
-      "Children in our care receive shelter, nourishment, clothing, education, medical attention, and the dignity of belonging in a protective home.",
+      "Children in our orphanage receive shelter, nourishment, clothing, education, medical attention, and the dignity of belonging in a protective home.",
     sections: [
       {
         heading: "Care that feels like family",
         body:
-          "Vulnerable children need more than temporary relief. Home of Joy provides safe accommodation and daily care so each child can rest, eat, learn, and grow in a loving environment—where belonging is not conditional, and dignity is never optional.",
+          "Vulnerable children need more than temporary relief. Home of Joy’s orphanage provides safe accommodation and daily care so each child can rest, eat, learn, and grow in a loving environment—where belonging is not conditional, and dignity is never optional.",
       },
       {
         heading: "Daily needs, met with respect",
         body:
-          "Food shared in community, clothing that fits the season, and medical attention when it matters: our child-care work is attentive to the whole child. Caregivers walk closely with girls and boys so practical needs are met without stripping away warmth or identity.",
+          "Food shared in community, clothing that fits the season, and medical attention when it matters: orphanage care is attentive to the whole child. Caregivers walk closely with girls and boys so practical needs are met without stripping away warmth or identity.",
       },
       {
         heading: "Room to grow",
@@ -78,14 +109,45 @@ const storyCopy: Record<
           "A protective home creates space for education, play, and healing. In courtyard meals and quiet moments of care alike, children experience consistency—the kind of steady presence that helps fear loosen its grip and confidence begin to return.",
       },
     ],
-    practiceTitle: "What child care includes",
+    practiceTitle: "What orphanage care includes",
     practices: [
       "Safe accommodation in a protective, loving environment",
       "Nourishment, clothing, and medical attention",
       "Education and daily belonging for vulnerable children",
     ],
     closing:
-      "Every child deserves a place to belong. Through orphanage and child care, we uphold that promise—one meal, one school day, and one act of compassion at a time.",
+      "Every child deserves a place to belong. Through our orphanage, we uphold that promise—one meal, one school day, and one act of compassion at a time.",
+  },
+  "women-empowerment": {
+    kicker: "Women Empowerment & Skills",
+    headline: "Skills that strengthen women and families",
+    lead:
+      "Through skill programs and community presence, we walk with women so they can learn practical abilities, strengthen their households, and step into greater opportunity.",
+    sections: [
+      {
+        heading: "Empowerment rooted in practical skill",
+        body:
+          "Women carry much of the weight of household survival. Home of Joy’s women empowerment and skill program focuses on practical abilities—creative work, livelihood pathways, and confidence—so women can grow dignity alongside capability.",
+      },
+      {
+        heading: "Learning that supports the household",
+        body:
+          "Skill sessions and community gatherings create room for women to practice, share, and be seen. Whether through craft-based learning or supportive outreach, the goal is steady: help women gain tools that strengthen both their own futures and the children in their care.",
+      },
+      {
+        heading: "Dignity in every step",
+        body:
+          "Empowerment is never spectacle. It is respectful presence, useful training, and pathways that honor women’s strength. When women are equipped, families and communities gain resilience that lasts beyond a single distribution day.",
+      },
+    ],
+    practiceTitle: "How the skill program takes shape",
+    practices: [
+      "Skills training that builds practical ability and confidence",
+      "Community support that upholds women’s dignity",
+      "Pathways that strengthen households and children’s futures",
+    ],
+    closing:
+      "When women grow in skill and confidence, hope multiplies through the household. Our women empowerment program keeps that work practical, respectful, and lasting.",
   },
   "child-labour": {
     kicker: "Child Labour Prevention",

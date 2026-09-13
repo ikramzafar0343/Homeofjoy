@@ -21,7 +21,7 @@ const FinalCtaSection = dynamic(() => import("@/features/support/FinalCtaSection
 export const metadata: Metadata = {
   title: "Our Work",
   description:
-    "Explore Home of Joy’s six areas of work: education, child care, child labour prevention, protection, discipleship, and community outreach.",
+    "Explore Home of Joy’s work: literacy, orphanage care, women empowerment and skills, education, child labour prevention, protection, discipleship, and community outreach.",
 };
 
 export default function OurWorkPage() {
@@ -29,8 +29,8 @@ export default function OurWorkPage() {
     <>
       <PageHero
         eyebrow="Our Work"
-        title="Practical care across six areas of service"
-        description="From education and protection to community response, our work is designed to uphold dignity and open pathways to hope."
+        title="Practical care across areas of service"
+        description="From literacy and orphanage care to women empowerment, education, and community response, our work upholds dignity and opens pathways to hope."
         gallery={pageHeroGalleries.ourWork}
         ctaLabel="Support the mission"
         ctaHref="/donate"

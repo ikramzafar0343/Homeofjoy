@@ -28,9 +28,9 @@ export const ourWorkAreas: readonly OurWorkArea[] = [
     slug: "education",
     title: "Education",
     description:
-      "Quality education, literacy programs, and school support for children with limited access.",
+      "Quality school support and classroom learning for children with limited access.",
     detail:
-      "We walk with children and families so learning can replace barriers—through literacy support, school encouragement, and steady pathways into opportunity.",
+      "We walk with children and families so learning can replace barriers—through classroom support, school encouragement, and steady pathways into opportunity.",
     href: "/our-work/education",
     tone: "sky",
     imageSrc: "/images/field/education/children-workbooks-red-table.webp",
@@ -65,12 +65,51 @@ export const ourWorkAreas: readonly OurWorkArea[] = [
   },
   {
     number: "02",
-    slug: "orphanage",
-    title: "Orphanage & Child Care",
+    slug: "literacy",
+    title: "Literacy Program",
     description:
-      "Safe accommodation, food, clothing, medical care, and a loving environment for vulnerable children.",
+      "Reading, writing, and foundational learning so children and youth can grow in knowledge and confidence.",
     detail:
-      "Children in our care receive shelter, nourishment, clothing, education, medical attention, and the dignity of belonging in a protective home.",
+      "Our literacy program helps learners build reading and writing skills through workshops, classroom practice, and encouragement that makes learning feel possible.",
+    href: "/our-work/literacy",
+    tone: "sky",
+    imageSrc: "/images/field/education/youth-literacy-workshop-swat-kalam.webp",
+    imageAlt: "Youth literacy workshop in Swat Kalam",
+    gallery: [
+      {
+        src: "/images/field/education/youth-literacy-workshop-swat-kalam.webp",
+        alt: "Youth literacy workshop outdoors in Swat Kalam",
+      },
+      {
+        src: "/images/field/education/discipleship-literacy-workshop-whiteboard.webp",
+        alt: "Literacy workshop at a whiteboard",
+      },
+      {
+        src: "/images/field/education/children-writing-clipboards-classroom.webp",
+        alt: "Children writing on clipboards in the classroom",
+      },
+      {
+        src: "/images/field/education/classroom-children-alphabet-posters.webp",
+        alt: "Classroom with alphabet posters on the wall",
+      },
+      {
+        src: "/images/field/education/children-showing-textbooks-circle-table.webp",
+        alt: "Children showing textbooks around a circle table",
+      },
+      {
+        src: "/images/field/education/preschoolers-classroom-red-table.webp",
+        alt: "Preschoolers learning at a red classroom table",
+      },
+    ],
+  },
+  {
+    number: "03",
+    slug: "orphanage",
+    title: "Orphanage",
+    description:
+      "Safe accommodation, food, clothing, medical care, and a loving home for vulnerable children.",
+    detail:
+      "Children in our orphanage receive shelter, nourishment, clothing, education, medical attention, and the dignity of belonging in a protective home.",
     href: "/our-work/orphanage",
     tone: "warm",
     imageSrc: "/images/field/care/school-children-communal-meal.webp",
@@ -104,7 +143,46 @@ export const ourWorkAreas: readonly OurWorkArea[] = [
     ],
   },
   {
-    number: "03",
+    number: "04",
+    slug: "women-empowerment",
+    title: "Women Empowerment & Skills",
+    description:
+      "Skills training and practical support that help women grow confidence, dignity, and livelihood pathways.",
+    detail:
+      "Through skill programs and community presence, we walk with women so they can learn practical abilities, strengthen their households, and step into greater opportunity.",
+    href: "/our-work/women-empowerment",
+    tone: "warm",
+    imageSrc: "/images/field/education/girls-showing-cotton-painting-work.webp",
+    imageAlt: "Girls showing cotton painting skill work",
+    gallery: [
+      {
+        src: "/images/field/education/girls-showing-cotton-painting-work.webp",
+        alt: "Girls showing cotton painting skill work",
+      },
+      {
+        src: "/images/field/outreach/embroidered-cloth-distribution.webp",
+        alt: "Embroidered cloth distribution in the community",
+      },
+      {
+        src: "/images/field/outreach/grain-aid-distribution-sindhi-women.webp",
+        alt: "Grain aid distribution among Sindhi women",
+      },
+      {
+        src: "/images/field/outreach/community-gathering-veiled-woman-child.webp",
+        alt: "Community gathering with a woman and child",
+      },
+      {
+        src: "/images/field/outreach/man-women-bangles-thatched-hut.webp",
+        alt: "Women gathered near a thatched hut",
+      },
+      {
+        src: "/images/field/outreach/handing-aid-package-woman.webp",
+        alt: "Handing an aid package to a woman with dignity",
+      },
+    ],
+  },
+  {
+    number: "05",
     slug: "child-labour",
     title: "Child Labour Prevention",
     description:
@@ -144,7 +222,7 @@ export const ourWorkAreas: readonly OurWorkArea[] = [
     ],
   },
   {
-    number: "04",
+    number: "06",
     slug: "child-protection",
     title: "Child Protection",
     description:
@@ -184,7 +262,7 @@ export const ourWorkAreas: readonly OurWorkArea[] = [
     ],
   },
   {
-    number: "05",
+    number: "07",
     slug: "evangelism",
     title: "Evangelism & Discipleship",
     description:
@@ -193,18 +271,9 @@ export const ourWorkAreas: readonly OurWorkArea[] = [
       "Hope is shared through respectful relationships—supporting missionaries, small groups, and discipleship with compassion at the center.",
     href: "/our-work/evangelism",
     tone: "faith",
-    imageSrc: "/images/field/education/youth-literacy-workshop-swat-kalam.webp",
-    imageAlt:
-      "Instructor leading a discipleship and literacy youth workshop outdoors",
+    imageSrc: "/images/field/education/forest-workshop-presenter-board.webp",
+    imageAlt: "Presenter leading a discipleship workshop outdoors",
     gallery: [
-      {
-        src: "/images/field/education/youth-literacy-workshop-swat-kalam.webp",
-        alt: "Youth literacy workshop in Swat Kalam",
-      },
-      {
-        src: "/images/field/education/discipleship-literacy-workshop-whiteboard.webp",
-        alt: "Discipleship literacy workshop at a whiteboard",
-      },
       {
         src: "/images/field/education/forest-workshop-presenter-board.webp",
         alt: "Presenter at a forest workshop with a board",
@@ -221,10 +290,18 @@ export const ourWorkAreas: readonly OurWorkArea[] = [
         src: "/images/field/education/harmonium-music-class-circle.webp",
         alt: "Harmonium music class in a circle",
       },
+      {
+        src: "/images/field/community/gathering-under-tree-speakers.webp",
+        alt: "Community gathering under a tree",
+      },
+      {
+        src: "/images/field/education/forest-educational-gathering.webp",
+        alt: "Educational gathering in a forest setting",
+      },
     ],
   },
   {
-    number: "06",
+    number: "08",
     slug: "outreach",
     title: "Community & Disaster Outreach",
     description:

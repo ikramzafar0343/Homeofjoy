@@ -161,7 +161,8 @@ export default function SiteFooter() {
 
         <div className="flex flex-col gap-3 pt-8 md:flex-row md:items-center md:justify-between">
           <p className="text-xs text-white/55">
-            © {year} {organizationContent.name}. All rights reserved.
+            © {year} {organizationContent.name}. All rights reserved. SECP Registered
+            No. CUIN {organizationContent.registration.secpCuin}.
           </p>
           <div className="flex flex-wrap items-center gap-4">
             {footerLegalItems.map((item) => (

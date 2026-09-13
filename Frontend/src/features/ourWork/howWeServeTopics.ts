@@ -47,25 +47,25 @@ export const howWeServeTopics: readonly HowWeServeTopic[] = [
     id: "educate",
     label: "Educate",
     heading:
-      "Education opens doors that poverty tried to close, one learner at a time.",
+      "Education and literacy open doors that poverty tried to close, one learner at a time.",
     summary:
       "Literacy support, school encouragement, and steady pathways help children with limited access grow in knowledge and hope.",
     detail:
-      "When a child can learn, the future of a family begins to change. We support classrooms, learning materials, and the encouragement children need to stay in school and discover opportunity.",
-    imageSrc: "/images/field/education/children-workbooks-red-table.webp",
-    imageAlt: "A child learning through education support",
+      "When a child can learn, the future of a family begins to change. We support literacy programs, classrooms, learning materials, and the encouragement children need to stay in school and discover opportunity.",
+    imageSrc: "/images/field/education/youth-literacy-workshop-swat-kalam.webp",
+    imageAlt: "A youth literacy workshop supporting foundational learning",
     gallery: [
+      {
+        src: "/images/field/education/youth-literacy-workshop-swat-kalam.webp",
+        alt: "Youth literacy workshop outdoors",
+      },
+      {
+        src: "/images/field/education/discipleship-literacy-workshop-whiteboard.webp",
+        alt: "Literacy workshop at a whiteboard",
+      },
       {
         src: "/images/field/education/children-workbooks-red-table.webp",
         alt: "Children studying workbooks at a classroom table",
-      },
-      {
-        src: "/images/field/education/classroom-children-alphabet-posters.webp",
-        alt: "Classroom with alphabet posters",
-      },
-      {
-        src: "/images/field/education/teacher-whiteboard-children-carpet.webp",
-        alt: "Teacher leading a lesson at the whiteboard",
       },
       {
         src: "/images/field/education/home-of-joy-school-exterior.webp",
@@ -107,29 +107,29 @@ export const howWeServeTopics: readonly HowWeServeTopic[] = [
     id: "empower",
     label: "Empower",
     heading:
-      "Empowerment helps families move from survival toward lasting strength.",
+      "Empowerment helps women and families move from survival toward lasting strength.",
     summary:
-      "We accompany communities so children can leave labour risk behind and step into safer, more hopeful pathways.",
+      "Skills training and practical support help women grow confidence, dignity, and livelihood pathways for their households.",
     detail:
-      "Empowerment means walking with parents and communities—strengthening protection, encouraging education, and building the confidence families need to choose a different future for their children.",
-    imageSrc: "/images/field/education/home-of-joy-school-building-front.webp",
-    imageAlt: "Pathways that keep children in learning and opportunity",
+      "Empowerment means walking with women and communities—building practical skills, encouraging safer futures for children, and strengthening the confidence families need to choose a different path.",
+    imageSrc: "/images/field/education/girls-showing-cotton-painting-work.webp",
+    imageAlt: "Girls showing skill work from a women empowerment program",
     gallery: [
       {
-        src: "/images/field/education/home-of-joy-school-building-front.webp",
-        alt: "Home of Joy school building",
+        src: "/images/field/education/girls-showing-cotton-painting-work.webp",
+        alt: "Girls showing cotton painting skill work",
       },
       {
-        src: "/images/field/outreach/brick-kiln-community-gathering.webp",
-        alt: "Brick-kiln community gathering",
+        src: "/images/field/outreach/embroidered-cloth-distribution.webp",
+        alt: "Embroidered cloth distribution",
       },
       {
-        src: "/images/field/community/outdoor-community-meeting-rugs.webp",
-        alt: "Outdoor community meeting",
+        src: "/images/field/outreach/grain-aid-distribution-sindhi-women.webp",
+        alt: "Community support among women",
       },
       {
-        src: "/images/field/education/children-showing-textbooks-circle-table.webp",
-        alt: "Children showing textbooks",
+        src: "/images/field/outreach/handing-aid-package-woman.webp",
+        alt: "Support handed to a woman with dignity",
       },
     ],
   },

@@ -15,6 +15,8 @@ const accents = [
   design.pillGreen,
   design.pillPurple,
   design.pillYellow,
+  design.pillPink,
+  design.pillGreen,
 ] as const;
 
 export default function WorkGallerySection() {
@@ -36,12 +38,12 @@ export default function WorkGallerySection() {
             id="what-we-do-title"
             className={`${design.heading} ${design.headingLight}`}
           >
-            Six areas of compassionate service
+            Areas of compassionate service
           </h2>
           <p className={`${design.body} ${design.bodyLight} ${styles.intro}`}>
-            {organizationContent.mission} Across education, child care, protection,
-            discipleship, and community outreach, we serve so hope can take root in
-            Pakistan.
+            {organizationContent.mission} Across literacy, orphanage care, women
+            empowerment, education, protection, discipleship, and community outreach,
+            we serve so hope can take root in Pakistan.
           </p>
         </div>
 

@@ -17,9 +17,9 @@ const accents = [
 
 const topicStoryHref: Record<string, string> = {
   protect: "/our-work/child-protection",
-  educate: "/our-work/education",
+  educate: "/our-work/literacy",
   serve: "/our-work/orphanage",
-  empower: "/our-work/child-labour",
+  empower: "/our-work/women-empowerment",
   "bring-hope": "/our-work/evangelism",
 };
 

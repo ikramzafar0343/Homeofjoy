@@ -14,6 +14,8 @@ const accents = [
   design.pillGreen,
   design.pillPurple,
   design.pillYellow,
+  design.pillPink,
+  design.pillGreen,
 ] as const;
 
 const frameClass = [
@@ -23,6 +25,8 @@ const frameClass = [
   design.shapeA,
   design.shapeB,
   design.shapeCircle,
+  design.shapeA,
+  design.shapeB,
 ] as const;
 
 export default function OurWorkAreasDetail() {
