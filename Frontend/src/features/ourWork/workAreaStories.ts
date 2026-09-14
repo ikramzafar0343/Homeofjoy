@@ -60,28 +60,28 @@ const storyCopy: Record<
     kicker: "Literacy Program",
     headline: "Reading and writing that open futures",
     lead:
-      "Our literacy program helps children and youth build reading and writing skills through workshops, classroom practice, and encouragement that makes learning feel possible.",
+      "Our literacy program helps children, youth, and women build reading and writing skills through classrooms, community sessions, and encouragement that makes learning feel possible.",
     sections: [
       {
         heading: "Foundational skills that change a life",
         body:
-          "Literacy is more than letters on a page. When a child can read and write, doors open to schooling, safer choices, and the confidence to participate in community life. Home of Joy runs literacy work so foundational learning is not left to chance.",
+          "Literacy is more than letters on a page. When a learner can read and write, doors open to schooling, safer choices, and the confidence to participate in community life. Home of Joy runs literacy work so foundational learning is not left to chance—for children in classrooms and for women in community sessions alike.",
       },
       {
-        heading: "Workshops and classroom practice",
+        heading: "Classrooms and community practice",
         body:
-          "From outdoor literacy workshops to whiteboard lessons and clipboard practice in the classroom, our program meets learners where they are. We create space for repetition, encouragement, and the quiet victories that turn unfamiliar letters into usable skill.",
+          "From school writing sessions to courtyard whiteboard lessons and Path of Life booklet gatherings, our program meets learners where they are. We create space for repetition, encouragement, and the quiet victories that turn unfamiliar letters into usable skill.",
       },
       {
         heading: "Confidence that carries forward",
         body:
-          "Literacy strengthens every other part of our mission. Children who can read are better prepared for school, protection pathways, and hope that is grounded in real ability—not only in good intention.",
+          "Literacy strengthens every other part of our mission. Children who can read are better prepared for school, and women who gain literacy strengthen households—hope grounded in real ability, not only good intention.",
       },
     ],
     practiceTitle: "How the literacy program works",
     practices: [
-      "Reading and writing support for children and youth",
-      "Literacy workshops and classroom practice",
+      "Classroom literacy for children and youth",
+      "Community literacy sessions with women and families",
       "Encouragement that builds confidence alongside skill",
     ],
     closing:
@@ -122,27 +122,27 @@ const storyCopy: Record<
     kicker: "Women Empowerment & Skills",
     headline: "Skills that strengthen women and families",
     lead:
-      "Through skill programs and community presence, we walk with women so they can learn practical abilities, strengthen their households, and step into greater opportunity.",
+      "Through literacy sessions, skill practice, and community presence, we walk with women so they can learn practical abilities, strengthen their households, and step into greater opportunity.",
     sections: [
       {
         heading: "Empowerment rooted in practical skill",
         body:
-          "Women carry much of the weight of household survival. Home of Joy’s women empowerment and skill program focuses on practical abilities—creative work, livelihood pathways, and confidence—so women can grow dignity alongside capability.",
+          "Women carry much of the weight of household survival. Home of Joy’s women empowerment and skill program focuses on practical abilities—literacy practice, learning sessions, and confidence—so women can grow dignity alongside capability.",
       },
       {
         heading: "Learning that supports the household",
         body:
-          "Skill sessions and community gatherings create room for women to practice, share, and be seen. Whether through craft-based learning or supportive outreach, the goal is steady: help women gain tools that strengthen both their own futures and the children in their care.",
+          "Home sessions, courtyard lessons, and shared booklet practice create room for women to learn, share, and be seen. Whether through reading, writing, or facilitated teaching, the goal is steady: help women gain tools that strengthen both their own futures and the children in their care.",
       },
       {
         heading: "Dignity in every step",
         body:
-          "Empowerment is never spectacle. It is respectful presence, useful training, and pathways that honor women’s strength. When women are equipped, families and communities gain resilience that lasts beyond a single distribution day.",
+          "Empowerment is never spectacle. It is respectful presence, useful training, and pathways that honor women’s strength. When women are equipped, families and communities gain resilience that lasts beyond a single gathering.",
       },
     ],
     practiceTitle: "How the skill program takes shape",
     practices: [
-      "Skills training that builds practical ability and confidence",
+      "Literacy and skills sessions that build practical ability",
       "Community support that upholds women’s dignity",
       "Pathways that strengthen households and children’s futures",
     ],

@@ -19,12 +19,16 @@ export const landingHero = {
   ctaHref: "/our-work",
   gallery: [
     photo(
-      "/images/field/education/classroom-children-alphabet-posters.webp",
-      "Children learning together in a Home of Joy classroom",
+      "/images/field/education/literacy-classroom-students-writing.webp",
+      "Students writing during a literacy classroom session at Home of Joy",
     ),
     photo(
-      "/images/field/education/children-showing-textbooks-circle-table.webp",
-      "Children showing their textbooks around a circle table",
+      "/images/field/education/literacy-women-courtyard-group-booklets.webp",
+      "Women holding literacy booklets after a community session",
+    ),
+    photo(
+      "/images/field/education/classroom-children-alphabet-posters.webp",
+      "Children learning together in a Home of Joy classroom",
     ),
     photo(
       "/images/field/celebration/annual-result-day-uniform-students.webp",
@@ -35,12 +39,12 @@ export const landingHero = {
       "Children sharing a communal meal in the school courtyard",
     ),
     photo(
-      "/images/field/outreach/communal-meal-rural-gathering.webp",
-      "Community gathering for a shared meal during outreach",
+      "/images/field/empowerment/women-literacy-home-session-teaching.webp",
+      "Woman facilitator teaching a home literacy session",
     ),
     photo(
-      "/images/field/education/children-ring-toss-school-courtyard.webp",
-      "Children playing ring toss in the school courtyard",
+      "/images/field/outreach/communal-meal-rural-gathering.webp",
+      "Community gathering for a shared meal during outreach",
     ),
   ],
 } as const;
@@ -210,24 +214,24 @@ export const landingFocusPanel = {
   ctaHref: "/our-work/literacy",
   gallery: [
     photo(
-      "/images/field/education/youth-literacy-workshop-swat-kalam.webp",
-      "Youth literacy workshop in the field",
+      "/images/field/education/literacy-classroom-students-writing.webp",
+      "Uniformed students writing at desks during a literacy classroom session",
     ),
     photo(
-      "/images/field/education/discipleship-literacy-workshop-whiteboard.webp",
-      "Literacy workshop at a whiteboard",
+      "/images/field/education/literacy-women-courtyard-whiteboard-lesson.webp",
+      "Community literacy lesson for women at a courtyard whiteboard",
     ),
     photo(
-      "/images/field/education/children-workbooks-red-table.webp",
-      "Children studying workbooks at a classroom table",
+      "/images/field/education/literacy-girls-path-of-life-papers.webp",
+      "Girls holding Path of Life literacy papers",
     ),
     photo(
-      "/images/field/education/teacher-whiteboard-children-carpet.webp",
-      "Teacher at a whiteboard with children seated on a carpet",
+      "/images/field/education/literacy-women-path-of-life-booklets.webp",
+      "Women holding Path of Life literacy booklets",
     ),
     photo(
-      "/images/field/education/children-writing-clipboards-classroom.webp",
-      "Children writing on clipboards in the classroom",
+      "/images/field/empowerment/women-literacy-home-session-teaching.webp",
+      "Woman facilitator teaching a home literacy session",
     ),
   ],
 } as const;

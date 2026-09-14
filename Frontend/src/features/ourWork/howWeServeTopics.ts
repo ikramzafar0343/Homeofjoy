@@ -52,24 +52,24 @@ export const howWeServeTopics: readonly HowWeServeTopic[] = [
       "Literacy support, school encouragement, and steady pathways help children with limited access grow in knowledge and hope.",
     detail:
       "When a child can learn, the future of a family begins to change. We support literacy programs, classrooms, learning materials, and the encouragement children need to stay in school and discover opportunity.",
-    imageSrc: "/images/field/education/youth-literacy-workshop-swat-kalam.webp",
-    imageAlt: "A youth literacy workshop supporting foundational learning",
+    imageSrc: "/images/field/education/literacy-classroom-students-writing.webp",
+    imageAlt: "Students writing during a literacy classroom session at Home of Joy",
     gallery: [
       {
-        src: "/images/field/education/youth-literacy-workshop-swat-kalam.webp",
-        alt: "Youth literacy workshop outdoors",
+        src: "/images/field/education/literacy-classroom-students-writing.webp",
+        alt: "Uniformed students writing at desks in a literacy classroom",
       },
       {
-        src: "/images/field/education/discipleship-literacy-workshop-whiteboard.webp",
-        alt: "Literacy workshop at a whiteboard",
+        src: "/images/field/education/literacy-women-courtyard-whiteboard-lesson.webp",
+        alt: "Community literacy lesson at a courtyard whiteboard",
       },
       {
-        src: "/images/field/education/children-workbooks-red-table.webp",
-        alt: "Children studying workbooks at a classroom table",
+        src: "/images/field/education/literacy-girls-path-of-life-papers.webp",
+        alt: "Girls holding Path of Life literacy papers",
       },
       {
-        src: "/images/field/education/home-of-joy-school-exterior.webp",
-        alt: "Home of Joy school exterior",
+        src: "/images/field/education/literacy-women-circle-studying-booklets.webp",
+        alt: "Women studying literacy booklets in a circle",
       },
     ],
   },
@@ -109,27 +109,27 @@ export const howWeServeTopics: readonly HowWeServeTopic[] = [
     heading:
       "Empowerment helps women and families move from survival toward lasting strength.",
     summary:
-      "Skills training and practical support help women grow confidence, dignity, and livelihood pathways for their households.",
+      "Literacy sessions, skills practice, and practical support help women grow confidence, dignity, and livelihood pathways for their households.",
     detail:
-      "Empowerment means walking with women and communities—building practical skills, encouraging safer futures for children, and strengthening the confidence families need to choose a different path.",
-    imageSrc: "/images/field/education/girls-showing-cotton-painting-work.webp",
-    imageAlt: "Girls showing skill work from a women empowerment program",
+      "Empowerment means walking with women and communities—building literacy and practical skills, encouraging safer futures for children, and strengthening the confidence families need to choose a different path.",
+    imageSrc: "/images/field/education/literacy-women-courtyard-group-booklets.webp",
+    imageAlt: "Women holding literacy booklets after a community empowerment session",
     gallery: [
       {
-        src: "/images/field/education/girls-showing-cotton-painting-work.webp",
-        alt: "Girls showing cotton painting skill work",
+        src: "/images/field/education/literacy-women-courtyard-group-booklets.webp",
+        alt: "Women holding literacy booklets after a community session",
       },
       {
-        src: "/images/field/outreach/embroidered-cloth-distribution.webp",
-        alt: "Embroidered cloth distribution",
+        src: "/images/field/empowerment/women-literacy-home-session-teaching.webp",
+        alt: "Woman facilitator teaching a home literacy session",
       },
       {
-        src: "/images/field/outreach/grain-aid-distribution-sindhi-women.webp",
-        alt: "Community support among women",
+        src: "/images/field/empowerment/women-literacy-group-reading-booklets.webp",
+        alt: "Women reading literacy booklets together",
       },
       {
-        src: "/images/field/outreach/handing-aid-package-woman.webp",
-        alt: "Support handed to a woman with dignity",
+        src: "/images/field/empowerment/women-literacy-writing-notebook-floral.webp",
+        alt: "Woman practicing writing in a notebook",
       },
     ],
   },

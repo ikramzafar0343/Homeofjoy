@@ -42,6 +42,10 @@ export const ourWorkAreas: readonly OurWorkArea[] = [
         alt: "Children studying workbooks at a red classroom table",
       },
       {
+        src: "/images/field/education/literacy-classroom-students-writing.webp",
+        alt: "Uniformed students writing at desks in a Home of Joy classroom",
+      },
+      {
         src: "/images/field/education/classroom-children-alphabet-posters.webp",
         alt: "Classroom of children with alphabet posters on the wall",
       },
@@ -57,10 +61,6 @@ export const ourWorkAreas: readonly OurWorkArea[] = [
         src: "/images/field/education/home-of-joy-school-building-front.webp",
         alt: "Front of the Home of Joy school building",
       },
-      {
-        src: "/images/field/education/boys-displaying-classroom-artwork.webp",
-        alt: "Boys displaying classroom artwork",
-      },
     ],
   },
   {
@@ -68,37 +68,46 @@ export const ourWorkAreas: readonly OurWorkArea[] = [
     slug: "literacy",
     title: "Literacy Program",
     description:
-      "Reading, writing, and foundational learning so children and youth can grow in knowledge and confidence.",
+      "Reading, writing, and foundational learning for children, youth, and communities.",
     detail:
-      "Our literacy program helps learners build reading and writing skills through workshops, classroom practice, and encouragement that makes learning feel possible.",
+      "Our literacy program helps learners build reading and writing skills through classrooms, community sessions, and encouragement that makes learning feel possible.",
     href: "/our-work/literacy",
     tone: "sky",
-    imageSrc: "/images/field/education/youth-literacy-workshop-swat-kalam.webp",
-    imageAlt: "Youth literacy workshop in Swat Kalam",
+    imageSrc: "/images/field/education/literacy-classroom-students-writing.webp",
+    imageAlt:
+      "Uniformed students writing at desks during a literacy classroom session at Home of Joy",
     gallery: [
       {
-        src: "/images/field/education/youth-literacy-workshop-swat-kalam.webp",
-        alt: "Youth literacy workshop outdoors in Swat Kalam",
+        src: "/images/field/education/literacy-classroom-students-writing.webp",
+        alt: "Uniformed students writing at desks during a literacy classroom session",
       },
       {
-        src: "/images/field/education/discipleship-literacy-workshop-whiteboard.webp",
-        alt: "Literacy workshop at a whiteboard",
+        src: "/images/field/education/literacy-girls-path-of-life-papers.webp",
+        alt: "Girls and facilitators holding Path of Life literacy papers",
       },
       {
-        src: "/images/field/education/children-writing-clipboards-classroom.webp",
-        alt: "Children writing on clipboards in the classroom",
+        src: "/images/field/education/literacy-women-path-of-life-booklets.webp",
+        alt: "Women holding Path of Life literacy booklets after a session",
       },
       {
-        src: "/images/field/education/classroom-children-alphabet-posters.webp",
-        alt: "Classroom with alphabet posters on the wall",
+        src: "/images/field/education/literacy-women-courtyard-whiteboard-lesson.webp",
+        alt: "Instructor leading a community literacy lesson at a courtyard whiteboard",
       },
       {
-        src: "/images/field/education/children-showing-textbooks-circle-table.webp",
-        alt: "Children showing textbooks around a circle table",
+        src: "/images/field/education/literacy-women-circle-studying-booklets.webp",
+        alt: "Women studying literacy booklets together in a circle",
       },
       {
-        src: "/images/field/education/preschoolers-classroom-red-table.webp",
-        alt: "Preschoolers learning at a red classroom table",
+        src: "/images/field/education/literacy-women-courtyard-group-booklets.webp",
+        alt: "Women and children holding literacy booklets in a courtyard",
+      },
+      {
+        src: "/images/field/education/literacy-instructor-doorway-group-lesson.webp",
+        alt: "Instructor teaching a literacy group seated on rugs",
+      },
+      {
+        src: "/images/field/education/literacy-woman-path-of-life-mat-session.webp",
+        alt: "Woman reading a Path of Life literacy sheet during a community session",
       },
     ],
   },
@@ -147,37 +156,45 @@ export const ourWorkAreas: readonly OurWorkArea[] = [
     slug: "women-empowerment",
     title: "Women Empowerment & Skills",
     description:
-      "Skills training and practical support that help women grow confidence, dignity, and livelihood pathways.",
+      "Skills training, literacy, and practical support that help women grow confidence, dignity, and livelihood pathways.",
     detail:
-      "Through skill programs and community presence, we walk with women so they can learn practical abilities, strengthen their households, and step into greater opportunity.",
+      "Through skill programs, literacy sessions, and community presence, we walk with women so they can learn practical abilities, strengthen their households, and step into greater opportunity.",
     href: "/our-work/women-empowerment",
     tone: "warm",
-    imageSrc: "/images/field/education/girls-showing-cotton-painting-work.webp",
-    imageAlt: "Girls showing cotton painting skill work",
+    imageSrc: "/images/field/education/literacy-women-courtyard-group-booklets.webp",
+    imageAlt: "Women holding literacy booklets after a community empowerment session",
     gallery: [
       {
-        src: "/images/field/education/girls-showing-cotton-painting-work.webp",
-        alt: "Girls showing cotton painting skill work",
+        src: "/images/field/education/literacy-women-courtyard-group-booklets.webp",
+        alt: "Women holding literacy booklets after a community empowerment session",
       },
       {
-        src: "/images/field/outreach/embroidered-cloth-distribution.webp",
-        alt: "Embroidered cloth distribution in the community",
+        src: "/images/field/empowerment/women-literacy-home-session-teaching.webp",
+        alt: "Woman facilitator teaching a home literacy session",
       },
       {
-        src: "/images/field/outreach/grain-aid-distribution-sindhi-women.webp",
-        alt: "Grain aid distribution among Sindhi women",
+        src: "/images/field/empowerment/women-literacy-group-reading-booklets.webp",
+        alt: "Women reading literacy booklets together on a rug",
       },
       {
-        src: "/images/field/outreach/community-gathering-veiled-woman-child.webp",
-        alt: "Community gathering with a woman and child",
+        src: "/images/field/empowerment/women-literacy-writing-notebook-floral.webp",
+        alt: "Woman practicing writing in a notebook during a literacy session",
       },
       {
-        src: "/images/field/outreach/man-women-bangles-thatched-hut.webp",
-        alt: "Women gathered near a thatched hut",
+        src: "/images/field/empowerment/women-literacy-handwriting-practice.webp",
+        alt: "Close view of handwriting practice in a literacy notebook",
       },
       {
-        src: "/images/field/outreach/handing-aid-package-woman.webp",
-        alt: "Handing an aid package to a woman with dignity",
+        src: "/images/field/empowerment/women-literacy-writing-focus.webp",
+        alt: "Woman focused on writing during a literacy practice session",
+      },
+      {
+        src: "/images/field/empowerment/women-literacy-facilitator-home-session.webp",
+        alt: "Facilitator leading a women literacy session in a home setting",
+      },
+      {
+        src: "/images/field/education/literacy-women-courtyard-whiteboard-lesson.webp",
+        alt: "Community literacy lesson for women at a courtyard whiteboard",
       },
     ],
   },

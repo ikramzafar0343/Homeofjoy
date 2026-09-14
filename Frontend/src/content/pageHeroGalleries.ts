@@ -23,6 +23,10 @@ export const pageHeroGalleries = {
   ],
   ourWork: [
     photo(
+      "/images/field/education/literacy-classroom-students-writing.webp",
+      "Students writing during a literacy classroom session",
+    ),
+    photo(
       "/images/field/education/children-workbooks-red-table.webp",
       "Children studying workbooks",
     ),
